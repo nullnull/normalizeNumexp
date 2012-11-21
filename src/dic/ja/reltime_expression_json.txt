@@ -1,0 +1,765 @@
+{"pattern":"世紀前", "corresponding_time_position":["-seiki"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"世紀半前", "corresponding_time_position":["-seiki"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"世紀以上前", "corresponding_time_position":["-seiki"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"世紀半以上前", "corresponding_time_position":["-seiki"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀くらい前", "corresponding_time_position":["-seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半くらい前", "corresponding_time_position":["-seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀ぐらい前", "corresponding_time_position":["-seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半ぐらい前", "corresponding_time_position":["-seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀ほど前", "corresponding_time_position":["-seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半ほど前", "corresponding_time_position":["-seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀程度前", "corresponding_time_position":["-seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半程度前", "corresponding_time_position":["-seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀ばかり前", "corresponding_time_position":["-seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半ばかり前", "corresponding_time_position":["-seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀近く前", "corresponding_time_position":["-seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半近く前", "corresponding_time_position":["-seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀より前", "corresponding_time_position":["-seiki"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"世紀半より前", "corresponding_time_position":["-seiki"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀よりも前", "corresponding_time_position":["-seiki"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"世紀半よりも前", "corresponding_time_position":["-seiki"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀後", "corresponding_time_position":["+seiki"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"世紀半後", "corresponding_time_position":["+seiki"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"世紀以上後", "corresponding_time_position":["+seiki"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"世紀半以上後", "corresponding_time_position":["+seiki"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀より後", "corresponding_time_position":["+seiki"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"世紀半より後", "corresponding_time_position":["+seiki"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀よりも後", "corresponding_time_position":["+seiki"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"世紀半よりも後", "corresponding_time_position":["+seiki"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀ほど後", "corresponding_time_position":["+seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半ほど後", "corresponding_time_position":["+seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀くらい後", "corresponding_time_position":["+seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半くらい後", "corresponding_time_position":["+seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀ぐらい後", "corresponding_time_position":["+seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半ぐらい後", "corresponding_time_position":["+seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀程度後", "corresponding_time_position":["+seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半程度後", "corresponding_time_position":["+seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀ばかり後", "corresponding_time_position":["+seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半ばかり後", "corresponding_time_position":["+seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀近く後", "corresponding_time_position":["+seiki"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"世紀半近く後", "corresponding_time_position":["+seiki"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年前", "corresponding_time_position":["-y"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年半前", "corresponding_time_position":["-y"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年以上前", "corresponding_time_position":["-y"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"年半以上前", "corresponding_time_position":["-y"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"年くらい前", "corresponding_time_position":["-y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半くらい前", "corresponding_time_position":["-y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ぐらい前", "corresponding_time_position":["-y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半ぐらい前", "corresponding_time_position":["-y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ほど前", "corresponding_time_position":["-y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半ほど前", "corresponding_time_position":["-y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年程度前", "corresponding_time_position":["-y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半程度前", "corresponding_time_position":["-y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ばかり前", "corresponding_time_position":["-y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半ばかり前", "corresponding_time_position":["-y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年近く前", "corresponding_time_position":["-y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半近く前", "corresponding_time_position":["-y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年より前", "corresponding_time_position":["-y"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年半より前", "corresponding_time_position":["-y"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年よりも前", "corresponding_time_position":["-y"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年半よりも前", "corresponding_time_position":["-y"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年後", "corresponding_time_position":["+y"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年半後", "corresponding_time_position":["+y"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年以上後", "corresponding_time_position":["+y"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"年半以上後", "corresponding_time_position":["+y"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"年より後", "corresponding_time_position":["+y"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年半より後", "corresponding_time_position":["+y"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年よりも後", "corresponding_time_position":["+y"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年半よりも後", "corresponding_time_position":["+y"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ほど後", "corresponding_time_position":["+y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半ほど後", "corresponding_time_position":["+y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年くらい後", "corresponding_time_position":["+y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半くらい後", "corresponding_time_position":["+y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ぐらい後", "corresponding_time_position":["+y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半ぐらい後", "corresponding_time_position":["+y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年程度後", "corresponding_time_position":["+y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半程度後", "corresponding_time_position":["+y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ばかり後", "corresponding_time_position":["+y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半ばかり後", "corresponding_time_position":["+y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年近く後", "corresponding_time_position":["+y"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年半近く後", "corresponding_time_position":["+y"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月前", "corresponding_time_position":["-m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ヶ月半前", "corresponding_time_position":["-m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月以上前", "corresponding_time_position":["-m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半以上前", "corresponding_time_position":["-m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月くらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半くらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月ぐらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半ぐらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月ほど前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半ほど前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月程度前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半程度前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月ばかり前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半ばかり前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月近く前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半近く前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月より前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半より前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月よりも前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半よりも前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月後", "corresponding_time_position":["+m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ヶ月半後", "corresponding_time_position":["+m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月以上後", "corresponding_time_position":["+m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半以上後", "corresponding_time_position":["+m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月より後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半より後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月よりも後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半よりも後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月ほど後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半ほど後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月くらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半くらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月ぐらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半ぐらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月程度後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半程度後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月ばかり後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半ばかり後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月近く後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヶ月半近く後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月前", "corresponding_time_position":["-m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"か月半前", "corresponding_time_position":["-m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"か月以上前", "corresponding_time_position":["-m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"か月半以上前", "corresponding_time_position":["-m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"か月くらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半くらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月ぐらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半ぐらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月ほど前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半ほど前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月程度前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半程度前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月ばかり前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半ばかり前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月近く前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半近く前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月より前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"か月半より前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"か月よりも前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"か月半よりも前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"か月後", "corresponding_time_position":["+m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"か月半後", "corresponding_time_position":["+m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"か月以上後", "corresponding_time_position":["+m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"か月半以上後", "corresponding_time_position":["+m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"か月より後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"か月半より後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"か月よりも後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"か月半よりも後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"か月ほど後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半ほど後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月くらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半くらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月ぐらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半ぐらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月程度後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半程度後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月ばかり後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半ばかり後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"か月近く後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"か月半近く後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月前", "corresponding_time_position":["-m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"カ月半前", "corresponding_time_position":["-m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"カ月以上前", "corresponding_time_position":["-m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"カ月半以上前", "corresponding_time_position":["-m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月くらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半くらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月ぐらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半ぐらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月ほど前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半ほど前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月程度前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半程度前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月ばかり前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半ばかり前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月近く前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半近く前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月より前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"カ月半より前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月よりも前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"カ月半よりも前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月後", "corresponding_time_position":["+m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"カ月半後", "corresponding_time_position":["+m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"カ月以上後", "corresponding_time_position":["+m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"カ月半以上後", "corresponding_time_position":["+m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月より後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"カ月半より後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月よりも後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"カ月半よりも後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月ほど後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半ほど後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月くらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半くらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月ぐらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半ぐらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月程度後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半程度後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月ばかり後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半ばかり後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"カ月近く後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"カ月半近く後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月前", "corresponding_time_position":["-m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ヵ月半前", "corresponding_time_position":["-m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月以上前", "corresponding_time_position":["-m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半以上前", "corresponding_time_position":["-m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月くらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半くらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月ぐらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半ぐらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月ほど前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半ほど前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月程度前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半程度前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月ばかり前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半ばかり前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月近く前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半近く前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月より前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半より前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月よりも前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半よりも前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月後", "corresponding_time_position":["+m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ヵ月半後", "corresponding_time_position":["+m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月以上後", "corresponding_time_position":["+m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半以上後", "corresponding_time_position":["+m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月より後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半より後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月よりも後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半よりも後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月ほど後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半ほど後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月くらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半くらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月ぐらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半ぐらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月程度後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半程度後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月ばかり後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半ばかり後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月近く後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ヵ月半近く後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月前", "corresponding_time_position":["-m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ケ月半前", "corresponding_time_position":["-m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"ケ月以上前", "corresponding_time_position":["-m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"ケ月半以上前", "corresponding_time_position":["-m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月くらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半くらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月ぐらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半ぐらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月ほど前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半ほど前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月程度前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半程度前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月ばかり前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半ばかり前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月近く前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半近く前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月より前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ケ月半より前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月よりも前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ケ月半よりも前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月後", "corresponding_time_position":["+m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ケ月半後", "corresponding_time_position":["+m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"ケ月以上後", "corresponding_time_position":["+m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"ケ月半以上後", "corresponding_time_position":["+m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月より後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ケ月半より後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月よりも後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"ケ月半よりも後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月ほど後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半ほど後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月くらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半くらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月ぐらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半ぐらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月程度後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半程度後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月ばかり後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半ばかり後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"ケ月近く後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"ケ月半近く後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月前", "corresponding_time_position":["-m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"箇月半前", "corresponding_time_position":["-m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"箇月以上前", "corresponding_time_position":["-m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"箇月半以上前", "corresponding_time_position":["-m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月くらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半くらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月ぐらい前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半ぐらい前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月ほど前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半ほど前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月程度前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半程度前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月ばかり前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半ばかり前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月近く前", "corresponding_time_position":["-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半近く前", "corresponding_time_position":["-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月より前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"箇月半より前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月よりも前", "corresponding_time_position":["-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"箇月半よりも前", "corresponding_time_position":["-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月後", "corresponding_time_position":["+m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"箇月半後", "corresponding_time_position":["+m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"箇月以上後", "corresponding_time_position":["+m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"箇月半以上後", "corresponding_time_position":["+m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月より後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"箇月半より後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月よりも後", "corresponding_time_position":["+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"箇月半よりも後", "corresponding_time_position":["+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月ほど後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半ほど後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月くらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半くらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月ぐらい後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半ぐらい後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月程度後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半程度後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月ばかり後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半ばかり後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"箇月近く後", "corresponding_time_position":["+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"箇月半近く後", "corresponding_time_position":["+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週前", "corresponding_time_position":["-w"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"週半前", "corresponding_time_position":["-w"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"週以上前", "corresponding_time_position":["-w"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"週半以上前", "corresponding_time_position":["-w"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"週くらい前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半くらい前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週ぐらい前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半ぐらい前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週ほど前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半ほど前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週程度前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半程度前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週ばかり前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半ばかり前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週近く前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半近く前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週より前", "corresponding_time_position":["-w"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"週半より前", "corresponding_time_position":["-w"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"週よりも前", "corresponding_time_position":["-w"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"週半よりも前", "corresponding_time_position":["-w"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"週後", "corresponding_time_position":["+w"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"週半後", "corresponding_time_position":["+w"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"週以上後", "corresponding_time_position":["+w"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"週半以上後", "corresponding_time_position":["+w"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"週より後", "corresponding_time_position":["+w"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"週半より後", "corresponding_time_position":["+w"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"週よりも後", "corresponding_time_position":["+w"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"週半よりも後", "corresponding_time_position":["+w"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"週ほど後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半ほど後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週くらい後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半くらい後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週ぐらい後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半ぐらい後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週程度後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半程度後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週ばかり後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半ばかり後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週近く後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週半近く後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間前", "corresponding_time_position":["-w"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"週間半前", "corresponding_time_position":["-w"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"週間以上前", "corresponding_time_position":["-w"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"週間半以上前", "corresponding_time_position":["-w"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"週間くらい前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半くらい前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間ぐらい前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半ぐらい前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間ほど前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半ほど前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間程度前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半程度前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間ばかり前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半ばかり前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間近く前", "corresponding_time_position":["-w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半近く前", "corresponding_time_position":["-w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間より前", "corresponding_time_position":["-w"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"週間半より前", "corresponding_time_position":["-w"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"週間よりも前", "corresponding_time_position":["-w"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"週間半よりも前", "corresponding_time_position":["-w"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"週間後", "corresponding_time_position":["+w"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"週間半後", "corresponding_time_position":["+w"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"週間以上後", "corresponding_time_position":["+w"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"週間半以上後", "corresponding_time_position":["+w"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"週間より後", "corresponding_time_position":["+w"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"週間半より後", "corresponding_time_position":["+w"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"週間よりも後", "corresponding_time_position":["+w"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"週間半よりも後", "corresponding_time_position":["+w"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"週間ほど後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半ほど後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間くらい後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半くらい後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間ぐらい後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半ぐらい後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間程度後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半程度後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間ばかり後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半ばかり後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"週間近く後", "corresponding_time_position":["+w"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"週間半近く後", "corresponding_time_position":["+w"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日前", "corresponding_time_position":["-d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日半前", "corresponding_time_position":["-d"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"日以上前", "corresponding_time_position":["-d"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"日半以上前", "corresponding_time_position":["-d"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"日くらい前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半くらい前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日ぐらい前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半ぐらい前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日ほど前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半ほど前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日程度前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半程度前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日ばかり前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半ばかり前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日近く前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半近く前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日より前", "corresponding_time_position":["-d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"日半より前", "corresponding_time_position":["-d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"日よりも前", "corresponding_time_position":["-d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"日半よりも前", "corresponding_time_position":["-d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"日後", "corresponding_time_position":["+d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日半後", "corresponding_time_position":["+d"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"日以上後", "corresponding_time_position":["+d"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"日半以上後", "corresponding_time_position":["+d"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"日より後", "corresponding_time_position":["+d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"日半より後", "corresponding_time_position":["+d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"日よりも後", "corresponding_time_position":["+d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"日半よりも後", "corresponding_time_position":["+d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"日ほど後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半ほど後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日くらい後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半くらい後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日ぐらい後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半ぐらい後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日程度後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半程度後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日ばかり後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半ばかり後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日近く後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日半近く後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間前", "corresponding_time_position":["-d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日間半前", "corresponding_time_position":["-d"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"日間以上前", "corresponding_time_position":["-d"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"日間半以上前", "corresponding_time_position":["-d"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"日間くらい前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半くらい前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間ぐらい前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半ぐらい前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間ほど前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半ほど前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間程度前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半程度前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間ばかり前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半ばかり前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間近く前", "corresponding_time_position":["-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半近く前", "corresponding_time_position":["-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間より前", "corresponding_time_position":["-d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"日間半より前", "corresponding_time_position":["-d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"日間よりも前", "corresponding_time_position":["-d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"日間半よりも前", "corresponding_time_position":["-d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"日間後", "corresponding_time_position":["+d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日間半後", "corresponding_time_position":["+d"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"日間以上後", "corresponding_time_position":["+d"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"日間半以上後", "corresponding_time_position":["+d"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"日間より後", "corresponding_time_position":["+d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"日間半より後", "corresponding_time_position":["+d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"日間よりも後", "corresponding_time_position":["+d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"日間半よりも後", "corresponding_time_position":["+d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"日間ほど後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半ほど後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間くらい後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半くらい後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間ぐらい後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半ぐらい後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間程度後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半程度後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間ばかり後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半ばかり後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"日間近く後", "corresponding_time_position":["+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"日間半近く後", "corresponding_time_position":["+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間前", "corresponding_time_position":["-h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"時間半前", "corresponding_time_position":["-h"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"時間以上前", "corresponding_time_position":["-h"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"時間半以上前", "corresponding_time_position":["-h"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"時間くらい前", "corresponding_time_position":["-h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半くらい前", "corresponding_time_position":["-h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間ぐらい前", "corresponding_time_position":["-h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半ぐらい前", "corresponding_time_position":["-h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間ほど前", "corresponding_time_position":["-h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半ほど前", "corresponding_time_position":["-h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間程度前", "corresponding_time_position":["-h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半程度前", "corresponding_time_position":["-h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間ばかり前", "corresponding_time_position":["-h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半ばかり前", "corresponding_time_position":["-h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間近く前", "corresponding_time_position":["-h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半近く前", "corresponding_time_position":["-h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間より前", "corresponding_time_position":["-h"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"時間半より前", "corresponding_time_position":["-h"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"時間よりも前", "corresponding_time_position":["-h"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"時間半よりも前", "corresponding_time_position":["-h"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"時間後", "corresponding_time_position":["+h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"時間半後", "corresponding_time_position":["+h"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"時間以上後", "corresponding_time_position":["+h"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"時間半以上後", "corresponding_time_position":["+h"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"時間より後", "corresponding_time_position":["+h"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"時間半より後", "corresponding_time_position":["+h"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"時間よりも後", "corresponding_time_position":["+h"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"時間半よりも後", "corresponding_time_position":["+h"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"時間ほど後", "corresponding_time_position":["+h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半ほど後", "corresponding_time_position":["+h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間くらい後", "corresponding_time_position":["+h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半くらい後", "corresponding_time_position":["+h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間ぐらい後", "corresponding_time_position":["+h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半ぐらい後", "corresponding_time_position":["+h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間程度後", "corresponding_time_position":["+h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半程度後", "corresponding_time_position":["+h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間ばかり後", "corresponding_time_position":["+h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半ばかり後", "corresponding_time_position":["+h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"時間近く後", "corresponding_time_position":["+h"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"時間半近く後", "corresponding_time_position":["+h"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分前", "corresponding_time_position":["-mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"分半前", "corresponding_time_position":["-mn"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"分以上前", "corresponding_time_position":["-mn"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"分半以上前", "corresponding_time_position":["-mn"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"分くらい前", "corresponding_time_position":["-mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半くらい前", "corresponding_time_position":["-mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分ぐらい前", "corresponding_time_position":["-mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半ぐらい前", "corresponding_time_position":["-mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分ほど前", "corresponding_time_position":["-mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半ほど前", "corresponding_time_position":["-mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分程度前", "corresponding_time_position":["-mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半程度前", "corresponding_time_position":["-mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分ばかり前", "corresponding_time_position":["-mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半ばかり前", "corresponding_time_position":["-mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分近く前", "corresponding_time_position":["-mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半近く前", "corresponding_time_position":["-mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分より前", "corresponding_time_position":["-mn"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"分半より前", "corresponding_time_position":["-mn"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"分よりも前", "corresponding_time_position":["-mn"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"分半よりも前", "corresponding_time_position":["-mn"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"分後", "corresponding_time_position":["+mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"分半後", "corresponding_time_position":["+mn"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"分以上後", "corresponding_time_position":["+mn"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"分半以上後", "corresponding_time_position":["+mn"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"分より後", "corresponding_time_position":["+mn"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"分半より後", "corresponding_time_position":["+mn"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"分よりも後", "corresponding_time_position":["+mn"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"分半よりも後", "corresponding_time_position":["+mn"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"分ほど後", "corresponding_time_position":["+mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半ほど後", "corresponding_time_position":["+mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分くらい後", "corresponding_time_position":["+mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半くらい後", "corresponding_time_position":["+mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分ぐらい後", "corresponding_time_position":["+mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半ぐらい後", "corresponding_time_position":["+mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分程度後", "corresponding_time_position":["+mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半程度後", "corresponding_time_position":["+mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分ばかり後", "corresponding_time_position":["+mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半ばかり後", "corresponding_time_position":["+mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"分近く後", "corresponding_time_position":["+mn"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"分半近く後", "corresponding_time_position":["+mn"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒前", "corresponding_time_position":["-s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"秒半前", "corresponding_time_position":["-s"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"秒以上前", "corresponding_time_position":["-s"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"秒半以上前", "corresponding_time_position":["-s"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"秒くらい前", "corresponding_time_position":["-s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半くらい前", "corresponding_time_position":["-s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒ぐらい前", "corresponding_time_position":["-s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半ぐらい前", "corresponding_time_position":["-s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒ほど前", "corresponding_time_position":["-s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半ほど前", "corresponding_time_position":["-s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒程度前", "corresponding_time_position":["-s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半程度前", "corresponding_time_position":["-s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒ばかり前", "corresponding_time_position":["-s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半ばかり前", "corresponding_time_position":["-s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒近く前", "corresponding_time_position":["-s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半近く前", "corresponding_time_position":["-s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒より前", "corresponding_time_position":["-s"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"秒半より前", "corresponding_time_position":["-s"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"秒よりも前", "corresponding_time_position":["-s"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"秒半よりも前", "corresponding_time_position":["-s"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"秒後", "corresponding_time_position":["+s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"秒半後", "corresponding_time_position":["+s"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"秒以上後", "corresponding_time_position":["+s"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"秒半以上後", "corresponding_time_position":["+s"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"秒より後", "corresponding_time_position":["+s"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"秒半より後", "corresponding_time_position":["+s"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"秒よりも後", "corresponding_time_position":["+s"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"秒半よりも後", "corresponding_time_position":["+s"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"秒ほど後", "corresponding_time_position":["+s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半ほど後", "corresponding_time_position":["+s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒くらい後", "corresponding_time_position":["+s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半くらい後", "corresponding_time_position":["+s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒ぐらい後", "corresponding_time_position":["+s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半ぐらい後", "corresponding_time_position":["+s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒程度後", "corresponding_time_position":["+s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半程度後", "corresponding_time_position":["+s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒ばかり後", "corresponding_time_position":["+s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半ばかり後", "corresponding_time_position":["+s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"秒近く後", "corresponding_time_position":["+s"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"秒半近く後", "corresponding_time_position":["+s"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月前", "corresponding_time_position":["-y", "-m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半前", "corresponding_time_position":["-y", "-m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月以上前", "corresponding_time_position":["-y", "-m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半以上前", "corresponding_time_position":["-y", "-m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月くらい前", "corresponding_time_position":["-y", "-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半くらい前", "corresponding_time_position":["-y", "-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ぐらい前", "corresponding_time_position":["-y", "-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半ぐらい前", "corresponding_time_position":["-y", "-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ほど前", "corresponding_time_position":["-y", "-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半ほど前", "corresponding_time_position":["-y", "-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月程度前", "corresponding_time_position":["-y", "-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半程度前", "corresponding_time_position":["-y", "-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ばかり前", "corresponding_time_position":["-y", "-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半ばかり前", "corresponding_time_position":["-y", "-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月近く前", "corresponding_time_position":["-y", "-m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半近く前", "corresponding_time_position":["-y", "-m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月より前", "corresponding_time_position":["-y", "-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半より前", "corresponding_time_position":["-y", "-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月よりも前", "corresponding_time_position":["-y", "-m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半よりも前", "corresponding_time_position":["-y", "-m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月後", "corresponding_time_position":["+y", "+m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半後", "corresponding_time_position":["+y", "+m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月以上後", "corresponding_time_position":["+y", "+m"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半以上後", "corresponding_time_position":["+y", "+m"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月より後", "corresponding_time_position":["+y", "+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半より後", "corresponding_time_position":["+y", "+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月よりも後", "corresponding_time_position":["+y", "+m"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半よりも後", "corresponding_time_position":["+y", "+m"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ほど後", "corresponding_time_position":["+y", "+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半ほど後", "corresponding_time_position":["+y", "+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月くらい後", "corresponding_time_position":["+y", "+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半くらい後", "corresponding_time_position":["+y", "+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ぐらい後", "corresponding_time_position":["+y", "+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半ぐらい後", "corresponding_time_position":["+y", "+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月程度後", "corresponding_time_position":["+y", "+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半程度後", "corresponding_time_position":["+y", "+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ばかり後", "corresponding_time_position":["+y", "+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半ばかり後", "corresponding_time_position":["+y", "+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月近く後", "corresponding_time_position":["+y", "+m"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半近く後", "corresponding_time_position":["+y", "+m"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間以上前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半以上前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間くらい前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半くらい前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間ぐらい前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半ぐらい前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間ほど前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半ほど前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間程度前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半程度前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間ばかり前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半ばかり前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間近く前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半近く前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間より前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半より前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間よりも前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半よりも前", "corresponding_time_position":["-y", "-m", "-d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間以上後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["or_over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半以上後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["or_over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間より後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半より後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間よりも後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["over"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半よりも後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["over", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間ほど後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半ほど後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間くらい後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半くらい後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間ぐらい後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半ぐらい後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間程度後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半程度後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間ばかり後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半ばかり後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間近く後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月ǂ日間半近く後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
+{"pattern":"世紀以内", "corresponding_time_position":["+seiki"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"年以内", "corresponding_time_position":["+y"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"年間以内", "corresponding_time_position":["+y"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"ヶ月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"か月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"カ月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"ヵ月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"ケ月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"箇月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"週以内", "corresponding_time_position":["+w"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"週間以内", "corresponding_time_position":["+w"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"日以内", "corresponding_time_position":["+d"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"日間以内", "corresponding_time_position":["+d"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"時間以内", "corresponding_time_position":["+h"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"分以内", "corresponding_time_position":["+mn"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"分間以内", "corresponding_time_position":["+mn"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"秒以内", "corresponding_time_position":["+s"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"秒間以内", "corresponding_time_position":["+s"], "process_type":["inai"], "ordinary":false, "option":""}
+{"pattern":"世紀", "corresponding_time_position":["seiki"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年", "corresponding_time_position":["y"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日ǂ時", "corresponding_time_position":["y", "m", "d", "h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日ǂ時ǂ分", "corresponding_time_position":["y", "m", "d", "h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日ǂ時ǂ分ǂ秒", "corresponding_time_position":["y", "m", "d", "h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日ǂ：ǂ", "corresponding_time_position":["y", "m", "d", "h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月ǂ日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月ǂ日ǂ時", "corresponding_time_position":["m", "d", "h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月ǂ日ǂ時ǂ分", "corresponding_time_position":["m", "d", "h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月ǂ日ǂ時ǂ分ǂ秒", "corresponding_time_position":["m", "d", "h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月ǂ日ǂ：ǂ", "corresponding_time_position":["m", "d", "h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日", "corresponding_time_position":["d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日ǂ時", "corresponding_time_position":["d", "h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日ǂ時ǂ分", "corresponding_time_position":["d", "h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日ǂ時ǂ分ǂ秒", "corresponding_time_position":["d", "h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日ǂ：ǂ", "corresponding_time_position":["d", "h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"時", "corresponding_time_position":["h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"時ǂ分", "corresponding_time_position":["h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"時ǂ分ǂ秒", "corresponding_time_position":["h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"分ǂ秒", "corresponding_time_position":["mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"/ǂ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"/ǂ/ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"／ǂ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"／ǂ／ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":":ǂ", "corresponding_time_position":["h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"：ǂ", "corresponding_time_position":["h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":":ǂ:ǂ", "corresponding_time_position":["h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"：ǂ：ǂ", "corresponding_time_position":["h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日午前ǂ時", "corresponding_time_position":["y", "m", "d", "h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日午前ǂ時ǂ分", "corresponding_time_position":["y", "m", "d", "h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日午前ǂ時ǂ分ǂ秒", "corresponding_time_position":["y", "m", "d", "h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月ǂ日午前ǂ時", "corresponding_time_position":["m", "d", "h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月ǂ日午前ǂ時ǂ分", "corresponding_time_position":["m", "d", "h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月ǂ日午前ǂ時ǂ分ǂ秒", "corresponding_time_position":["m", "d", "h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日午前ǂ時", "corresponding_time_position":["d", "h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日午前ǂ時ǂ分", "corresponding_time_position":["d", "h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日午前ǂ時ǂ分ǂ秒", "corresponding_time_position":["d", "h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"-ǂ-ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"−ǂ−ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ーǂーǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ǂ／ǂ／ǂ　ǂ：ǂ：ǂ", "corresponding_time_position":["y", "m", "d", "h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ǂ／ǂ／ǂ　ǂ：ǂ：ǂ", "corresponding_time_position":["y", "m", "d", "h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":".ǂ.ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":".ǂ", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日午後ǂ時", "corresponding_time_position":["y", "m", "d", "h"], "process_type":["gogo"], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日午後ǂ時ǂ分", "corresponding_time_position":["y", "m", "d", "h", "mn"], "process_type":["gogo"], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日午後ǂ時ǂ分ǂ秒", "corresponding_time_position":["y", "m", "d", "h", "mn", "s"], "process_type":["gogo"], "ordinary":false, "option":""}
+{"pattern":"月ǂ日午後ǂ時", "corresponding_time_position":["m", "d", "h"], "process_type":["gogo"], "ordinary":false, "option":""}
+{"pattern":"月ǂ日午後ǂ時ǂ分", "corresponding_time_position":["m", "d", "h", "mn"], "process_type":["gogo"], "ordinary":false, "option":""}
+{"pattern":"月ǂ日午後ǂ時ǂ分ǂ秒", "corresponding_time_position":["m", "d", "h", "mn", "s"], "process_type":["gogo"], "ordinary":false, "option":""}
+{"pattern":"日午後ǂ時", "corresponding_time_position":["d", "h"], "process_type":["gogo"], "ordinary":false, "option":""}
+{"pattern":"日午後ǂ時ǂ分", "corresponding_time_position":["d", "h", "mn"], "process_type":["gogo"], "ordinary":false, "option":""}
+{"pattern":"日午後ǂ時ǂ分ǂ秒", "corresponding_time_position":["d", "h", "mn", "s"], "process_type":["gogo"], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日ǂ時半", "corresponding_time_position":["y", "m", "d", "h"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日午前ǂ時半", "corresponding_time_position":["y", "m", "d", "h"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年ǂ月ǂ日午後ǂ時半", "corresponding_time_position":["y", "m", "d", "h"], "process_type":["gogo", "han"], "ordinary":false, "option":""}
+{"pattern":"月ǂ日ǂ時半", "corresponding_time_position":["m", "d", "h"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"月ǂ日午前ǂ時半", "corresponding_time_position":["m", "d", "h"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"月ǂ日午後ǂ時半", "corresponding_time_position":["m", "d", "h"], "process_type":["gogo", "han"], "ordinary":false, "option":""}
+{"pattern":"日ǂ時半", "corresponding_time_position":["d", "h"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"日午前ǂ時半", "corresponding_time_position":["d", "h"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"日午後ǂ時半", "corresponding_time_position":["d", "h"], "process_type":["gogo", "han"], "ordinary":false, "option":""}
+{"pattern":"時半", "corresponding_time_position":["h"], "process_type":["han"], "ordinary":false, "option":""}

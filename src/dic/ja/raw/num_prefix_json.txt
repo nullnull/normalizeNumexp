@@ -1,0 +1,8 @@
+{"pattern":"第", "option_type":"ordinary"}
+{"pattern":"約", "option_type":"about"}
+{"pattern":"だいたい", "option_type":"about"}
+{"pattern":"ほぼ", "option_type":"about"}
+{"pattern":"およそ", "option_type":"about"}
+{"pattern":"ほとんど", "option_type":"about"}
+{"pattern":"全", "option_type":"none"}
+{"pattern":"ちょうど", "option_type":"none"}

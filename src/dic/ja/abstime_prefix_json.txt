@@ -1,0 +1,15 @@
+{"pattern":"だいたい", "process_type":"about"}
+{"pattern":"およそ", "process_type":"about"}
+{"pattern":"紀元前", "process_type":"kigenzen"}
+{"pattern":"午前", "process_type":"gozen"}
+{"pattern":"午後", "process_type":"gogo"}
+{"pattern":"AM", "process_type":"gozen"}
+{"pattern":"PM", "process_type":"gogo"}
+{"pattern":"ちょうど", "process_type":"none"}
+{"pattern":"~", "process_type":"kara_prefix"}
+{"pattern":"〜", "process_type":"kara_prefix"}
+{"pattern":"～", "process_type":"kara_prefix"}
+{"pattern":"-", "process_type":"kara_prefix"}
+{"pattern":"−", "process_type":"kara_prefix"}
+{"pattern":"ー", "process_type":"kara_prefix"}
+{"pattern":"から", "process_type":"kara_prefix"}

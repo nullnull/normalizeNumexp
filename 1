@@ -1,0 +1,18 @@
+  File "./waf", line 161, in <module>
+    Scripting.waf_entry_point(cwd, VERSION, wafdir)
+  File "/Users/narisawa/src/digit_utils/.waf-1.6.9-7330c395352899063370590811613d1d/waflib/Scripting.py", line 95, in waf_entry_point
+    run_commands()
+  File "/Users/narisawa/src/digit_utils/.waf-1.6.9-7330c395352899063370590811613d1d/waflib/Scripting.py", line 148, in run_commands
+    run_command(cmd_name)
+  File "/Users/narisawa/src/digit_utils/.waf-1.6.9-7330c395352899063370590811613d1d/waflib/Scripting.py", line 140, in run_command
+    ctx.execute()
+  File "/Users/narisawa/src/digit_utils/.waf-1.6.9-7330c395352899063370590811613d1d/waflib/Context.py", line 87, in execute
+    self.recurse([os.path.dirname(g_module.root_path)])
+  File "/Users/narisawa/src/digit_utils/.waf-1.6.9-7330c395352899063370590811613d1d/waflib/Context.py", line 126, in recurse
+    raise Errors.WafError('No function %s defined in %s'%(name or self.fun,node.abspath()))
+ 
+No function 2 defined in /Users/narisawa/src/digit_utils/wscript
+  File "./waf", line 161, in <module>
+	Scripting.waf_entry_point(cwd, VERSION, wafdir)
+  File "/Users/narisawa/src/digit_utils/.waf-1.6.9-7330c395352899063370590811613d1d/waflib/Scripting.py", line 99, in waf_entry_point
+	Logs.error(e.msg)

@@ -1,0 +1,15 @@
+第	ordinary
+約	about
+だいたい	about
+ほぼ	about
+およそ	about
+ほとんど	about
+全	none
+ちょうど	none
+~	kara_prefix
+〜	kara_prefix
+～	kara_prefix
+-	kara_prefix
+−	kara_prefix
+ー	kara_prefix
+から	kara_prefix

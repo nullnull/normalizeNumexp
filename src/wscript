@@ -14,13 +14,6 @@ def build(bld):
         use = ['PFICOMMON', 'UX'],
         target = 'digit_utils'
         )
-    """
-    bld(features = 'cxx cprogram',
-        source = 'cgi_nee.cpp',
-        use = ['PFICOMMON'],
-        target = 'cgi_nee',
-        uselib_local = 'digit_utils')
-    """
 
     bld(features = 'cxx cprogram',
         source = 'main.cpp',

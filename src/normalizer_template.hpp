@@ -99,8 +99,8 @@ public:
   }
   
   void load_from_dictionaries(const std::string& limited_expression_dictionary, const std::string& prefix_counter_dictionary, const std::string& prefix_number_modifier_dictionary, const std::string& suffix_number_modifier_dictionary){
-    //std::string path = "../../src/dic/"; // TODO : 最終的にリソースはどういう形で読み込む？
-	std::string path = "/home/katsuma/src/digit_utils/src/dic/";
+    std::string path = "../../src/dic/"; // TODO : 最終的にリソースはどういう形で読み込む？
+	//std::string path = "/home/katsuma/src/digit_utils/src/dic/";
     path += language_; path += "/";
     load_from_dictionary(path+limited_expression_dictionary, limited_expressions_);
     load_from_dictionary(path+prefix_counter_dictionary, prefix_counters_);

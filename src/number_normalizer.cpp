@@ -338,7 +338,7 @@ void SymbolFixer::fix_prefix_symbol(const pfi::data::string::ustring& utext, std
 double SymbolFixer::create_decimal_value(const Number& number) {
   double decimal;
   decimal = number.value_lowerbound;
-  while (decimal > 1)
+  while (decimal >= 1)
     decimal *= 0.1;
   int place = 0;
   while (1) {
@@ -353,6 +353,7 @@ double SymbolFixer::create_decimal_value(const Number& number) {
 void SymbolFixer::fix_decimal_point(std::vector<Number>& numbers, int i, pfi::data::string::ustring decimal_strings) {
   double decimal = create_decimal_value(numbers[i+1]);
   numbers[i].value_lowerbound += decimal;
+  numbers[i].value_upperbound = numbers[i].value_lowerbound;
   numbers[i].original_expression += decimal_strings;
   numbers[i].original_expression += numbers[i+1].original_expression;
   numbers[i].position_end = numbers[i+1].position_end;

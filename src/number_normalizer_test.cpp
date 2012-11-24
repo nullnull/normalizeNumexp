@@ -126,6 +126,17 @@ TEST_F(NumberNormalizerTest, process_test2_decimal_point) {
   EXPECT_DOUBLE_EQ(3456789.456, result[1].value_lowerbound);
 }
 
+TEST_F(NumberNormalizerTest, process_test2_decimal_point2) {
+	const string text("131.1ポイントというスコアを叩き出した");
+	vector<Number> result;
+	std::string language("ja");
+	NumberNormalizer nn(language);
+	nn.process(text, result);
+	ASSERT_EQ(1, result.size());
+	EXPECT_DOUBLE_EQ(131.1, result[0].value_lowerbound);
+	EXPECT_DOUBLE_EQ(131.1, result[0].value_upperbound);
+}
+
 TEST_F(NumberNormalizerTest, process_test3_plus) {
   const string text("その+3,244人が＋３，４５６，７８９円でプラス百二十三万四千五百六十七円");
   vector<Number> result;

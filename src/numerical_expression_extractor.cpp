@@ -33,7 +33,7 @@ namespace numerical_expression_extractor{
 		//TODO : O(N^2)のアルゴリズム。対象となる表現と、その他すべての表現に対して重複をチェックしている。必要に応じて高速化する
 		//erase duration
 		for(int i=0; i<static_cast<int>(durationexps.size()); i++){
-			if(is_covered_by_other_type_expressions(durationexps[0], abstimeexps) || is_covered_by_other_type_expressions(durationexps[0], reltimeexps) || is_covered_by_other_type_expressions(durationexps[0], numexps)){
+			if(is_covered_by_other_type_expressions(durationexps[i], abstimeexps) || is_covered_by_other_type_expressions(durationexps[i], reltimeexps) || is_covered_by_other_type_expressions(durationexps[i], numexps)){
 				durationexps.erase(durationexps.begin() + i);
 				i--;
 			}
@@ -41,7 +41,7 @@ namespace numerical_expression_extractor{
 		
 		//erase reltime
 		for(int i=0; i<static_cast<int>(reltimeexps.size()); i++){
-			if(is_covered_by_other_type_expressions(reltimeexps[0], abstimeexps) || is_covered_by_other_type_expressions(reltimeexps[0], numexps) || is_covered_by_other_type_expressions(reltimeexps[0], durationexps)){
+			if(is_covered_by_other_type_expressions(reltimeexps[i], abstimeexps) || is_covered_by_other_type_expressions(reltimeexps[i], numexps) || is_covered_by_other_type_expressions(reltimeexps[i], durationexps)){
 				reltimeexps.erase(reltimeexps.begin() + i);
 				i--;
 			}
@@ -49,7 +49,7 @@ namespace numerical_expression_extractor{
 		
 		//erase numexp
 		for(int i=0; i<static_cast<int>(numexps.size()); i++){
-			if(is_covered_by_other_type_expressions(numexps[0], abstimeexps) || is_covered_by_other_type_expressions(numexps[0], reltimeexps) || is_covered_by_other_type_expressions(numexps[0], durationexps)){
+			if(is_covered_by_other_type_expressions(numexps[i], abstimeexps) || is_covered_by_other_type_expressions(numexps[i], reltimeexps) || is_covered_by_other_type_expressions(numexps[i], durationexps)){
 				numexps.erase(numexps.begin() + i);
 				i--;
 			}
@@ -57,7 +57,7 @@ namespace numerical_expression_extractor{
 		
 		//erase abstime
 		for(int i=0; i<static_cast<int>(abstimeexps.size()); i++){
-			if(is_covered_by_other_type_expressions(abstimeexps[0], numexps) || is_covered_by_other_type_expressions(abstimeexps[0], reltimeexps) || is_covered_by_other_type_expressions(abstimeexps[0], durationexps)){
+			if(is_covered_by_other_type_expressions(abstimeexps[i], numexps) || is_covered_by_other_type_expressions(abstimeexps[i], reltimeexps) || is_covered_by_other_type_expressions(abstimeexps[i], durationexps)){
 				abstimeexps.erase(abstimeexps.begin() + i);
 				i--;
 			}
@@ -65,7 +65,9 @@ namespace numerical_expression_extractor{
 	}
 	
 	
-	 void merge_normalize_expressions_into_result(const std::vector<numerical_expression_normalizer::NumericalExpression> numexps, const std::vector<abstime_expression_normalizer::AbstimeExpression> abstimeexps, const std::vector<reltime_expression_normalizer::ReltimeExpression> reltimeexps, const std::vector<duration_expression_normalizer::DurationExpression> durationexps, std::vector<std::string>& result){
+	 //void merge_normalize_expressions_into_result(const std::vector<numerical_expression_normalizer::NumericalExpression> numexps, const std::vector<abstime_expression_normalizer::AbstimeExpression> abstimeexps, const std::vector<reltime_expression_normalizer::ReltimeExpression> reltimeexps, const std::vector<duration_expression_normalizer::DurationExpression> durationexps, std::vector<std::string>& result){
+	void merge_normalize_expressions_into_result( std::vector<numerical_expression_normalizer::NumericalExpression> numexps,  std::vector<abstime_expression_normalizer::AbstimeExpression> abstimeexps,  std::vector<reltime_expression_normalizer::ReltimeExpression> reltimeexps,  std::vector<duration_expression_normalizer::DurationExpression> durationexps, std::vector<std::string>& result){
+
 	 //TODO : それぞれの正規形に、toString関数をつける？逆に分かり辛い？　とりあえずここで処理
 	 std::string kugiri("*");
 	 std::string tmpstr;
@@ -74,28 +76,29 @@ namespace numerical_expression_extractor{
 	 
 	 for(int i=0; i<static_cast<int>(numexps.size()); i++){
 	 ss.clear(); ss.str("");
-	 ss << "numerical" << "*" << numexps[i].original_expression << "*" << numexps[i].position_start << "*" << numexps[i].position_end << "*" << numexps[i].counter << "*" << numexps[i].value_lowerbound;
+	 ss << "numerical" << "*" << numexps[i].original_expression << "*" << numexps[i].position_start << "*" << numexps[i].position_end << "*" << numexps[i].counter << "*" << numexps[i].value_lowerbound << "*" << numexps[i].value_upperbound;
 	 ss >> tmpstr;
 	 result.push_back(tmpstr);
 	 }
 	 
 	 for(int i=0; i<static_cast<int>(abstimeexps.size()); i++){
 	 ss.clear(); ss.str("");
-	 ss << "abstime" << "*" << abstimeexps[i].original_expression << "*" << abstimeexps[i].position_start << "*" << abstimeexps[i].position_end << "*";
+	 ss << "abstime" << "*" << abstimeexps[i].original_expression << "*" << abstimeexps[i].position_start << "*" << abstimeexps[i].position_end << "*" << "none" << "*" << abstimeexps[i].value_lowerbound.to_string() << "*" << abstimeexps[i].value_upperbound.to_string();
 	 ss >> tmpstr;
 	 result.push_back(tmpstr);
 	 }
 	 
 	 for(int i=0; i<static_cast<int>(reltimeexps.size()); i++){
 	 ss.clear(); ss.str("");
-	 ss << "reltime" << "*" << reltimeexps[i].original_expression << "*" << reltimeexps[i].position_start << "*" << reltimeexps[i].position_end << "*";
+	 //TODO : 相対時間表現を、どう表示させるか？
+	 ss << "reltime" << "*" << reltimeexps[i].original_expression << "*" << reltimeexps[i].position_start << "*" << reltimeexps[i].position_end << "*" << "none" << "*" << reltimeexps[i].value_lowerbound_abs.to_string() << "," << reltimeexps[i].value_lowerbound_rel.to_string() << "*" << reltimeexps[i].value_upperbound_abs.to_string() << "," << reltimeexps[i].value_upperbound_rel.to_string();
 	 ss >> tmpstr;
 	 result.push_back(tmpstr);
 	 }
 	 
 	 for(int i=0; i<static_cast<int>(durationexps.size()); i++){
 	 ss.clear(); ss.str("");
-	 ss << "duration" << "*" << durationexps[i].original_expression << "*" << durationexps[i].position_start << "*" << durationexps[i].position_end << "*";
+	 ss << "duration" << "*" << durationexps[i].original_expression << "*" << durationexps[i].position_start << "*" << durationexps[i].position_end << "*" << "none" << "*" << durationexps[i].value_lowerbound.to_string() << "*" << durationexps[i].value_upperbound.to_string();
 	 ss >> tmpstr;
 	 result.push_back(tmpstr);
 	 }

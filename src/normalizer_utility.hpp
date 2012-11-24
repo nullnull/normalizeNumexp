@@ -9,7 +9,8 @@
 
 namespace normalizer_utility {
 using namespace digit_utility;
-struct Time {
+class Time {
+public:
   Time(const double value) {
     year = month = day = hour = minute = second = value;
   }
@@ -28,6 +29,38 @@ struct Time {
            t.hour == hour &&
            t.minute == minute &&
            t.second == second;
+  }
+
+  bool is_null_time_element(double t){
+	  return t==INFINITY || t==-INFINITY;
+  }
+  
+  std::string to_string_from_time_element(double t, std::string null_string, std::string kugiri){
+  	  std::stringstream ss;
+	  std::string ret;
+	  if(is_null_time_element(t)){
+		  return null_string + kugiri;
+	  }else{
+		  ss << t << kugiri;
+		  ss >> ret;
+		  return ret;
+	  }
+  }
+  
+  std::string to_string(){
+  	 std::stringstream ss;
+	 std::string ret;
+	 std::string kugiri("/");
+	 
+	 //ss << year << kugiri << month << kugiri << day << kugiri << hour << kugiri << minute << kugiri << second;
+	 ss << to_string_from_time_element(year, "YY", kugiri);
+	 ss << to_string_from_time_element(month, "MM", kugiri);
+	 ss << to_string_from_time_element(day, "DD", kugiri);
+	 ss << to_string_from_time_element(hour, "hh", kugiri);
+	 ss << to_string_from_time_element(minute, "mm", kugiri);
+	 ss << to_string_from_time_element(second, "ss", "");
+	 ss >> ret;
+	 return ret;
   }
 
   double year, month, day, hour, minute, second;

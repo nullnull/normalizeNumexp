@@ -7,19 +7,19 @@ def build(bld):
             features = 'gtest',
             source = source,
             target = target,
-            use = ['PFICOMMON','digit_utils', 'UX', 'boost_regex'])
+            use = ['PFICOMMON','normalizeNumexp', 'UX', 'boost_regex'])
 
     bld.shlib(
         source = ['digit_utility.cpp', 'number_normalizer.cpp', 'normalizer_utility.cpp',  'numerical_expression_normalizer.cpp', 'abstime_expression_normalizer.cpp', 'reltime_expression_normalizer.cpp', 'duration_expression_normalizer.cpp', 'numerical_expression_extractor.cpp'],
         use = ['PFICOMMON', 'UX'],
-        target = 'digit_utils'
+        target = 'normalizeNumexp'
         )
 
     bld(features = 'cxx cprogram',
         source = 'main.cpp',
         use = ['PFICOMMON'],
         target = 'main',
-        uselib_local = 'digit_utils')
+        uselib_local = 'normalizeNumexp')
 
     define_test('digit_utility_test.cpp')
     define_test('number_normalizer_test.cpp')

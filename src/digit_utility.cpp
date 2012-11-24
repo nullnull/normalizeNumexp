@@ -46,7 +46,8 @@ void load_from_dictionary(const std::string& filepath, std::vector<T>& load_targ
 
 void init_kansuji(const std::string& language){
   std::vector<ChineseCharacter> chinese_characters;
-  std::string path = "../../src/dic/"; // TODO : 最終的にリソースはどういう形で読み込む？
+  //std::string path = "../../src/dic/"; // TODO : 最終的にリソースはどういう形で読み込む？
+  std::string path = "/usr/local/lib/normalizeNumexp/dic/";
   //std::string path("/home/katsuma/src/digit_utils/src/dic/");
   if(language == "ja"){
     path += "ja/chinese_character.txt";

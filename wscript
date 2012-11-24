@@ -1,4 +1,4 @@
-
+import os
 APPNAME = 'numerical and temporal expression normalizer'
 VERSION = '0.5.0'
 
@@ -19,3 +19,13 @@ def configure(conf):
 
 def build(bld):
   bld.recurse('src')
+#  bld.install_files('${PREFIX}/include', 'src/*.hpp') #cannot install
+  for dpath, dnames, fnames in os.walk("src") :
+    for fname in fnames :
+      if not fname.endswith(".hpp") : continue
+      bld.install_files('${PREFIX}/include/normalizeNumexp/', [dpath+"/"+fname])
+  for dpath, dnames, fnames in os.walk("src/dic") :
+    for fname in fnames :
+      if not fname.endswith(".txt") : continue
+      bld.install_files('${PREFIX}/lib/normalizeNumexp/'+dpath[4:], [dpath+"/"+fname])
+  

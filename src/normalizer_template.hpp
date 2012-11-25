@@ -23,6 +23,7 @@
 #include "digit_utility.hpp"
 #include "number_normalizer.hpp"
 #include "normalizer_utility.hpp"
+#include "dictionary_dirpath.hpp"
 #include <unistd.h>
 
 namespace normalizer_template{
@@ -49,6 +50,7 @@ public:
 
   void load_json_from_file(const std::string& filepath, pfi::text::json::json& js) {
     std::ifstream in(filepath.c_str());
+	/*
     if(!in){
       //TODO : ファイルが見つからないときはどうする？
       std::cout << "cannot find file:" << filepath << std::endl;
@@ -57,6 +59,7 @@ public:
 		getcwd(dir,255);
 		std::cout<<"Current Directory : "<<dir<<std::endl;
     }
+	*/
     pfi::text::json::json_parser parser(in);
     try {
       while (true) {
@@ -67,11 +70,11 @@ public:
   }
   
   template <class T>
-  void load_from_dictionary(const std::string& filepath, std::vector<T>& load_target) {
+  void load_from_dictionary(const std::string& dictionary_path, std::vector<T>& load_target) {
     load_target.clear();
     try {
       pfi::text::json::json js = pfi::text::json::json(new pfi::text::json::json_array());
-      load_json_from_file(filepath, js);
+      load_json_from_file(dictionary_path, js);
       pfi::text::json::from_json(js, load_target);
     } catch( ... ) {
       std::cout << "dictionary load error" << std::endl; //TODO : error処理
@@ -99,14 +102,14 @@ public:
   }
   
   void load_from_dictionaries(const std::string& limited_expression_dictionary, const std::string& prefix_counter_dictionary, const std::string& prefix_number_modifier_dictionary, const std::string& suffix_number_modifier_dictionary){
-    //std::string path = "../../src/dic/"; // TODO : 最終的にリソースはどういう形で読み込む？
-	std::string path = "/usr/local/lib/normalizeNumexp/dic/";
-	//std::string path = "/home/katsuma/src/digit_utils/src/dic/";
-    path += language_; path += "/";
-    load_from_dictionary(path+limited_expression_dictionary, limited_expressions_);
-    load_from_dictionary(path+prefix_counter_dictionary, prefix_counters_);
-    load_from_dictionary(path+suffix_number_modifier_dictionary, suffix_number_modifier_);
-    load_from_dictionary(path+prefix_number_modifier_dictionary, prefix_number_modifier_);
+	std::string dictionary_path;
+	dictionary_path += dictionary_dirpath::get_dictionary_dirpath();
+    dictionary_path += language_; 
+	dictionary_path += "/";
+    load_from_dictionary(dictionary_path+limited_expression_dictionary, limited_expressions_);
+    load_from_dictionary(dictionary_path+prefix_counter_dictionary, prefix_counters_);
+    load_from_dictionary(dictionary_path+suffix_number_modifier_dictionary, suffix_number_modifier_);
+    load_from_dictionary(dictionary_path+prefix_number_modifier_dictionary, prefix_number_modifier_);
     
     build_patterns(limited_expressions_, limited_expression_patterns_);
     build_patterns_rev(prefix_counters_, prefix_counter_patterns_);

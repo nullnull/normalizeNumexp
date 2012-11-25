@@ -1,4 +1,5 @@
 #include "digit_utility.hpp"
+#include "dictionary_dirpath.hpp"
 #include <pficommon/text/json.h>
 //debug
 namespace digit_utility {
@@ -19,14 +20,6 @@ struct ChineseCharacter {
 
 void load_json_from_file(const std::string& filepath, pfi::text::json::json& js) {
   std::ifstream in(filepath.c_str());
-	if(!in){
-		//TODO : ファイルが見つからないときはどうする？
-		std::cout << "cannot find file:" << filepath << std::endl;
-		std::cout << "note: you can setup filepath in digit_utility.cpp:load_json_from_file() (TODO)" << std::endl;
-		char dir[255];
-		getcwd(dir,255);
-		std::cout<<"Current Directory : "<<dir<<std::endl;
-	}
   pfi::text::json::json_parser parser(in);
   try {
     while (true) {
@@ -37,26 +30,25 @@ void load_json_from_file(const std::string& filepath, pfi::text::json::json& js)
 }
 
 template <class T>
-void load_from_dictionary(const std::string& filepath, std::vector<T>& load_target) {
+void load_from_dictionary(const std::string& dictionary_path, std::vector<T>& load_target) {
   load_target.clear();
   pfi::text::json::json js = pfi::text::json::json(new pfi::text::json::json_array());
-  load_json_from_file(filepath, js);
+  load_json_from_file(dictionary_path, js);
   pfi::text::json::from_json(js, load_target);
 }
 
 void init_kansuji(const std::string& language){
   std::vector<ChineseCharacter> chinese_characters;
-  //std::string path = "../../src/dic/"; // TODO : 最終的にリソースはどういう形で読み込む？
-  std::string path = "/usr/local/lib/normalizeNumexp/dic/";
-  //std::string path("/home/katsuma/src/digit_utils/src/dic/");
+  std::string dictionary_path;
+  dictionary_path += dictionary_dirpath::get_dictionary_dirpath();
   if(language == "ja"){
-    path += "ja/chinese_character.txt";
+    dictionary_path += "ja/chinese_character.txt";
   }else if (language == "zh"){
-    path += "zh/chinese_character.txt";
+    dictionary_path += "zh/chinese_character.txt";
   }else {
     return;
   }
-  load_from_dictionary(path, chinese_characters);
+  load_from_dictionary(dictionary_path, chinese_characters);
   for(int i=0; i<chinese_characters.size(); i++){
     ENotationType notation_type;
     if(chinese_characters[i].NotationType == "09") notation_type = KANSUJI_09;

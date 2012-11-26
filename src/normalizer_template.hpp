@@ -50,16 +50,6 @@ public:
 
   void load_json_from_file(const std::string& filepath, pfi::text::json::json& js) {
     std::ifstream in(filepath.c_str());
-	/*
-    if(!in){
-      //TODO : ファイルが見つからないときはどうする？
-      std::cout << "cannot find file:" << filepath << std::endl;
-        std::cout << "note: you can setup filepath in normalizer_template.hpp:load_from_dictionaries() (TODO)" << std::endl;
-		char dir[255];
-		getcwd(dir,255);
-		std::cout<<"Current Directory : "<<dir<<std::endl;
-    }
-	*/
     pfi::text::json::json_parser parser(in);
     try {
       while (true) {

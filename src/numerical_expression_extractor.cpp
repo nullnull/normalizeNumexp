@@ -83,7 +83,7 @@ namespace numerical_expression_extractor{
 	 
 	 for(int i=0; i<static_cast<int>(abstimeexps.size()); i++){
 	 ss.clear(); ss.str("");
-	 ss << "abstime" << "*" << abstimeexps[i].original_expression << "*" << abstimeexps[i].position_start << "*" << abstimeexps[i].position_end << "*" << "none" << "*" << abstimeexps[i].value_lowerbound.to_string() << "*" << abstimeexps[i].value_upperbound.to_string();
+	 ss << "abstime" << "*" << abstimeexps[i].original_expression << "*" << abstimeexps[i].position_start << "*" << abstimeexps[i].position_end << "*" << "none" << "*" << abstimeexps[i].value_lowerbound.to_string(false) << "*" << abstimeexps[i].value_upperbound.to_string(true);
 	 ss >> tmpstr;
 	 result.push_back(tmpstr);
 	 }
@@ -91,14 +91,14 @@ namespace numerical_expression_extractor{
 	 for(int i=0; i<static_cast<int>(reltimeexps.size()); i++){
 	 ss.clear(); ss.str("");
 	 //TODO : 相対時間表現を、どう表示させるか？
-	 ss << "reltime" << "*" << reltimeexps[i].original_expression << "*" << reltimeexps[i].position_start << "*" << reltimeexps[i].position_end << "*" << "none" << "*" << reltimeexps[i].value_lowerbound_abs.to_string() << "," << reltimeexps[i].value_lowerbound_rel.to_string() << "*" << reltimeexps[i].value_upperbound_abs.to_string() << "," << reltimeexps[i].value_upperbound_rel.to_string();
+	 ss << "reltime" << "*" << reltimeexps[i].original_expression << "*" << reltimeexps[i].position_start << "*" << reltimeexps[i].position_end << "*" << "none" << "*" << reltimeexps[i].value_lowerbound_abs.to_string(false) << "," << reltimeexps[i].value_lowerbound_rel.to_string(false) << "*" << reltimeexps[i].value_upperbound_abs.to_string(true) << "," << reltimeexps[i].value_upperbound_rel.to_string(true);
 	 ss >> tmpstr;
 	 result.push_back(tmpstr);
 	 }
 	 
 	 for(int i=0; i<static_cast<int>(durationexps.size()); i++){
 	 ss.clear(); ss.str("");
-	 ss << "duration" << "*" << durationexps[i].original_expression << "*" << durationexps[i].position_start << "*" << durationexps[i].position_end << "*" << "none" << "*" << durationexps[i].value_lowerbound.to_string() << "*" << durationexps[i].value_upperbound.to_string();
+	 ss << "duration" << "*" << durationexps[i].original_expression << "*" << durationexps[i].position_start << "*" << durationexps[i].position_end << "*" << "none" << "*" << durationexps[i].value_lowerbound.to_string(false) << "*" << durationexps[i].value_upperbound.to_string(true);
 	 ss >> tmpstr;
 	 result.push_back(tmpstr);
 	 }

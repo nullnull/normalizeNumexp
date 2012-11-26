@@ -31,34 +31,42 @@ public:
            t.second == second;
   }
 
-  bool is_null_time_element(double t){
-	  return t==INFINITY || t==-INFINITY;
+  bool is_null_time_element(double t, bool is_upperbound){
+		if(is_upperbound) return t==-INFINITY;
+		else return t==INFINITY;
   }
+	
+	bool is_infinity_time_element(double t, bool is_upperbound){
+		if(is_upperbound) return t==INFINITY;
+		else return t==-INFINITY;
+	}
   
-  std::string to_string_from_time_element(double t, std::string null_string, std::string kugiri){
-  	  std::stringstream ss;
+  std::string to_string_from_time_element(double t, std::string null_string, std::string kugiri, bool is_upperbound){
+		std::stringstream ss;
 	  std::string ret;
-	  if(is_null_time_element(t)){
+	  if(is_null_time_element(t, is_upperbound)){
 		  return null_string + kugiri;
-	  }else{
+	  }else if(is_infinity_time_element(t, is_upperbound)){
+		  return "INF";
+		}else{
 		  ss << t << kugiri;
 		  ss >> ret;
 		  return ret;
 	  }
   }
   
-  std::string to_string(){
-  	 std::stringstream ss;
+  std::string to_string(bool is_upperbound){
+	 std::stringstream ss;
 	 std::string ret;
 	 std::string kugiri("/");
 	 
 	 //ss << year << kugiri << month << kugiri << day << kugiri << hour << kugiri << minute << kugiri << second;
-	 ss << to_string_from_time_element(year, "YY", kugiri);
-	 ss << to_string_from_time_element(month, "MM", kugiri);
-	 ss << to_string_from_time_element(day, "DD", kugiri);
-	 ss << to_string_from_time_element(hour, "hh", kugiri);
-	 ss << to_string_from_time_element(minute, "mm", kugiri);
-	 ss << to_string_from_time_element(second, "ss", "");
+	 ss << to_string_from_time_element(year, "YY", kugiri, is_upperbound);
+	 ss << to_string_from_time_element(month, "MM", kugiri, is_upperbound);
+	 ss << to_string_from_time_element(day, "DD", kugiri, is_upperbound);
+	 ss << to_string_from_time_element(hour, "hh", kugiri, is_upperbound);
+	 ss << to_string_from_time_element(minute, "mm", kugiri, is_upperbound);
+	 ss << to_string_from_time_element(second, "ss", "", is_upperbound);
 	 ss >> ret;
 	 return ret;
   }

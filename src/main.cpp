@@ -13,7 +13,10 @@ int main(){
   while(1) {
     sentence = "";
     cin >> sentence;
+    if(sentence.empty()) break;
     nee.extract_numerical_expression(sentence, result);
+
+    //show results
     for(int i=0; i<result.size(); i++){
       cout << result[i] << endl;
     }	

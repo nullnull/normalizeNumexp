@@ -18,6 +18,7 @@ def configure(conf):
   pass
 
 def build(bld):
+  create_dic_file(bld)
   bld.recurse('src')
 #  bld.install_files('${PREFIX}/include', 'src/*.hpp') #cannot install
   for dpath, dnames, fnames in os.walk("src") :
@@ -29,3 +30,13 @@ def build(bld):
       if not fname.endswith(".txt") : continue
       bld.install_files('${PREFIX}/lib/normalizeNumexp/'+dpath[4:], [dpath+"/"+fname])
   
+
+def create_dic_file(bld) :
+	source = """
+#include "dictionary_dirpath.hpp"
+namespace dictionary_dirpath {
+std::string get_dictionary_dirpath(){
+			return \""""
+	source += str(bld.env.PREFIX) + "/lib/normalizeNumexp/dic/\";}}"
+	fout = open("./src/dictionary_dirpath.cpp", "w")
+	fout.write(source)

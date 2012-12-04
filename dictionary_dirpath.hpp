@@ -1,0 +1,1 @@
+/home/katsuma/usr/local

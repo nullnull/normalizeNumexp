@@ -3,7 +3,6 @@
 #include <string>
 
 namespace dictionary_dirpath {
-//std::string dictionary_dirpath;
 std::string get_dictionary_dirpath();
 }
 

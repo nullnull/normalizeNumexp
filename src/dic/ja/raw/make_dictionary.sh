@@ -8,9 +8,10 @@ python create_dic_number_modifier.py abstime_setubiji.txt > ../reltime_suffix_js
 python create_dic_number_modifier.py duration_setouji.txt > ../duration_prefix_json.txt
 python create_dic_number_modifier.py duration_setubiji.txt > ../duration_suffix_json.txt
 python create_dic_num.py > ../num_counter_json.txt
-cat num_prefix_counter_json.txt > ../num_prefix_counter_json.txt
+python create_dic_num_prefix_counter.py > ../num_prefix_counter_json.txt
 python create_dic_abstime.py > ../abstime_expression_json.txt
 python create_dic_abstime_prefix_counter.py > ../abstime_prefix_counter_json.txt
 python create_dic_reltime.py > ../reltime_expression_json.txt
 python create_dic_reltime_prefix_counter.py > ../reltime_prefix_counter_json.txt
 python create_dic_duration.py > ../duration_expression_json.txt
+python create_dic_inappropriate.py > ../inappropriate_strings_json.txt

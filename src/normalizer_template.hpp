@@ -31,7 +31,7 @@ namespace normalizer_template{
 template <class AnyTypeExpression, class AnyTypeLimitedExpression>
 class NormalizerTemplate{
 public:
-  virtual void init() = 0;  
+  virtual void init() = 0;
   virtual void normalize_number(const std::string& text, std::vector<digit_utility::Number>& numbers) = 0;
   virtual void revise_any_type_expression_by_matching_limited_expression(std::vector<AnyTypeExpression>& any_type_expressions, int& expression_id, AnyTypeLimitedExpression matching_limited_expression) = 0;
   virtual void revise_any_type_expression_by_matching_prefix_counter(AnyTypeExpression& any_type_expression, const AnyTypeLimitedExpression& matching_limited_expression) = 0;

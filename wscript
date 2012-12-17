@@ -38,5 +38,6 @@ namespace dictionary_dirpath {
 std::string get_dictionary_dirpath(){
 			return \""""
 	source += str(bld.env.PREFIX) + "/lib/normalizeNumexp/dic/\";}}"
+#	source += "/home/katsuma/src/normalizeNumexp/src/dic/\";}}"
 	fout = open("./src/dictionary_dirpath.cpp", "w")
 	fout.write(source)

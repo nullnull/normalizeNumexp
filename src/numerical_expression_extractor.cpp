@@ -26,10 +26,11 @@ namespace numerical_expression_extractor{
 		return false;
 	}
 	
-	void delete_inappropriate_extraction(std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
-										 std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
-										 std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
-										 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
+	
+	void delete_duplicate_extraction(std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
+																	 std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
+																	 std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
+																	 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
 		//TODO : O(N^2)のアルゴリズム。対象となる表現と、その他すべての表現に対して重複をチェックしている。必要に応じて高速化する
 		//erase duration
 		for(int i=0; i<static_cast<int>(durationexps.size()); i++){
@@ -61,11 +62,43 @@ namespace numerical_expression_extractor{
 				abstimeexps.erase(abstimeexps.begin() + i);
 				i--;
 			}
-		}
+		}															 
 	}
 	
 	
-	 //void merge_normalize_expressions_into_result(const std::vector<numerical_expression_normalizer::NumericalExpression> numexps, const std::vector<abstime_expression_normalizer::AbstimeExpression> abstimeexps, const std::vector<reltime_expression_normalizer::ReltimeExpression> reltimeexps, const std::vector<duration_expression_normalizer::DurationExpression> durationexps, std::vector<std::string>& result){
+	
+	
+	template <class AnyTypeExpression>
+	void NumericalExpressionExtractor::delete_inappropriate_extraction_using_dictionary_one_type(std::vector<AnyTypeExpression>& any_type_expressions){
+		for(int i=0; i<static_cast<int>(any_type_expressions.size()); i++){
+			if(inappropriate_strings_to_bool[pfi::data::string::ustring_to_string(any_type_expressions[i].original_expression)]){
+				any_type_expressions.erase(any_type_expressions.begin() + i);
+				i--;
+			}
+		}	
+		return;
+	}
+	
+	void NumericalExpressionExtractor::delete_inappropriate_extraction_using_dictionary(std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
+																			 std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
+																			 std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
+																			 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
+		delete_inappropriate_extraction_using_dictionary_one_type(numexps);
+		delete_inappropriate_extraction_using_dictionary_one_type(abstimeexps);
+		delete_inappropriate_extraction_using_dictionary_one_type(reltimeexps);
+		delete_inappropriate_extraction_using_dictionary_one_type(durationexps);					
+	}
+	
+	
+	void NumericalExpressionExtractor::delete_inappropriate_extraction(std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
+										 std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
+										 std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
+										 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
+		delete_duplicate_extraction(numexps, abstimeexps, reltimeexps, durationexps);
+		delete_inappropriate_extraction_using_dictionary(numexps, abstimeexps, reltimeexps, durationexps);
+	}
+	
+	
 	void merge_normalize_expressions_into_result( std::vector<numerical_expression_normalizer::NumericalExpression> numexps,  std::vector<abstime_expression_normalizer::AbstimeExpression> abstimeexps,  std::vector<reltime_expression_normalizer::ReltimeExpression> reltimeexps,  std::vector<duration_expression_normalizer::DurationExpression> durationexps, std::vector<std::string>& result){
 
 	 //TODO : それぞれの正規形に、toString関数をつける？逆に分かり辛い？　とりあえずここで処理
@@ -105,10 +138,48 @@ namespace numerical_expression_extractor{
 	 }
 	 
 	
-	NumericalExpressionExtractor::NumericalExpressionExtractor(const std::string& language) : NEN(language), AEN(language), REN(language), DEN(language) {}
+	//TODO : digit_utilityのをそのまま使いたかったが、うまく読み込んでくれないので直コピー
+	void load_json_from_file(const std::string& filepath, pfi::text::json::json& js) {
+		std::ifstream in(filepath.c_str());
+		pfi::text::json::json_parser parser(in);
+		try {
+			while (true) {
+				js.add(parser.parse());
+			}
+		} catch (const pfi::lang::end_of_data&) {
+		}
+	}
+	
+	template <class T>
+	void load_from_dictionary(const std::string& dictionary_path, std::vector<T>& load_target) {
+		load_target.clear();
+		pfi::text::json::json js = pfi::text::json::json(new pfi::text::json::json_array());
+		load_json_from_file(dictionary_path, js);
+		pfi::text::json::from_json(js, load_target);
+	}
+
+	
+	void NumericalExpressionExtractor::init_inappropriate_stringss(const std::string& language){
+		std::vector<InappropriateStrings> inappropriate_stringss;
+		std::string dictionary_path;
+		dictionary_path += dictionary_dirpath::get_dictionary_dirpath();
+    dictionary_path += language;
+		dictionary_path += "/inappropriate_strings_json.txt";
+		load_from_dictionary(dictionary_path, inappropriate_stringss); 
+		
+		for(int i=0; i<static_cast<int>(inappropriate_stringss.size()); i++){
+			inappropriate_strings_to_bool[inappropriate_stringss[i].str] = true;
+		}
+	}
+	
+	
+	NumericalExpressionExtractor::NumericalExpressionExtractor(const std::string& language) : NEN(language), AEN(language), REN(language), DEN(language) {
+		std::string dictionary_path;
+		init_inappropriate_stringss(language);
+	}
 	
 	void NumericalExpressionExtractor::extract_numerical_expression(const std::string& text, std::vector<std::string>& result){
-		result.clear(); //TODO : 結果をどのような形で返すかはScrewの実装に合わせて。とりあえず、original_expressionのみを格納したvectorを返す。
+		result.clear();
 		std::vector<numerical_expression_normalizer::NumericalExpression> numexps;
 		std::vector<abstime_expression_normalizer::AbstimeExpression> abstimeexps;
 		std::vector<reltime_expression_normalizer::ReltimeExpression> reltimeexps;

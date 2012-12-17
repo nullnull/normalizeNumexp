@@ -42,10 +42,10 @@ TEST_F(AbstimeexpNormalizerTest, simple1) {
 
 TEST_F(AbstimeexpNormalizerTest, simple2) {
   AbstimeExpressionNormalizer AEN("ja");
-  std::string text("1989-7-21　1989.7.21　1989/7/21");
+  std::string text("1989-7-21　1989.7.21　1989/7/21 １９８９．７．２１");
   std::vector<AbstimeExpression> abstimeexps;
   AEN.process(text, abstimeexps);
-  ASSERT_EQ(3u, abstimeexps.size());
+  ASSERT_EQ(4u, abstimeexps.size());
   
   Time ex_lower(1989,7,21, INFINITY, INFINITY, INFINITY);
   Time ex_upper(1989,7,21, -INFINITY, -INFINITY, -INFINITY);
@@ -60,6 +60,10 @@ TEST_F(AbstimeexpNormalizerTest, simple2) {
   EXPECT_EQ("1989/7/21", ustring_to_string(abstimeexps[2].original_expression));
   EXPECT_TRUE(is_same_time(ex_lower, abstimeexps[2].value_lowerbound));
   EXPECT_TRUE(is_same_time(ex_upper, abstimeexps[2].value_upperbound));
+
+  EXPECT_EQ("１９８９．７．２１", ustring_to_string(abstimeexps[3].original_expression));
+  EXPECT_TRUE(is_same_time(ex_lower, abstimeexps[3].value_lowerbound));
+  EXPECT_TRUE(is_same_time(ex_upper, abstimeexps[3].value_upperbound));
 }
 
 TEST_F(AbstimeexpNormalizerTest, gogo) {

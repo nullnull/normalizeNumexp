@@ -252,3 +252,7 @@
 {"pattern":"平成", "corresponding_time_position":[], "process_type":["1988"], "ordinary":false, "option":"seireki"}
 {"pattern":"H", "corresponding_time_position":[], "process_type":["1988"], "ordinary":false, "option":"seireki"}
 {"pattern":"紀元前", "corresponding_time_position":[], "process_type":[], "ordinary":false, "option":"kigenzen"}
+{"pattern":"午前", "corresponding_time_position":[], "process_type":[], "ordinary":false, "option":"gozen"}
+{"pattern":"午後", "corresponding_time_position":[], "process_type":[], "ordinary":false, "option":"gogo"}
+{"pattern":"AM", "corresponding_time_position":[], "process_type":[], "ordinary":false, "option":"gozen"}
+{"pattern":"PM", "corresponding_time_position":[], "process_type":[], "ordinary":false, "option":"gogo"}

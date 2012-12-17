@@ -1,10 +1,5 @@
 だいたい	about
 およそ	about
-紀元前	kigenzen
-午前	gozen
-午後	gogo
-AM	gozen
-PM	gogo
 ちょうど	none
 ~	kara_prefix
 〜	kara_prefix

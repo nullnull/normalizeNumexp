@@ -72,21 +72,9 @@ TEST_F(NumexpExtractorTest, real_example1) {
 	string text("【今日から開催】The Fruits of Adventures @ ZEIT-FOTO SALON(東京・京橋)  4/26(Tue)まで");
 	NumericalExpressionExtractor NEE(language);
 	NEE.extract_numerical_expression(text, result);
-	for(int i=0; i<result.size(); i++){
-		cout << result[i] << endl;
-	}
 	ASSERT_EQ(1u, result.size());
 	EXPECT_EQ("abstime*4/26*59*63*none*YY/4/26/hh/mm/ss*YY/4/26/hh/mm/ss", result[0]);
-}
-
-TEST_F(NumexpExtractorTest, inappropriate_strings1) {
-	vector<string> result;
-	string language("ja");
-	string text("一体それがどうしたというのだね。九州。四国。");
-	NumericalExpressionExtractor NEE(language);
-	NEE.extract_numerical_expression(text, result);
 	for(int i=0; i<result.size(); i++){
 		cout << result[i] << endl;
 	}
-	ASSERT_EQ(0u, result.size());
 }

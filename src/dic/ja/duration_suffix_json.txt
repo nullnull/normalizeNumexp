@@ -1,16 +1,4 @@
 {"pattern":"目", "process_type":"ordinary"}
-{"pattern":"よりもはるかに大きい", "process_type":"over"}
-{"pattern":"よりもはるかに小さい", "process_type":"less"}
-{"pattern":"よりもかなり大きい", "process_type":"over"}
-{"pattern":"よりもかなり小さい", "process_type":"less"}
-{"pattern":"よりも少し大きい", "process_type":"over"}
-{"pattern":"よりも少し小さい", "process_type":"less"}
-{"pattern":"よりも多少大きい", "process_type":"over"}
-{"pattern":"よりも多少小さい", "process_type":"less"}
-{"pattern":"よりも大きい", "process_type":"over"}
-{"pattern":"よりも小さい", "process_type":"less"}
-{"pattern":"より大きい", "process_type":"over"}
-{"pattern":"より小さい", "process_type":"less"}
 {"pattern":"以下", "process_type":"or_less"}
 {"pattern":"以前", "process_type":"or_less"}
 {"pattern":"以内", "process_type":"or_less"}

@@ -1,1 +1,5 @@
 紀元前	kigenzen
+午前	gozen
+午後	gogo
+AM	gozen
+PM	gogo

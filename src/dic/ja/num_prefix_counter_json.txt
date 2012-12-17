@@ -1,5 +1,5 @@
-{"pattern":"¥", "counter":"円", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
 {"pattern":"￥", "counter":"円", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"¥", "counter":"円", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
 {"pattern":"$", "counter":"ドル", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
 {"pattern":"＄", "counter":"ドル", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
 {"pattern":"€", "counter":"ユーロ", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
@@ -13,6 +13,6 @@
 {"pattern":"週", "counter":"/week", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
 {"pattern":"月", "counter":"/month", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
 {"pattern":"年", "counter":"/year", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
-{"pattern":"最大", "counter":"", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
-{"pattern":"最長", "counter":"", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
-{"pattern":"最高", "counter":"", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
+{"pattern":"最大", "counter":"(saidai)", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
+{"pattern":"最長", "counter":"(saityou)", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
+{"pattern":"最高", "counter":"(saikou)", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}

@@ -16,6 +16,7 @@ public:
   }
 };
 
+
 TEST_F(NumberNormalizerTest, extract_one_number_test) {
   const string input("それは三十二年前の出来事");
   NumberExtractor ne;
@@ -253,6 +254,16 @@ TEST_F(NumberNormalizerTest, invalid_notation_type2) {
   ASSERT_EQ(2u, result.size());
   EXPECT_EQ("２００７", ustring_to_string(result[0].original_expression));
   EXPECT_EQ("二十", ustring_to_string(result[1].original_expression));
+}
+
+TEST_F(NumberNormalizerTest, commma_range1) {
+  const string text("1,2個");
+  vector<Number> result;
+  std::string language("ja");
+  NumberNormalizer nn(language);
+  nn.process(text, result);
+  ASSERT_EQ(1u, result.size());
+  EXPECT_EQ("1,2", ustring_to_string(result[0].original_expression));
 }
 
 TEST_F(NumberNormalizerTest, chinese1) {

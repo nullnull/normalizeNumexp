@@ -92,3 +92,15 @@ y m d h mn s
 y m d
 .*
 y m
+．*
+y m
+．*．*
+y m d
+・*
+y m
+・*・*
+y m d
+，*
+y m
+，*，*
+y m d

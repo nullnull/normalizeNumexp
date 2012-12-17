@@ -678,25 +678,6 @@
 {"pattern":"年ǂヶ月ǂ日間半ばかり後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
 {"pattern":"年ǂヶ月ǂ日間近く後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about"], "ordinary":false, "option":""}
 {"pattern":"年ǂヶ月ǂ日間半近く後", "corresponding_time_position":["+y", "+m", "+d"], "process_type":["about", "han"], "ordinary":false, "option":""}
-{"pattern":"世紀以内", "corresponding_time_position":["+seiki"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"年以内", "corresponding_time_position":["+y"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"年間以内", "corresponding_time_position":["+y"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"ヶ月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"か月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"カ月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"ヵ月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"ケ月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"箇月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"月以内", "corresponding_time_position":["+m"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"週以内", "corresponding_time_position":["+w"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"週間以内", "corresponding_time_position":["+w"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"日以内", "corresponding_time_position":["+d"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"日間以内", "corresponding_time_position":["+d"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"時間以内", "corresponding_time_position":["+h"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"分以内", "corresponding_time_position":["+mn"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"分間以内", "corresponding_time_position":["+mn"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"秒以内", "corresponding_time_position":["+s"], "process_type":["inai"], "ordinary":false, "option":""}
-{"pattern":"秒間以内", "corresponding_time_position":["+s"], "process_type":["inai"], "ordinary":false, "option":""}
 {"pattern":"世紀", "corresponding_time_position":["seiki"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":"年", "corresponding_time_position":["y"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":"年ǂ月", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
@@ -744,6 +725,12 @@
 {"pattern":"ǂ／ǂ／ǂ　ǂ：ǂ：ǂ", "corresponding_time_position":["y", "m", "d", "h", "mn", "s"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":".ǂ.ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":".ǂ", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"．ǂ", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"．ǂ．ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"・ǂ", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"・ǂ・ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"，ǂ", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"，ǂ，ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":"年ǂ月ǂ日午後ǂ時", "corresponding_time_position":["y", "m", "d", "h"], "process_type":["gogo"], "ordinary":false, "option":""}
 {"pattern":"年ǂ月ǂ日午後ǂ時ǂ分", "corresponding_time_position":["y", "m", "d", "h", "mn"], "process_type":["gogo"], "ordinary":false, "option":""}
 {"pattern":"年ǂ月ǂ日午後ǂ時ǂ分ǂ秒", "corresponding_time_position":["y", "m", "d", "h", "mn", "s"], "process_type":["gogo"], "ordinary":false, "option":""}

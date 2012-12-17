@@ -231,6 +231,8 @@ TEST_F(ReltimeexpNormalizerTest, prefix_counter2) {
   EXPECT_TRUE(is_same_time(ex1_upper_rel, reltimeexps[0].value_upperbound_rel));
 }
 
+/*
+//これは持続時間表現とした。
 TEST_F(ReltimeexpNormalizerTest, inai1) {
   ReltimeExpressionNormalizer REN("ja");
   std::string text("あの人なら三時間以内で仕上げるでしょう。");
@@ -249,6 +251,7 @@ TEST_F(ReltimeexpNormalizerTest, inai1) {
   EXPECT_TRUE(is_same_time(ex1_lower_rel, reltimeexps[0].value_lowerbound_rel));
   EXPECT_TRUE(is_same_time(ex1_upper_rel, reltimeexps[0].value_upperbound_rel));
 }
+*/
 
 TEST_F(ReltimeexpNormalizerTest, abstime_expression) {
   ReltimeExpressionNormalizer REN("ja");

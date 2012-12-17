@@ -377,7 +377,7 @@ void SymbolFixer::fix_intermediate_symbol(const pfi::data::string::ustring& utex
   if (digit_utility::is_decimal_point(intermediate)) {
     fix_decimal_point(numbers, i, intermediate);
   }
-  if (digit_utility::is_range_expression(intermediate)) {
+  if ((digit_utility::is_range_expression(intermediate)) || (digit_utility::is_comma(intermediate[0]) && intermediate.size() == 1 && (numbers[i].value_lowerbound == numbers[i+1].value_upperbound-1))) { //範囲表現か、コンマの並列表現のとき
     fix_range_expression(numbers, i, intermediate);
   }
   //TODO : 「数」の処理はどうする？　「百数十円」など
@@ -462,6 +462,9 @@ void NumberNormalizer::process_dont_fix_by_symbol(const std::string& text, std::
     ArabicNumberConverter NC;
     convert_number(NC, numbers);
   }
+	
+	//「京」「万」など単独のものを削除する（ここで処理を行わないと、「数万」などに対応できない）
+	remove_only_kansuji_kurai_man(numbers);
 
 }
   

@@ -90,3 +90,57 @@ TEST_F(NumexpExtractorTest, inappropriate_strings1) {
 	}
 	ASSERT_EQ(0u, result.size());
 }
+
+/*
+//TODO : 未対応。現在は絶対時間表現として抽出してしまう。
+TEST_F(NumexpExtractorTest, inappropriate_prefix1) {
+	vector<string> result;
+	string language("ja");
+	string text("ver2.3.4。ver２．３。");
+	NumericalExpressionExtractor NEE(language);
+	NEE.extract_numerical_expression(text, result);
+	for(int i=0; i<result.size(); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(0u, result.size());
+}
+*/
+
+TEST_F(NumexpExtractorTest, inappropriate_abstime1) {
+	vector<string> result;
+	string language("ja");
+	string text("198999年30月41日。080-6006-4451。ver2.0");
+	NumericalExpressionExtractor NEE(language);
+	NEE.extract_numerical_expression(text, result);
+	for(int i=0; i<result.size(); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(0u, result.size());
+}
+
+TEST_F(NumexpExtractorTest, revise_abstime1) {
+	vector<string> result;
+	string language("ja");
+	string text("09年5月。99年5月");
+	NumericalExpressionExtractor NEE(language);
+	NEE.extract_numerical_expression(text, result);
+	for(int i=0; i<result.size(); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(2u, result.size());
+	EXPECT_EQ("abstime*09年5月*0*5*none*2009/5/DD/hh/mm/ss*2009/5/DD/hh/mm/ss", result[0]);
+	EXPECT_EQ("abstime*99年5月*6*11*none*1999/5/DD/hh/mm/ss*1999/5/DD/hh/mm/ss", result[1]);	
+}
+
+TEST_F(NumexpExtractorTest, revise_abstime2) {
+	vector<string> result;
+	string language("ja");
+	string text("西暦99年5月");
+	NumericalExpressionExtractor NEE(language);
+	NEE.extract_numerical_expression(text, result);
+	for(int i=0; i<result.size(); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(1u, result.size());
+	EXPECT_EQ("abstime*西暦99年5月*0*7*none*99/5/DD/hh/mm/ss*99/5/DD/hh/mm/ss", result[0]);
+}

@@ -26,11 +26,13 @@ namespace numerical_expression_extractor{
 											 std::vector<duration_expression_normalizer::DurationExpression>& durationexps);
 											 
 		void init_inappropriate_stringss(const std::string& language);
-		void delete_inappropriate_extraction(std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
+		void delete_inappropriate_extraction(const std::string& text,
+																				 std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
 																				 std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
 																				 std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
 																				 std::vector<duration_expression_normalizer::DurationExpression>& durationexps);
-		void delete_inappropriate_extraction_using_dictionary(std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
+		void delete_inappropriate_extraction_using_dictionary(const std::string& text,
+																													std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
 																													std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
 																													std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
 																													std::vector<duration_expression_normalizer::DurationExpression>& durationexps);
@@ -42,7 +44,6 @@ namespace numerical_expression_extractor{
 		abstime_expression_normalizer::AbstimeExpressionNormalizer AEN;
 		reltime_expression_normalizer::ReltimeExpressionNormalizer REN;
 		duration_expression_normalizer::DurationExpressionNormalizer DEN;
-//		vector<InappropriateStrings> inappropriate_stringss;
 		std::map<std::string, bool> inappropriate_strings_to_bool;
 	};
 } //namespace numerical_expression_extractor

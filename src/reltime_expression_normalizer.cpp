@@ -206,12 +206,180 @@ namespace reltime_expression_normalizer {
     }
     reltimeexp.position_start -= pfi::data::string::string_to_ustring(matching_limited_expression.pattern).size();
   }
+	
+	
+	
+	
+	
+	
+	
+	/*
+	 　修飾語による規格化表現の補正処理。
+	 	絶対表現と同じ処理を念のため書き加えたが、絶対表現と同じ修飾表現 + 相対時間表現は存在しないと考えられるので、恐らく必要ない。
+	 */
+	
+	void do_time_about(ReltimeExpression& reltimeexp) {
+		//「およそ1000年前」「2か月前頃」など
+		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_rel, &tvu = reltimeexp.value_upperbound_rel;
+		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_rel);
+		if (target_time_position == "year") {
+			tvl.year -= 5;
+			tvu.year += 5;
+		} else if (target_time_position == "month") {
+			tvl.month -= 1;
+			tvu.month += 1;
+		} else if (target_time_position == "day") {
+			tvl.day -= 1;
+			tvu.day += 1;
+		} else if (target_time_position == "hour") {
+			tvl.hour -= 1;
+			tvu.hour += 1;
+		} else if (target_time_position == "minute") {
+			tvl.minute -= 5;
+			tvu.minute += 5;
+		} else if (target_time_position == "second") {
+			tvl.second -= 5;
+			tvu.second += 5;
+		}
+	}
+	
+	//~~他の処理も同様
+	void do_time_zenhan(ReltimeExpression& reltimeexp) {
+		//「18世紀前半」「1989年前半」「7月前半」「3日朝」など。
+		//TODO : 「18世紀はじめ」などもzenhanに括ってしまっている。より細かく分類が行いたい場合は、hajime関数などを書いて処理
+		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
+		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
+		if (target_time_position == "year") {
+			if(tvl.year != tvu.year){
+				//「18世紀前半」のとき
+				tvu.year = (tvl.year + tvu.year)/2 -0.5;
+			} else {
+				//「1989年前半」のとき
+				tvl.month = 1;
+				tvu.month = 6;
+			}
+		} else if (target_time_position == "month") {
+			//「7月前半」のとき
+			tvl.day = 1;
+			tvl.day = 15;
+		} else if (target_time_position == "day") {
+			//「3日朝」のとき
+			tvl.hour = 5;
+			tvu.hour = 12;
+		} else {
+			//これ以外でzenhanになる場合はない？　処理を行わない。
+		}
+	}
+	
+	
+	void do_time_kouhan(ReltimeExpression& reltimeexp) {
+		//「18世紀後半」「1989年後半」「7月後半」など。
+		//TODO : 「18世紀末」「3日夜」などもkouhanに括ってしまっている。
+		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
+		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
+		if (target_time_position == "year") {
+			if(tvl.year != tvu.year){
+				//「18世紀後半」のとき
+				tvl.year = (tvl.year + tvu.year)/2 +0.5;;
+			} else {
+				//「1989年後半」のとき
+				tvl.month = 7;
+				tvu.month = 12;
+			}
+		} else if (target_time_position == "month") {
+			//「7月後半」のとき
+			tvl.day = 16;
+			tvl.day = 31;
+		} else if (target_time_position == "day") {
+			//「3日夜」のとき
+			tvl.hour = 18;
+			tvu.hour = 24;
+		} else {
+			//これ以外の場合はない？　処理を行わない。
+		}
+	}
+	
+	
+	void do_time_nakaba(ReltimeExpression& reltimeexp) {
+		//「18世紀中盤」「1989年中盤」「7月中盤」など。
+		//TODO : 「18世紀なかば」「3日昼」などもnakabaに括ってしまっている。
+		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
+		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
+		if (target_time_position == "year") {
+			if(tvl.year != tvu.year){
+				//「18世紀中盤」のとき
+				int tmp = (tvu.year - tvl.year)/4;
+				tvl.year += tmp;
+				tvu.year -= tmp;
+			} else {
+				//「1989年中盤」のとき
+				tvl.month = 4;
+				tvu.month = 9;
+			}
+		} else if (target_time_position == "month") {
+			//「7月半ば」のとき
+			tvl.day = 10;
+			tvl.day = 20;
+		} else if (target_time_position == "day") {
+			//「3日昼」のとき
+			tvl.hour = 10;
+			tvu.hour = 15;
+		} else {
+			//これ以外の場合はない？　処理を行わない。
+		}
+	}
+	
+	
+	void do_time_joujun(ReltimeExpression& reltimeexp) {
+		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
+		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
+		if (target_time_position == "month") {
+			tvl.day = 1;
+			tvu.day = 10;
+		} 
+	}
+	
+	void do_time_tyujun(ReltimeExpression& reltimeexp) {
+		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
+		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
+		if (target_time_position == "month") {
+			tvl.day = 11;
+			tvu.day = 20;
+		} 
+	}
+	
+	void do_time_gejun(ReltimeExpression& reltimeexp) {
+		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
+		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
+		if (target_time_position == "month") {
+			tvl.day = 21;
+			tvu.day = 31;
+		} 
+	} 
   
   void ReltimeExpressionNormalizer::revise_any_type_expression_by_number_modifier(ReltimeExpression& reltimeexp,
                                                                                   const normalizer_utility::NumberModifier& number_modifier) {
     std::string process_type = number_modifier.process_type;
     //or_overなどのタイプは、reltimeではexpression_jsonの方で記述されており、これはrevise_reltimeexp_by_process_typeで処理されるので、ここでは処理しない。（TODO : 辞書からありえない表現をのぞく）
-    reltimeexp.options.push_back(process_type);
+		if (process_type == "none") {
+			;
+		} else if (process_type == "about") {
+			do_time_about(reltimeexp);
+		} else if (process_type == "zenhan") {
+			do_time_zenhan(reltimeexp);
+		} else if (process_type == "kouhan") {
+			do_time_kouhan(reltimeexp);
+		} else if (process_type == "nakaba") {
+			do_time_nakaba(reltimeexp);
+		} else if (process_type == "joujun") {
+			do_time_joujun(reltimeexp);
+		} else if (process_type == "tyujun") {
+			do_time_tyujun(reltimeexp);
+		} else if (process_type == "gejun") {
+			do_time_gejun(reltimeexp);
+		}	else {
+			reltimeexp.options.push_back(process_type);
+		}
   }
   
   void ReltimeExpressionNormalizer::delete_not_any_type_expression(std::vector<ReltimeExpression>& reltimeexps){

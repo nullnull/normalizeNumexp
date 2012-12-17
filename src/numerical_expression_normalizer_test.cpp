@@ -53,26 +53,22 @@ TEST_F(NumexpNormalizerTest, simple2) {
 
 TEST_F(NumexpNormalizerTest, about1) {
   NumericalExpressionNormalizer NEN("ja");
-  std::string text("その約三人がぼぼぼぼ");
+  std::string text("その約十人がぼぼぼぼ");
   std::vector<NumericalExpression> numexps;
   NEN.process(text, numexps);
-  NumericalExpression ex(string_to_ustring("約三人"), 2, 5, 3.0, 3.0);
+  NumericalExpression ex(string_to_ustring("約十人"), 2, 5, 7, 13.0);
   ex.counter = string_to_ustring("人");
   EXPECT_TRUE(is_same_numexp(ex, numexps[0]));
-  ASSERT_EQ(1u, numexps[0].options.size());
-  EXPECT_EQ(numexps[0].options[0], "about");
 }
 
 TEST_F(NumexpNormalizerTest, about2) {
   NumericalExpressionNormalizer NEN("ja");
-  std::string text("そのおよそ三人がぼぼぼぼ");
+  std::string text("そのおよそ十人がぼぼぼぼ");
   std::vector<NumericalExpression> numexps;
   NEN.process(text, numexps);
-  NumericalExpression ex(string_to_ustring("およそ三人"), 2, 7, 3.0, 3.0);
+  NumericalExpression ex(string_to_ustring("およそ十人"), 2, 7, 7, 13.0);
   ex.counter = string_to_ustring("人");
   EXPECT_TRUE(is_same_numexp(ex, numexps[0]));
-  ASSERT_EQ(1u, numexps[0].options.size());
-  EXPECT_EQ(numexps[0].options[0], "about");
 }
 
 TEST_F(NumexpNormalizerTest, or_over) {
@@ -87,14 +83,12 @@ TEST_F(NumexpNormalizerTest, or_over) {
 
 TEST_F(NumexpNormalizerTest, about_and_or_over) {
   NumericalExpressionNormalizer NEN("ja");
-  std::string text("その約三人以上がぼぼぼぼ");
+  std::string text("その約十人以上がぼぼぼぼ");
   std::vector<NumericalExpression> numexps;
   NEN.process(text, numexps);
-  NumericalExpression ex(string_to_ustring("約三人以上"), 2, 7, 3.0, INFINITY);
+  NumericalExpression ex(string_to_ustring("約十人以上"), 2, 7, 7.0, INFINITY);
   ex.counter = string_to_ustring("人");
   EXPECT_TRUE(is_same_numexp(ex, numexps[0]));
-  ASSERT_EQ(1u, numexps[0].options.size());
-  EXPECT_EQ(numexps[0].options[0], "about");
 }
 
 TEST_F(NumexpNormalizerTest, or_less) {
@@ -112,11 +106,9 @@ TEST_F(NumexpNormalizerTest, kyou) {
   std::string text("レッドブルを10本強飲んだ");
   std::vector<NumericalExpression> numexps;
   NEN.process(text, numexps);
-  NumericalExpression ex(string_to_ustring("10本強"), 6, 10, 10, 10.0);
+  NumericalExpression ex(string_to_ustring("10本強"), 6, 10, 10, 16);
   ex.counter = string_to_ustring("本");
   EXPECT_TRUE(is_same_numexp(ex, numexps[0]));
-  ASSERT_EQ(1u, numexps[0].options.size());
-  EXPECT_EQ(numexps[0].options[0], "kyou");
 }
 
 TEST_F(NumexpNormalizerTest, jaku) {
@@ -124,11 +116,9 @@ TEST_F(NumexpNormalizerTest, jaku) {
   std::string text("レッドブルを10本弱飲んだ");
   std::vector<NumericalExpression> numexps;
   NEN.process(text, numexps);
-  NumericalExpression ex(string_to_ustring("10本弱"), 6, 10, 10, 10);
+  NumericalExpression ex(string_to_ustring("10本弱"), 6, 10, 5, 10);
   ex.counter = string_to_ustring("本");
   EXPECT_TRUE(is_same_numexp(ex, numexps[0]));
-  ASSERT_EQ(1u, numexps[0].options.size());
-  EXPECT_EQ(numexps[0].options[0], "jaku");
 }
 
 TEST_F(NumexpNormalizerTest, ordinary) {
@@ -284,15 +274,13 @@ TEST_F(NumexpNormalizerTest, range9) {
   std::string text("およそ時速50km〜60kmくらい");
   std::vector<NumericalExpression> numexps;
   NEN.process(text, numexps);
-  NumericalExpression ex(string_to_ustring("およそ時速50km〜60kmくらい"), 0, 17, 50000, 60000);
+  NumericalExpression ex(string_to_ustring("およそ時速50km〜60kmくらい"), 0, 17, 35000, 78000);
   ex.counter = string_to_ustring("m/h");
   ASSERT_EQ(1u, numexps.size());
   EXPECT_TRUE(is_same_numexp(ex, numexps[0]));
-  ASSERT_EQ(4u, numexps[0].options.size());
+  ASSERT_EQ(2u, numexps[0].options.size());
   EXPECT_EQ("kara_suffix", numexps[0].options[0]);
-  EXPECT_EQ("about", numexps[0].options[1]);
-  EXPECT_EQ("about", numexps[0].options[2]);
-  EXPECT_EQ("kara_prefix", numexps[0].options[3]); //optionsにおいて、unique処理を行うかどうか、またkara_suffix, kara_prefixを処理するべきかどうか、どちらとも言えないので、とりあえずこのように定義する
+  EXPECT_EQ("kara_prefix", numexps[0].options[1]); //optionsにおいて、unique処理を行うかどうか、またkara_suffix, kara_prefixを処理するべきかどうか、どちらとも言えないので、とりあえずこのように定義する
 }
 
 TEST_F(NumexpNormalizerTest, chinese1) {

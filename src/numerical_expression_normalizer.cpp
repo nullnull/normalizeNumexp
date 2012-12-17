@@ -46,8 +46,6 @@ void NumericalExpressionNormalizer::revise_any_type_expression_by_matching_prefi
 void NumericalExpressionNormalizer::revise_any_type_expression_by_number_modifier(NumericalExpression& numexp, const normalizer_utility::NumberModifier& number_modifier){
   std::string process_type = number_modifier.process_type;
   /* 「約」などのNumberModifierの処理を行う。
-   　TODO : 「約」がどの数字の範囲を示しているのか？などは厳密に定義できない。できれば、ユーザーが自由に定義できるようにしたい。ので、この関数の一部を編集可能にしたい。　　どうやる???
-            現状では「約」などの処理はoptionsとして記述しておき、規格化の際には処理を行わない。
    */
   if(process_type == "or_over"){
     numexp.value_upperbound = INFINITY;
@@ -72,19 +70,16 @@ void NumericalExpressionNormalizer::revise_any_type_expression_by_number_modifie
     ;
   }else if(process_type == "per"){
     // TODO : どんな処理をするか未定。　該当する事例は「1ページ毎」など。
-  }else {
+  }else if(process_type == "about"){
+    numexp.value_lowerbound *= 0.7;
+    numexp.value_upperbound *= 1.3;
+	}else if(process_type == "kyou"){
+    numexp.value_upperbound *= 1.6;
+  }else if(process_type == "jaku"){
+    numexp.value_lowerbound *= 0.5;
+	}else {
     numexp.options.push_back(process_type);
-  }
-  
-  /*
-   else if(process_type == "about"){
-   //numexp.value_lowerbound *= 0.7;
-   //numexp.value_upperbound *= 1.3;
-   }else if(process_type == "kyou"){
-   //numexp.value_upperbound *= 1.6;
-   }else if(process_type == "jaku"){
-   //numexp.value_lowerbound *= 0.5;
-   */
+	}
 }
   
 void NumericalExpressionNormalizer::delete_not_any_type_expression(std::vector<NumericalExpression>& numexps){

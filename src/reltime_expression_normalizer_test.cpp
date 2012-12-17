@@ -81,7 +81,7 @@ TEST_F(ReltimeexpNormalizerTest, plural1) {
   Time ex2_lower_rel(-14000, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
   Time ex2_upper_rel(-14000, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
   
-  EXPECT_EQ("から36万年前", ustring_to_string(reltimeexps[0].original_expression)); //TODO : 「から」を範囲表現として辞書にいれると、こうなってしまう。どうする？
+  EXPECT_EQ("から36万年前", ustring_to_string(reltimeexps[0].original_expression)); //TODO : 「から」を範囲表現として辞書にいれると、こうなってしまう。今後の課題
   EXPECT_TRUE(is_same_time(ex1_lower_abs, reltimeexps[0].value_lowerbound_abs));
   EXPECT_TRUE(is_same_time(ex1_upper_abs, reltimeexps[0].value_upperbound_abs));
   EXPECT_TRUE(is_same_time(ex1_lower_rel, reltimeexps[0].value_lowerbound_rel));
@@ -261,3 +261,36 @@ TEST_F(ReltimeexpNormalizerTest, abstime_expression) {
   ASSERT_EQ(0u, reltimeexps.size());
 }
 
+TEST_F(ReltimeexpNormalizerTest, about1) {
+  ReltimeExpressionNormalizer REN("ja");
+  std::string text("およそ1000年前");
+  std::vector<ReltimeExpression> reltimeexps;
+  REN.process(text, reltimeexps);
+  ASSERT_EQ(1u, reltimeexps.size());
+  Time ex1_lower_abs(INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper_abs(-INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
+  Time ex1_lower_rel(-1005, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper_rel(-995, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
+  EXPECT_EQ("およそ1000年前", ustring_to_string(reltimeexps[0].original_expression));
+  EXPECT_TRUE(is_same_time(ex1_lower_abs, reltimeexps[0].value_lowerbound_abs));
+  EXPECT_TRUE(is_same_time(ex1_upper_abs, reltimeexps[0].value_upperbound_abs));
+  EXPECT_TRUE(is_same_time(ex1_lower_rel, reltimeexps[0].value_lowerbound_rel));
+  EXPECT_TRUE(is_same_time(ex1_upper_rel, reltimeexps[0].value_upperbound_rel));
+}
+
+TEST_F(ReltimeexpNormalizerTest, about2) {
+  ReltimeExpressionNormalizer REN("ja");
+  std::string text("約3ヶ月後");
+  std::vector<ReltimeExpression> reltimeexps;
+  REN.process(text, reltimeexps);
+  ASSERT_EQ(1u, reltimeexps.size());
+  Time ex1_lower_abs(INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper_abs(-INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
+  Time ex1_lower_rel(INFINITY, 2, INFINITY, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper_rel(-INFINITY, 4, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
+  EXPECT_EQ("約3ヶ月後", ustring_to_string(reltimeexps[0].original_expression));
+  EXPECT_TRUE(is_same_time(ex1_lower_abs, reltimeexps[0].value_lowerbound_abs));
+  EXPECT_TRUE(is_same_time(ex1_upper_abs, reltimeexps[0].value_upperbound_abs));
+  EXPECT_TRUE(is_same_time(ex1_lower_rel, reltimeexps[0].value_lowerbound_rel));
+  EXPECT_TRUE(is_same_time(ex1_upper_rel, reltimeexps[0].value_upperbound_rel));
+}

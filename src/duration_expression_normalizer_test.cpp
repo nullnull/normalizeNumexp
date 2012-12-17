@@ -145,15 +145,14 @@ TEST_F(DurationexpNormalizerTest, about_suffix) {
   DEN.process(text, durationexps);
   ASSERT_EQ(1u, durationexps.size());
   
-  Time ex1_lower(INFINITY, INFINITY, INFINITY, 3, INFINITY, INFINITY);
-  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 3, -INFINITY, -INFINITY);
+  Time ex1_lower(INFINITY, INFINITY, INFINITY, 2, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 4, -INFINITY, -INFINITY);
   
   EXPECT_EQ("三時間くらい", ustring_to_string(durationexps[0].original_expression));
   EXPECT_TRUE(is_same_time(ex1_lower, durationexps[0].value_lowerbound));
   EXPECT_TRUE(is_same_time(ex1_upper, durationexps[0].value_upperbound));
-  ASSERT_EQ(1u, durationexps[0].options.size());
-  EXPECT_EQ(durationexps[0].options[0], "about");
 }
+
 
 TEST_F(DurationexpNormalizerTest, about_prefix) {
   DurationExpressionNormalizer DEN("ja");
@@ -162,12 +161,42 @@ TEST_F(DurationexpNormalizerTest, about_prefix) {
   DEN.process(text, durationexps);
   ASSERT_EQ(1u, durationexps.size());
   
-  Time ex1_lower(INFINITY, INFINITY, INFINITY, 3, INFINITY, INFINITY);
-  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 3, -INFINITY, -INFINITY);
+  Time ex1_lower(INFINITY, INFINITY, INFINITY, 2, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 4, -INFINITY, -INFINITY);
   
   EXPECT_EQ("ほぼ三時間", ustring_to_string(durationexps[0].original_expression));
   EXPECT_TRUE(is_same_time(ex1_lower, durationexps[0].value_lowerbound));
   EXPECT_TRUE(is_same_time(ex1_upper, durationexps[0].value_upperbound));
-  ASSERT_EQ(1u, durationexps[0].options.size());
-  EXPECT_EQ(durationexps[0].options[0], "about");
+}
+
+
+TEST_F(DurationexpNormalizerTest, kyou) {
+  DurationExpressionNormalizer DEN("ja");
+  std::string text("あの人は三時間強は耐えた");
+  std::vector<DurationExpression> durationexps;
+  DEN.process(text, durationexps);
+  ASSERT_EQ(1u, durationexps.size());
+  
+  Time ex1_lower(INFINITY, INFINITY, INFINITY, 3, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 4, -INFINITY, -INFINITY);
+  
+  EXPECT_EQ("三時間強", ustring_to_string(durationexps[0].original_expression));
+  EXPECT_TRUE(is_same_time(ex1_lower, durationexps[0].value_lowerbound));
+  EXPECT_TRUE(is_same_time(ex1_upper, durationexps[0].value_upperbound));
+}
+
+
+TEST_F(DurationexpNormalizerTest, jaku) {
+  DurationExpressionNormalizer DEN("ja");
+  std::string text("あの人は三時間弱は耐えた");
+  std::vector<DurationExpression> durationexps;
+  DEN.process(text, durationexps);
+  ASSERT_EQ(1u, durationexps.size());
+  
+  Time ex1_lower(INFINITY, INFINITY, INFINITY, 2, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 3, -INFINITY, -INFINITY);
+  
+  EXPECT_EQ("三時間弱", ustring_to_string(durationexps[0].original_expression));
+  EXPECT_TRUE(is_same_time(ex1_lower, durationexps[0].value_lowerbound));
+  EXPECT_TRUE(is_same_time(ex1_upper, durationexps[0].value_upperbound));
 }

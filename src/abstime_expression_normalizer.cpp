@@ -39,6 +39,7 @@ void set_time(AbstimeExpression& abstimeexp, const std::string& corresponding_ti
 }
 
 void revise_abstimeexp_by_process_type(AbstimeExpression& abstimeexp, std::string process_type) {
+	//修飾語でない、パターンに含まれるprocess_typeによる規格化表現の補正処理。
   if (process_type == "gogo") {
     abstimeexp.value_lowerbound.hour += 12;
     abstimeexp.value_upperbound.hour += 12;
@@ -50,6 +51,7 @@ void revise_abstimeexp_by_process_type(AbstimeExpression& abstimeexp, std::strin
 
 void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_limited_expression(std::vector<AbstimeExpression>& abstimeexps, int &expression_id,
     const LimitedAbstimeExpression matching_limited_abstime_expression) {
+	//一致したパターンに応じて、規格化を行う
   int final_integrated_abstimeexp_id = expression_id + matching_limited_abstime_expression.total_number_of_place_holder;
   abstimeexps[expression_id].position_end = abstimeexps[final_integrated_abstimeexp_id].position_end
       + matching_limited_abstime_expression.length_of_strings_after_final_place_holder;
@@ -65,6 +67,7 @@ void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_limited
 }
 
 void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_prefix_counter(AbstimeExpression& any_type_expression, const LimitedAbstimeExpression& matching_limited_expression) {
+	//一致したパターンに応じて、規格化を行う（数字の前側に単位等が来る場合。絶対時間表現の場合「西暦」など）
   if(matching_limited_expression.option == "seireki"){
     int tmp;
     normalizer_utility::cast(matching_limited_expression.process_type[0], tmp);
@@ -74,17 +77,21 @@ void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_prefix_
   any_type_expression.position_start -= pfi::data::string::string_to_ustring(matching_limited_expression.pattern).size();
 }
 
+
+
+
+
 /*
- aboutタイプなどの処理は規格化の際に行わないことになったので、コメントアウト。
- 規格化の際に処理を行うとすると、以下のような処理を行う予定。
+　修飾語による規格化表現の補正処理。
+*/
  
-void do_time_about(AbstimeExpression& abstimeexp) { //TODO : 「about」という処理タイプの処理を行う
+void do_time_about(AbstimeExpression& abstimeexp) {
   normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
   const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
   if (target_time_position == "year") {
-    //TODO : 「1800年ごろ」という指定なら1790~1810くらいだと感じる　「1811年ごろ」という指定なら1810~1812くらいだと感じる　　どんな実装が良いか相談
-    tvl.year -= 1;
-    tvu.year += 1;
+    //TODO : 「1800年ごろ」という指定なら1790~1810くらいだと感じる　「1811年ごろ」という指定なら1810~1812くらいだと感じる　　以下は雑な実装
+    tvl.year -= 5;
+    tvu.year += 5;
   } else if (target_time_position == "month") {
     tvl.month -= 1;
     tvu.month += 1;
@@ -104,9 +111,118 @@ void do_time_about(AbstimeExpression& abstimeexp) { //TODO : 「about」とい�
 }
 
  //~~他の処理も同様
-void do_time_zenhann(AbstimeExpression& abstimeexp) {
+void do_time_zenhan(AbstimeExpression& abstimeexp) {
+	//「18世紀前半」「1989年前半」「7月前半」「3日朝」など。
+	//TODO : 「18世紀はじめ」などもzenhanに括ってしまっている。より細かく分類が行いたい場合は、hajime関数などを書いて処理
+	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
+  const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
+  if (target_time_position == "year") {
+    if(tvl.year != tvu.year){
+			//「18世紀前半」のとき
+			tvu.year = (tvl.year + tvu.year)/2 -0.5;
+		} else {
+			//「1989年前半」のとき
+			tvl.month = 1;
+			tvu.month = 6;
+		}
+  } else if (target_time_position == "month") {
+		//「7月前半」のとき
+    tvl.day = 1;
+		tvl.day = 15;
+  } else if (target_time_position == "day") {
+		//「3日朝」のとき
+    tvl.hour = 5;
+		tvu.hour = 12;
+  } else {
+		//これ以外でzenhanになる場合はない？　処理を行わない。
+	}
 }
- */
+
+
+void do_time_kouhan(AbstimeExpression& abstimeexp) {
+	//「18世紀後半」「1989年後半」「7月後半」など。
+	//TODO : 「18世紀末」「3日夜」などもkouhanに括ってしまっている。
+	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
+	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
+	if (target_time_position == "year") {
+		if(tvl.year != tvu.year){
+			//「18世紀後半」のとき
+			tvl.year = (tvl.year + tvu.year)/2 +0.5;;
+		} else {
+			//「1989年後半」のとき
+			tvl.month = 7;
+			tvu.month = 12;
+		}
+	} else if (target_time_position == "month") {
+		//「7月後半」のとき
+		tvl.day = 16;
+		tvl.day = 31;
+	} else if (target_time_position == "day") {
+		//「3日夜」のとき
+		tvl.hour = 18;
+		tvu.hour = 24;
+	} else {
+		//これ以外の場合はない？　処理を行わない。
+	}
+}
+
+
+void do_time_nakaba(AbstimeExpression& abstimeexp) {
+	//「18世紀中盤」「1989年中盤」「7月中盤」など。
+	//TODO : 「18世紀なかば」「3日昼」などもnakabaに括ってしまっている。
+	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
+	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
+	if (target_time_position == "year") {
+		if(tvl.year != tvu.year){
+			//「18世紀中盤」のとき
+			int tmp = (tvu.year - tvl.year)/4;
+			tvl.year += tmp;
+			tvu.year -= tmp;
+		} else {
+			//「1989年中盤」のとき
+			tvl.month = 4;
+			tvu.month = 9;
+		}
+	} else if (target_time_position == "month") {
+		//「7月半ば」のとき
+		tvl.day = 10;
+		tvl.day = 20;
+	} else if (target_time_position == "day") {
+		//「3日昼」のとき
+		tvl.hour = 10;
+		tvu.hour = 15;
+	} else {
+		//これ以外の場合はない？　処理を行わない。
+	}
+}
+
+
+void do_time_joujun(AbstimeExpression& abstimeexp) {
+	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
+	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
+	if (target_time_position == "month") {
+			tvl.day = 1;
+			tvu.day = 10;
+	} 
+}
+
+void do_time_tyujun(AbstimeExpression& abstimeexp) {
+	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
+	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
+	if (target_time_position == "month") {
+			tvl.day = 11;
+			tvu.day = 20;
+	} 
+}
+
+void do_time_gejun(AbstimeExpression& abstimeexp) {
+	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
+	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
+	if (target_time_position == "month") {
+			tvl.day = 21;
+			tvu.day = 31;
+	} 
+} 
 
 void AbstimeExpressionNormalizer::revise_any_type_expression_by_number_modifier(AbstimeExpression& abstimeexp,
     const normalizer_utility::NumberModifier& number_modifier) {
@@ -123,11 +239,35 @@ void AbstimeExpressionNormalizer::revise_any_type_expression_by_number_modifier(
     abstimeexp.include_upperbound = false;
   } else if (process_type == "none") {
     ;
-  } else {
-    abstimeexp.options.push_back(process_type); // TODO : 「約」などの処理は規格化行わない？　要検討
+  } else if (process_type == "about") {
+		do_time_about(abstimeexp);
+	} else if (process_type == "zenhan") {
+		do_time_zenhan(abstimeexp);
+	} else if (process_type == "kouhan") {
+		do_time_kouhan(abstimeexp);
+	} else if (process_type == "nakaba") {
+		do_time_nakaba(abstimeexp);
+	} else if (process_type == "joujun") {
+		do_time_joujun(abstimeexp);
+	} else if (process_type == "tyujun") {
+		do_time_tyujun(abstimeexp);
+	} else if (process_type == "gejun") {
+		do_time_gejun(abstimeexp);
+	}	else {
+    abstimeexp.options.push_back(process_type);
   }
 }
   
+
+
+
+
+
+
+/*
+　その他の処理
+*/
+
 void AbstimeExpressionNormalizer::delete_not_any_type_expression(std::vector<AbstimeExpression>& abstimeexps){
   for(int i=0; i<static_cast<int>(abstimeexps.size()); i++){
     if(normalizer_utility::is_null_time(abstimeexps[i].value_lowerbound) && normalizer_utility::is_null_time(abstimeexps[i].value_upperbound)){

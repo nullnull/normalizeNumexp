@@ -2689,20 +2689,21 @@ SWIG_Python_MustGetPtr(PyObject *obj, swig_type_info *ty, int argnum, int flags)
 #define SWIGTYPE_p_allocator_type swig_types[0]
 #define SWIGTYPE_p_char swig_types[1]
 #define SWIGTYPE_p_difference_type swig_types[2]
-#define SWIGTYPE_p_numerical_expression_extractor__NumericalExpressionExtractor swig_types[3]
-#define SWIGTYPE_p_p_PyObject swig_types[4]
-#define SWIGTYPE_p_size_type swig_types[5]
-#define SWIGTYPE_p_std__invalid_argument swig_types[6]
-#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[7]
-#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t__allocator_type swig_types[8]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[9]
-#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t__allocator_type swig_types[10]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[11]
-#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t__allocator_type swig_types[12]
-#define SWIGTYPE_p_swig__SwigPyIterator swig_types[13]
-#define SWIGTYPE_p_value_type swig_types[14]
-static swig_type_info *swig_types[16];
-static swig_module_info swig_module = {swig_types, 15, 0, 0, 0, 0};
+#define SWIGTYPE_p_numerical_expression_extractor__InappropriateStrings swig_types[3]
+#define SWIGTYPE_p_numerical_expression_extractor__NumericalExpressionExtractor swig_types[4]
+#define SWIGTYPE_p_p_PyObject swig_types[5]
+#define SWIGTYPE_p_size_type swig_types[6]
+#define SWIGTYPE_p_std__invalid_argument swig_types[7]
+#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t swig_types[8]
+#define SWIGTYPE_p_std__vectorT_double_std__allocatorT_double_t_t__allocator_type swig_types[9]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t swig_types[10]
+#define SWIGTYPE_p_std__vectorT_int_std__allocatorT_int_t_t__allocator_type swig_types[11]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t swig_types[12]
+#define SWIGTYPE_p_std__vectorT_std__string_std__allocatorT_std__string_t_t__allocator_type swig_types[13]
+#define SWIGTYPE_p_swig__SwigPyIterator swig_types[14]
+#define SWIGTYPE_p_value_type swig_types[15]
+static swig_type_info *swig_types[17];
+static swig_module_info swig_module = {swig_types, 16, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -10670,6 +10671,106 @@ SWIGINTERN PyObject *StringVector_swigregister(PyObject *SWIGUNUSEDPARM(self), P
   return SWIG_Py_Void();
 }
 
+SWIGINTERN PyObject *_wrap_InappropriateStrings_str_set(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  numerical_expression_extractor::InappropriateStrings *arg1 = (numerical_expression_extractor::InappropriateStrings *) 0 ;
+  std::string *arg2 = 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  int res2 = SWIG_OLDOBJ ;
+  PyObject * obj0 = 0 ;
+  PyObject * obj1 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"OO:InappropriateStrings_str_set",&obj0,&obj1)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_numerical_expression_extractor__InappropriateStrings, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InappropriateStrings_str_set" "', argument " "1"" of type '" "numerical_expression_extractor::InappropriateStrings *""'"); 
+  }
+  arg1 = reinterpret_cast< numerical_expression_extractor::InappropriateStrings * >(argp1);
+  {
+    std::string *ptr = (std::string *)0;
+    res2 = SWIG_AsPtr_std_string(obj1, &ptr);
+    if (!SWIG_IsOK(res2)) {
+      SWIG_exception_fail(SWIG_ArgError(res2), "in method '" "InappropriateStrings_str_set" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    if (!ptr) {
+      SWIG_exception_fail(SWIG_ValueError, "invalid null reference " "in method '" "InappropriateStrings_str_set" "', argument " "2"" of type '" "std::string const &""'"); 
+    }
+    arg2 = ptr;
+  }
+  if (arg1) (arg1)->str = *arg2;
+  resultobj = SWIG_Py_Void();
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return resultobj;
+fail:
+  if (SWIG_IsNewObj(res2)) delete arg2;
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_InappropriateStrings_str_get(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  numerical_expression_extractor::InappropriateStrings *arg1 = (numerical_expression_extractor::InappropriateStrings *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  std::string *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:InappropriateStrings_str_get",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_numerical_expression_extractor__InappropriateStrings, 0 |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "InappropriateStrings_str_get" "', argument " "1"" of type '" "numerical_expression_extractor::InappropriateStrings *""'"); 
+  }
+  arg1 = reinterpret_cast< numerical_expression_extractor::InappropriateStrings * >(argp1);
+  result = (std::string *) & ((arg1)->str);
+  resultobj = SWIG_From_std_string(static_cast< std::string >(*result));
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_new_InappropriateStrings(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  numerical_expression_extractor::InappropriateStrings *result = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)":new_InappropriateStrings")) SWIG_fail;
+  result = (numerical_expression_extractor::InappropriateStrings *)new numerical_expression_extractor::InappropriateStrings();
+  resultobj = SWIG_NewPointerObj(SWIG_as_voidptr(result), SWIGTYPE_p_numerical_expression_extractor__InappropriateStrings, SWIG_POINTER_NEW |  0 );
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *_wrap_delete_InappropriateStrings(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *resultobj = 0;
+  numerical_expression_extractor::InappropriateStrings *arg1 = (numerical_expression_extractor::InappropriateStrings *) 0 ;
+  void *argp1 = 0 ;
+  int res1 = 0 ;
+  PyObject * obj0 = 0 ;
+  
+  if (!PyArg_ParseTuple(args,(char *)"O:delete_InappropriateStrings",&obj0)) SWIG_fail;
+  res1 = SWIG_ConvertPtr(obj0, &argp1,SWIGTYPE_p_numerical_expression_extractor__InappropriateStrings, SWIG_POINTER_DISOWN |  0 );
+  if (!SWIG_IsOK(res1)) {
+    SWIG_exception_fail(SWIG_ArgError(res1), "in method '" "delete_InappropriateStrings" "', argument " "1"" of type '" "numerical_expression_extractor::InappropriateStrings *""'"); 
+  }
+  arg1 = reinterpret_cast< numerical_expression_extractor::InappropriateStrings * >(argp1);
+  delete arg1;
+  resultobj = SWIG_Py_Void();
+  return resultobj;
+fail:
+  return NULL;
+}
+
+
+SWIGINTERN PyObject *InappropriateStrings_swigregister(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+  PyObject *obj;
+  if (!PyArg_ParseTuple(args,(char*)"O:swigregister", &obj)) return NULL;
+  SWIG_TypeNewClientData(SWIGTYPE_p_numerical_expression_extractor__InappropriateStrings, SWIG_NewClientData(obj));
+  return SWIG_Py_Void();
+}
+
 SWIGINTERN PyObject *_wrap_new_NumericalExpressionExtractor(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
   PyObject *resultobj = 0;
   std::string *arg1 = 0 ;
@@ -10898,6 +10999,11 @@ static PyMethodDef SwigMethods[] = {
 	 { (char *)"StringVector_capacity", _wrap_StringVector_capacity, METH_VARARGS, NULL},
 	 { (char *)"delete_StringVector", _wrap_delete_StringVector, METH_VARARGS, NULL},
 	 { (char *)"StringVector_swigregister", StringVector_swigregister, METH_VARARGS, NULL},
+	 { (char *)"InappropriateStrings_str_set", _wrap_InappropriateStrings_str_set, METH_VARARGS, NULL},
+	 { (char *)"InappropriateStrings_str_get", _wrap_InappropriateStrings_str_get, METH_VARARGS, NULL},
+	 { (char *)"new_InappropriateStrings", _wrap_new_InappropriateStrings, METH_VARARGS, NULL},
+	 { (char *)"delete_InappropriateStrings", _wrap_delete_InappropriateStrings, METH_VARARGS, NULL},
+	 { (char *)"InappropriateStrings_swigregister", InappropriateStrings_swigregister, METH_VARARGS, NULL},
 	 { (char *)"new_NumericalExpressionExtractor", _wrap_new_NumericalExpressionExtractor, METH_VARARGS, NULL},
 	 { (char *)"NumericalExpressionExtractor_extract_numerical_expression", _wrap_NumericalExpressionExtractor_extract_numerical_expression, METH_VARARGS, NULL},
 	 { (char *)"delete_NumericalExpressionExtractor", _wrap_delete_NumericalExpressionExtractor, METH_VARARGS, NULL},
@@ -10911,6 +11017,7 @@ static PyMethodDef SwigMethods[] = {
 static swig_type_info _swigt__p_allocator_type = {"_p_allocator_type", "allocator_type *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_char = {"_p_char", "char *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_difference_type = {"_p_difference_type", "difference_type *", 0, 0, (void*)0, 0};
+static swig_type_info _swigt__p_numerical_expression_extractor__InappropriateStrings = {"_p_numerical_expression_extractor__InappropriateStrings", "numerical_expression_extractor::InappropriateStrings *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_numerical_expression_extractor__NumericalExpressionExtractor = {"_p_numerical_expression_extractor__NumericalExpressionExtractor", "numerical_expression_extractor::NumericalExpressionExtractor *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_p_PyObject = {"_p_p_PyObject", "PyObject **", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_size_type = {"_p_size_type", "size_type *", 0, 0, (void*)0, 0};
@@ -10928,6 +11035,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_allocator_type,
   &_swigt__p_char,
   &_swigt__p_difference_type,
+  &_swigt__p_numerical_expression_extractor__InappropriateStrings,
   &_swigt__p_numerical_expression_extractor__NumericalExpressionExtractor,
   &_swigt__p_p_PyObject,
   &_swigt__p_size_type,
@@ -10945,6 +11053,7 @@ static swig_type_info *swig_type_initial[] = {
 static swig_cast_info _swigc__p_allocator_type[] = {  {&_swigt__p_allocator_type, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_char[] = {  {&_swigt__p_char, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_difference_type[] = {  {&_swigt__p_difference_type, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_numerical_expression_extractor__InappropriateStrings[] = {  {&_swigt__p_numerical_expression_extractor__InappropriateStrings, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_numerical_expression_extractor__NumericalExpressionExtractor[] = {  {&_swigt__p_numerical_expression_extractor__NumericalExpressionExtractor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_p_PyObject[] = {  {&_swigt__p_p_PyObject, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_size_type[] = {  {&_swigt__p_size_type, 0, 0, 0},{0, 0, 0, 0}};
@@ -10962,6 +11071,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_allocator_type,
   _swigc__p_char,
   _swigc__p_difference_type,
+  _swigc__p_numerical_expression_extractor__InappropriateStrings,
   _swigc__p_numerical_expression_extractor__NumericalExpressionExtractor,
   _swigc__p_p_PyObject,
   _swigc__p_size_type,

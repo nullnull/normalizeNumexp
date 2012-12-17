@@ -170,7 +170,7 @@ namespace numerical_expression_extractor{
 	
 	
 	bool is_inappropriate_time_value(normalizer_utility::Time t){
-		return (is_out_of_range(t.year, 0, 3000) || is_out_of_range(t.month, 1, 12) || is_out_of_range(t.day, 1, 31) || is_out_of_range(t.hour, 0, 30) || is_out_of_range(t.minute, 0, 59) || is_out_of_range(t.second, 0, 59));
+		return (is_out_of_range(t.year, 1, 3000) || is_out_of_range(t.month, 1, 12) || is_out_of_range(t.day, 1, 31) || is_out_of_range(t.hour, 0, 30) || is_out_of_range(t.minute, 0, 59) || is_out_of_range(t.second, 0, 59));
 	}
 	
 	

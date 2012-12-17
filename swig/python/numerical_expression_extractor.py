@@ -236,6 +236,24 @@ class StringVector(_object):
 StringVector_swigregister = _numerical_expression_extractor.StringVector_swigregister
 StringVector_swigregister(StringVector)
 
+class InappropriateStrings(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, InappropriateStrings, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, InappropriateStrings, name)
+    __repr__ = _swig_repr
+    __swig_setmethods__["str"] = _numerical_expression_extractor.InappropriateStrings_str_set
+    __swig_getmethods__["str"] = _numerical_expression_extractor.InappropriateStrings_str_get
+    if _newclass:str = _swig_property(_numerical_expression_extractor.InappropriateStrings_str_get, _numerical_expression_extractor.InappropriateStrings_str_set)
+    def __init__(self): 
+        this = _numerical_expression_extractor.new_InappropriateStrings()
+        try: self.this.append(this)
+        except: self.this = this
+    __swig_destroy__ = _numerical_expression_extractor.delete_InappropriateStrings
+    __del__ = lambda self : None;
+InappropriateStrings_swigregister = _numerical_expression_extractor.InappropriateStrings_swigregister
+InappropriateStrings_swigregister(InappropriateStrings)
+
 class NumericalExpressionExtractor(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, NumericalExpressionExtractor, name, value)

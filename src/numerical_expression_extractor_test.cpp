@@ -92,7 +92,7 @@ TEST_F(NumexpExtractorTest, inappropriate_strings1) {
 }
 
 /*
-//TODO : 未対応。現在は絶対時間表現として抽出してしまう。
+//TODO : 未対応。現在は絶対時間表現
 TEST_F(NumexpExtractorTest, inappropriate_prefix1) {
 	vector<string> result;
 	string language("ja");
@@ -109,7 +109,7 @@ TEST_F(NumexpExtractorTest, inappropriate_prefix1) {
 TEST_F(NumexpExtractorTest, inappropriate_abstime1) {
 	vector<string> result;
 	string language("ja");
-	string text("198999年30月41日。080-6006-4451。ver2.0");
+	string text("198999年30月41日。080-6006-4451。ver2.0。");
 	NumericalExpressionExtractor NEE(language);
 	NEE.extract_numerical_expression(text, result);
 	for(int i=0; i<result.size(); i++){

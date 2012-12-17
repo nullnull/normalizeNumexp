@@ -26,6 +26,7 @@ namespace numerical_expression_extractor{
 											 std::vector<duration_expression_normalizer::DurationExpression>& durationexps);
 											 
 		void init_inappropriate_stringss(const std::string& language);
+		void init_url_strings();
 		void delete_inappropriate_extraction(const std::string& text,
 																				 std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
 																				 std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
@@ -38,13 +39,17 @@ namespace numerical_expression_extractor{
 																													std::vector<duration_expression_normalizer::DurationExpression>& durationexps);
 		template <class AnyTypeExpression>
 		void delete_inappropriate_extraction_using_dictionary_one_type(std::vector<AnyTypeExpression>& any_type_expressions);
-		
+		template <class AnyTypeExpression>
+		void delete_url_strings(const std::string& text, std::vector<AnyTypeExpression>& any_type_expressions);
+		template <class AnyTypeExpression>
+		bool is_url_strings(const std::string& text, const AnyTypeExpression& any_type_expression);
 		
 		numerical_expression_normalizer::NumericalExpressionNormalizer NEN;
 		abstime_expression_normalizer::AbstimeExpressionNormalizer AEN;
 		reltime_expression_normalizer::ReltimeExpressionNormalizer REN;
 		duration_expression_normalizer::DurationExpressionNormalizer DEN;
 		std::map<std::string, bool> inappropriate_strings_to_bool;
+		std::map<char, bool> url_strings_to_bool;
 	};
 } //namespace numerical_expression_extractor
 

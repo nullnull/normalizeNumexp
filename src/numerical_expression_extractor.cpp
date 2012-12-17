@@ -31,6 +31,7 @@ namespace numerical_expression_extractor{
 																	 std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
 																	 std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
 																	 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
+		//表現タイプ毎に重複があるので、これを削除する（例：「300年間」はabstimeexpsでも「300年」として規格化されている）
 		//TODO : O(N^2)のアルゴリズム。対象となる表現と、その他すべての表現に対して重複をチェックしている。必要に応じて高速化する
 		//erase duration
 		for(int i=0; i<static_cast<int>(durationexps.size()); i++){
@@ -68,6 +69,20 @@ namespace numerical_expression_extractor{
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
+	不適切な表現を削除する。
+	TODO : とりあえず実装しただけ。局所的な手がかりしか用いない抽出による、不適切な表現を（しっかり）削除していくのは、今後の課題。
+	*/
+	
+	//辞書に記述した表現の削除
 	template <class AnyTypeExpression>
 	void NumericalExpressionExtractor::delete_inappropriate_extraction_using_dictionary_one_type(std::vector<AnyTypeExpression>& any_type_expressions){
 		for(int i=0; i<static_cast<int>(any_type_expressions.size()); i++){
@@ -80,23 +95,17 @@ namespace numerical_expression_extractor{
 	}
 	
 	
-	/*
-	pfi::data::string::ustring extract_prefix(const std::string& text, int x){
-		//xまでの文字列を抽出
-		
-	}
-	
-	
-	bool is_suffix_match(const pfi::data::string::ustring& ustr1, const pfi::data::string::ustring& ustr2){
-		sz1 = ustr1.size();
-		sz2 = ustr2.size();
-		for(int i=0; i<static_cast<int>(std::min(ustr1.size(), ustr2.size())); i++){
-			if(ustr1[sz1-1-i] != ustr2[sz2-1-i]) return false;
+	//文字列の前後を参照して表現を削除
+	bool is_suffix_match(const pfi::data::string::ustring& text, int position_start, const pfi::data::string::ustring& targ){
+		int sz = targ.size();
+		for(int i=0; i<sz; i++){
+			if(position_start-1-i < 0) return false;
+			if(text[position_start-1-i] != targ[sz-1-i]) return false;
 		}
 		return true;
 	} 
 	
-	
+	template <class AnyTypeExpression>
 	bool is_inappropriate_prefix(const std::string& text, const AnyTypeExpression& any_type_expression){
 		//TODO : 辞書知識として分離してない & 実装が超雑。
 		//現在はverのみを対象。
@@ -104,14 +113,11 @@ namespace numerical_expression_extractor{
 		targs.push_back(pfi::data::string::string_to_ustring("ver"));
 		targs.push_back(pfi::data::string::string_to_ustring("ｖｅｒ"));
 		
-		pfi::data::string::ustring prefix = extract_prefix(text, any_type_expression.pos_start);
-		
 		for(int i=0; i<static_cast<int>(targs.size()); i++){
-			if(is_suffix_match(prefix,targs[i]))	return true;
+			if(is_suffix_match(pfi::data::string::string_to_ustring(text), any_type_expression.position_start, targs[i]))	return true;
 		}
 		return false;
 	}
-	
 	
 	template <class AnyTypeExpression>
 	void delete_inappropriate_extraction_by_prefix(const std::string& text, std::vector<AnyTypeExpression>& any_type_expressions){
@@ -124,7 +130,37 @@ namespace numerical_expression_extractor{
 		}	
 		return;
 	}
-	*/	
+	
+	//URLっぽいものを削除
+	template <class AnyTypeExpression>
+	bool NumericalExpressionExtractor::is_url_strings(const std::string& text, const AnyTypeExpression& any_type_expression){
+		//数量表現・時間表現の前後がurlに含まれる文字、かつ自分自身もurlに含まれる文字であればtrue
+		pfi::data::string::ustring utext = pfi::data::string::string_to_ustring(text);
+		pfi::data::string::uchar a,b;
+		if(any_type_expression.position_start	>= 1) a = utext[any_type_expression.position_start-1];
+		if(any_type_expression.position_end	< utext.size()) b = utext[any_type_expression.position_end];
+		if(url_strings_to_bool[pfi::data::string::uchar_to_string(a)[0]] && url_strings_to_bool[pfi::data::string::uchar_to_string(b)[0]]){
+			for(int i=0; i<static_cast<int>(any_type_expression.original_expression.size()); i++){
+				if(not url_strings_to_bool[pfi::data::string::uchar_to_string(any_type_expression.original_expression[i])[0]]) return false;
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	
+	template <class AnyTypeExpression>
+	void NumericalExpressionExtractor::delete_url_strings(const std::string& text, std::vector<AnyTypeExpression>& any_type_expressions){
+		//url、その他英字記号の羅列と思われる文字列中の表現は、削除する　　　例：「http://www.iphone3g.com」など（3gで抽出してしまう）
+		for(int i=0; i<static_cast<int>(any_type_expressions.size()); i++){
+			if(is_url_strings(text, any_type_expressions[i])){
+				any_type_expressions.erase(any_type_expressions.begin() + i);
+				i--;
+			}
+		}	
+		return;
+	}
+		
 	
 	void NumericalExpressionExtractor::delete_inappropriate_extraction_using_dictionary(const std::string& text,
 																			 std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
@@ -136,14 +172,26 @@ namespace numerical_expression_extractor{
 		delete_inappropriate_extraction_using_dictionary_one_type(reltimeexps);
 		delete_inappropriate_extraction_using_dictionary_one_type(durationexps);
 		
-		/*
 		delete_inappropriate_extraction_by_prefix(text, numexps);
 		delete_inappropriate_extraction_by_prefix(text, abstimeexps);
 		delete_inappropriate_extraction_by_prefix(text, reltimeexps);
 		delete_inappropriate_extraction_by_prefix(text, durationexps);
-		*/
+		
+		delete_url_strings(text, numexps);
+		delete_url_strings(text, abstimeexps);
+		delete_url_strings(text, reltimeexps);
+		delete_url_strings(text, durationexps);
 	}
 	
+	
+	
+	
+	
+	
+	
+	/*
+	 不適切な時間表現の削除
+	 */
 	
 	void revise_year_do_revise(double& year){
 		if(20 < year && year < 100){
@@ -151,6 +199,12 @@ namespace numerical_expression_extractor{
 		}else if(0 <= year && year <= 20){
 			year += 2000;
 		}
+	}
+	
+	bool is_period_etc(pfi::data::string::uchar uc){
+		//TODO : とりあえず実装。。。
+		//TODO : digit_utilityとの依存性の問題が解決できず、こんな事態に。。
+		return uc == pfi::data::string::string_to_uchar(".") || uc == pfi::data::string::string_to_uchar("・") || uc == pfi::data::string::string_to_uchar("．") || uc == pfi::data::string::string_to_uchar("-") || uc == pfi::data::string::string_to_uchar("−") || uc == pfi::data::string::string_to_uchar("ー") || uc == pfi::data::string::string_to_uchar("―");
 	}
 	
 	void revise_year(abstime_expression_normalizer::AbstimeExpression& abstimeexp){
@@ -162,24 +216,23 @@ namespace numerical_expression_extractor{
 		revise_year_do_revise(abstimeexp.value_upperbound.year);
 	}
 	
-	
 	bool is_out_of_range(double x, double a, double b){
 		if(x==INFINITY || x==-INFINITY) return false;
 		return (x < a || b < x);
 	}
 	
-	
 	bool is_inappropriate_time_value(normalizer_utility::Time t){
 		return (is_out_of_range(t.year, 1, 3000) || is_out_of_range(t.month, 1, 12) || is_out_of_range(t.day, 1, 31) || is_out_of_range(t.hour, 0, 30) || is_out_of_range(t.minute, 0, 59) || is_out_of_range(t.second, 0, 59));
 	}
 	
-	
 	bool is_inappropriate_abstimeexp(abstime_expression_normalizer::AbstimeExpression& abstimeexp){
+		//「1.2.3」のような表現かどうか
+		if(abstimeexp.original_expression.size() > 1 && is_period_etc(abstimeexp.original_expression[1])) return true;
+		
 		//時間の範囲が明らかにおかしいかどうか
 		return (is_inappropriate_time_value(abstimeexp.value_lowerbound) || is_inappropriate_time_value(abstimeexp.value_upperbound));
 		
 	}
-	
 	
 	void revise_or_delete_abstimeexp(std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps, int& i){
 		revise_year(abstimeexps[i]);
@@ -189,7 +242,6 @@ namespace numerical_expression_extractor{
 		}
 	}
 	
-	
 	void delete_inappropriate_abstimeexps(std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps){
 		for(int i=0; i<static_cast<int>(abstimeexps.size()); i++){
 			revise_or_delete_abstimeexp(abstimeexps, i);
@@ -197,11 +249,16 @@ namespace numerical_expression_extractor{
 	}
 	
 	
+	
+	
+	
+	
+	//不適切な表現の削除
 	void NumericalExpressionExtractor::delete_inappropriate_extraction(const std::string& text,
-										 std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
-										 std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
-										 std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
-										 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
+																																		 std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
+																																		 std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
+																																		 std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
+																																		 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
 		//TODO : この部分を、コンポーネントとして書き出す。辞書で指定できるようにする。　規格化処理は辞書で指定できるが、不適切な表現の処理は辞書でできるようにほとんどなっていない。
 		delete_duplicate_extraction(numexps, abstimeexps, reltimeexps, durationexps);
 		delete_inappropriate_extraction_using_dictionary(text, numexps, abstimeexps, reltimeexps, durationexps);
@@ -209,6 +266,18 @@ namespace numerical_expression_extractor{
 	}
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//resultの生成
 	void merge_normalize_expressions_into_result( std::vector<numerical_expression_normalizer::NumericalExpression> numexps,  std::vector<abstime_expression_normalizer::AbstimeExpression> abstimeexps,  std::vector<reltime_expression_normalizer::ReltimeExpression> reltimeexps,  std::vector<duration_expression_normalizer::DurationExpression> durationexps, std::vector<std::string>& result){
 
 	 //TODO : それぞれの正規形に、toString関数をつける？逆に分かり辛い？　とりあえずここで処理
@@ -247,7 +316,18 @@ namespace numerical_expression_extractor{
 	 }
 	 }
 	 
-	
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+/* 
+ 初期化処理
+*/
 	//TODO : digit_utilityのをそのまま使いたかったが、うまく読み込んでくれないので直コピー
 	void load_json_from_file(const std::string& filepath, pfi::text::json::json& js) {
 		std::ifstream in(filepath.c_str());
@@ -268,7 +348,6 @@ namespace numerical_expression_extractor{
 		pfi::text::json::from_json(js, load_target);
 	}
 
-	
 	void NumericalExpressionExtractor::init_inappropriate_stringss(const std::string& language){
 		std::vector<InappropriateStrings> inappropriate_stringss;
 		std::string dictionary_path;
@@ -282,12 +361,26 @@ namespace numerical_expression_extractor{
 		}
 	}
 	
+	void NumericalExpressionExtractor::init_url_strings(){
+			std::string url_strings("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-!#$%&()=~^|¥@`/");
+			
+		for(int i=0; i<static_cast<int>(url_strings.size()); i++){
+			url_strings_to_bool[url_strings[i]] = true;
+		}
+	}
+
+
 	
 	NumericalExpressionExtractor::NumericalExpressionExtractor(const std::string& language) : NEN(language), AEN(language), REN(language), DEN(language) {
 		std::string dictionary_path;
 		init_inappropriate_stringss(language);
+		init_url_strings();
 	}
-	
+
+
+/*
+	main
+*/
 	void NumericalExpressionExtractor::extract_numerical_expression(const std::string& text, std::vector<std::string>& result){
 		result.clear();
 		std::vector<numerical_expression_normalizer::NumericalExpression> numexps;

@@ -46,29 +46,78 @@ public:
 	  std::string ret;
 	  if(is_null_time_element(t, is_upperbound)){
 		  return null_string + kugiri;
-	  }else if(is_infinity_time_element(t, is_upperbound)){
-		  return "INF";
 		}else{
+			ss.fill('0'); ss.width(static_cast<int>(null_string.size() + kugiri.size() -1));
 		  ss << t << kugiri;
 		  ss >> ret;
 		  return ret;
 	  }
   }
+	
+	std::string to_interval_string_from_time_element(double t, std::string time_position, bool is_upperbound){
+		std::stringstream ss;
+	  std::string ret;
+	  if(is_null_time_element(t, is_upperbound)){
+		  return "";
+		}else{
+		  ss << t << time_position;
+		  ss >> ret;
+		  return ret;
+	  }
+  }
+	
+	std::string to_string(bool is_upperbound){
+		if(is_null_time_element(year, is_upperbound) and is_null_time_element(month, is_upperbound) and is_null_time_element(day, is_upperbound)){
+			return to_time_string(is_upperbound);
+		}else{
+			return to_date_string(is_upperbound);
+		}
+	}
   
-  std::string to_string(bool is_upperbound){
+  std::string to_date_string(bool is_upperbound){
 	 std::stringstream ss;
 	 std::string ret;
-	 std::string kugiri("/");
-	 
-	 //ss << year << kugiri << month << kugiri << day << kugiri << hour << kugiri << minute << kugiri << second;
-	 ss << to_string_from_time_element(year, "YY", kugiri, is_upperbound);
-	 ss << to_string_from_time_element(month, "MM", kugiri, is_upperbound);
-	 ss << to_string_from_time_element(day, "DD", kugiri, is_upperbound);
-	 ss << to_string_from_time_element(hour, "hh", kugiri, is_upperbound);
-	 ss << to_string_from_time_element(minute, "mm", kugiri, is_upperbound);
-	 ss << to_string_from_time_element(second, "ss", "", is_upperbound);
+	 if(is_infinity_time_element(year, is_upperbound)){ 
+		if(is_upperbound) return "INF";
+		else return "-INF";
+	 }
+	 ss << to_string_from_time_element(year, "XXXX", "-", is_upperbound);
+	 ss << to_string_from_time_element(month, "XX", "-", is_upperbound);
+	 ss << to_string_from_time_element(day, "XX", "", is_upperbound);
 	 ss >> ret;
 	 return ret;
+  }
+	
+	std::string to_time_string(bool is_upperbound){
+		std::stringstream ss;
+		std::string ret;
+		if(is_infinity_time_element(year, is_upperbound)){ 
+			if(is_upperbound) return "INF";
+			else return "-INF";
+		}
+		ss << to_string_from_time_element(hour, "XX", ":", is_upperbound);
+		ss << to_string_from_time_element(minute, "XX", ":", is_upperbound);
+		ss << to_string_from_time_element(second, "XX", "", is_upperbound);
+		ss >> ret;
+		return ret;
+  }
+	
+	std::string to_duration_string(bool is_upperbound){
+		std::stringstream ss;
+		std::string ret;
+		if(is_infinity_time_element(year, is_upperbound)){ 
+			if(is_upperbound) return "INF";
+			else return "-INF";
+		}
+		ss << "P";
+		ss << to_interval_string_from_time_element(year, "Y", is_upperbound);
+		ss << to_interval_string_from_time_element(month, "M", is_upperbound);
+		ss << to_interval_string_from_time_element(day, "D", is_upperbound);
+		ss << to_interval_string_from_time_element(hour, "h", is_upperbound);
+		ss << to_interval_string_from_time_element(minute, "m", is_upperbound);
+		ss << to_interval_string_from_time_element(second, "s", is_upperbound);
+		ss >> ret;
+		return ret;
   }
 
   double year, month, day, hour, minute, second;

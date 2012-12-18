@@ -317,14 +317,14 @@ namespace numerical_expression_extractor{
 	 for(int i=0; i<static_cast<int>(reltimeexps.size()); i++){
 	 ss.clear(); ss.str("");
 	 //TODO : 相対時間表現を、どう表示させるか？
-	 ss << "reltime" << "*" << reltimeexps[i].original_expression << "*" << reltimeexps[i].position_start << "*" << reltimeexps[i].position_end << "*" << "none" << "*" << reltimeexps[i].value_lowerbound_abs.to_string(false) << "," << reltimeexps[i].value_lowerbound_rel.to_string(false) << "*" << reltimeexps[i].value_upperbound_abs.to_string(true) << "," << reltimeexps[i].value_upperbound_rel.to_string(true) << "*" << show_options(reltimeexps[i]);
+	 ss << "reltime" << "*" << reltimeexps[i].original_expression << "*" << reltimeexps[i].position_start << "*" << reltimeexps[i].position_end << "*" << "none" << "*" << reltimeexps[i].value_lowerbound_abs.to_string(false) << "," << reltimeexps[i].value_lowerbound_rel.to_duration_string(false) << "*" << reltimeexps[i].value_upperbound_abs.to_string(true) << "," << reltimeexps[i].value_upperbound_rel.to_duration_string(true) << "*" << show_options(reltimeexps[i]);
 	 ss >> tmpstr;
 	 result.push_back(tmpstr);
 	 }
 	 
 	 for(int i=0; i<static_cast<int>(durationexps.size()); i++){
 	 ss.clear(); ss.str("");
-	 ss << "duration" << "*" << durationexps[i].original_expression << "*" << durationexps[i].position_start << "*" << durationexps[i].position_end << "*" << "none" << "*" << durationexps[i].value_lowerbound.to_string(false) << "*" << durationexps[i].value_upperbound.to_string(true) << "*" << show_options(durationexps[i]);
+	 ss << "duration" << "*" << durationexps[i].original_expression << "*" << durationexps[i].position_start << "*" << durationexps[i].position_end << "*" << "none" << "*" << durationexps[i].value_lowerbound.to_duration_string(false) << "*" << durationexps[i].value_upperbound.to_duration_string(true) << "*" << show_options(durationexps[i]);
 	 ss >> tmpstr;
 	 result.push_back(tmpstr);
 	 }

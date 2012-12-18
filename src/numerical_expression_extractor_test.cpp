@@ -22,8 +22,8 @@ TEST_F(NumexpExtractorTest, simple1) {
   }
   ASSERT_EQ(3u, result.size());
   EXPECT_EQ("numerical*1人*27*29*人*1*1*", result[0]);
-  EXPECT_EQ("abstime*1911年から2011年*0*12*none*1911/MM/DD/hh/mm/ss*2011/MM/DD/hh/mm/ss*", result[1]);
-  EXPECT_EQ("duration*100年間*17*22*none*100/MM/DD/hh/mm/ss*100/MM/DD/hh/mm/ss*", result[2]);
+  EXPECT_EQ("abstime*1911年から2011年*0*12*none*1911-XX-XX*2011-XX-XX*", result[1]);
+  EXPECT_EQ("duration*100年間*17*22*none*P100Y*P100Y*", result[2]);
 }
 
 TEST_F(NumexpExtractorTest, simple2) {
@@ -33,7 +33,7 @@ TEST_F(NumexpExtractorTest, simple2) {
 	NumericalExpressionExtractor NEE(language);
 	NEE.extract_numerical_expression(text, result);
 	ASSERT_EQ(1u, result.size());
-	EXPECT_EQ("reltime*15年前*0*4*none*YY/MM/DD/hh/mm/ss,-15/MM/DD/hh/mm/ss*YY/MM/DD/hh/mm/ss,-15/MM/DD/hh/mm/ss*", result[0]);
+	EXPECT_EQ("reltime*15年前*0*4*none*XX:XX:XX,P-15Y*XX:XX:XX,P-15Y*", result[0]);
 	for(int i=0; i<static_cast<int>(result.size()); i++){
 		cout << result[i] << endl;
 	}
@@ -47,7 +47,7 @@ TEST_F(NumexpExtractorTest, simple3) {
 	NEE.extract_numerical_expression(text, result);
 	ASSERT_EQ(2u, result.size());
 	EXPECT_EQ("numerical*２人*8*10*人*2*2*", result[0]);
-	EXPECT_EQ("reltime*昨年3月*0*4*none*YY/3/DD/hh/mm/ss,-1/MM/DD/hh/mm/ss*YY/3/DD/hh/mm/ss,-1/MM/DD/hh/mm/ss*", result[1]);
+	EXPECT_EQ("reltime*昨年3月*0*4*none*XXXX-03-XX,P-1Y*XXXX-03-XX,P-1Y*", result[1]);
 	for(int i=0; i<static_cast<int>(result.size()); i++){
 		cout << result[i] << endl;
 	}
@@ -76,7 +76,7 @@ TEST_F(NumexpExtractorTest, real_example1) {
 		cout << result[i] << endl;
 	}
 	ASSERT_EQ(1u, result.size());
-	EXPECT_EQ("abstime*4/26*59*63*none*YY/4/26/hh/mm/ss*YY/4/26/hh/mm/ss*", result[0]);
+	EXPECT_EQ("abstime*4/26*59*63*none*XXXX-04-26*XXXX-04-26*", result[0]);
 }
 
 TEST_F(NumexpExtractorTest, inappropriate_strings1) {
@@ -139,8 +139,8 @@ TEST_F(NumexpExtractorTest, revise_abstime1) {
 		cout << result[i] << endl;
 	}
 	ASSERT_EQ(2u, result.size());
-	EXPECT_EQ("abstime*09年5月*0*5*none*2009/5/DD/hh/mm/ss*2009/5/DD/hh/mm/ss*", result[0]);
-	EXPECT_EQ("abstime*99年5月*6*11*none*1999/5/DD/hh/mm/ss*1999/5/DD/hh/mm/ss*", result[1]);	
+	EXPECT_EQ("abstime*09年5月*0*5*none*2009-05-XX*2009-05-XX*", result[0]);
+	EXPECT_EQ("abstime*99年5月*6*11*none*1999-05-XX*1999-05-XX*", result[1]);	
 }
 
 TEST_F(NumexpExtractorTest, not_abstime1) {
@@ -165,5 +165,5 @@ TEST_F(NumexpExtractorTest, revise_abstime2) {
 		cout << result[i] << endl;
 	}
 	ASSERT_EQ(1u, result.size());
-	EXPECT_EQ("abstime*西暦99年5月*0*7*none*99/5/DD/hh/mm/ss*99/5/DD/hh/mm/ss*", result[0]);
+	EXPECT_EQ("abstime*西暦99年5月*0*7*none*0099-05-XX*0099-05-XX*", result[0]);
 }

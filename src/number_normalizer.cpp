@@ -97,6 +97,7 @@ bool is_invalid_notation(const pfi::data::string::uchar uc, pfi::data::string::u
   } else if (is_kansuji_kurai_sen(uc)){
     return is_invalid_kansuji_kurai_order(uc, kansuji_kurai_sen_strings_for_check_invalid_notation);
   }
+	return false;
 }
 
 void NumberExtractor::return_longest_number_strings(const pfi::data::string::ustring& utext, int &i, std::string& numstr) {
@@ -113,6 +114,7 @@ void NumberExtractor::return_longest_number_strings(const pfi::data::string::ust
     }
     numstr += pfi::data::string::uchar_to_string(uc);
   }
+	return;
 }
 
 void NumberExtractor::extract_number(const std::string& text, std::vector<Number>& numbers) {
@@ -132,6 +134,23 @@ void NumberExtractor::extract_number(const std::string& text, std::vector<Number
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+数の表記の変換
+*/
+
 void NumberConverterTemplate::delete_comma(const pfi::data::string::ustring& ustr, pfi::data::string::ustring& ret) {
   ret.clear();
   for (int i = 0; i < static_cast<int>(ustr.size()); i++) {
@@ -142,55 +161,30 @@ void NumberConverterTemplate::delete_comma(const pfi::data::string::ustring& ust
   }
 }
 
-void NumberConverterTemplate::identify_notation_type_of_number_string(const pfi::data::string::ustring& number_string, int& notation_type) {
-  notation_type = NOT_NUMBER;
-  for (int i = 0; i < static_cast<int>(number_string.size()); i++) {
-    pfi::data::string::uchar uc = number_string[i];
-    update_notation_type(uc, notation_type);
-  }
-}
 
 void NumberConverterTemplate::convert_arabic_numerals(const pfi::data::string::ustring& number_string, double& value) {
   cast(number_string, value);
 }
 
-void NumberConverterTemplate::convert_kansuji_by_positional_notation(const pfi::data::string::ustring& number_string, double& value) {
-  std::stringstream ss;
-  for (int i = 0; i < static_cast<int>(number_string.size()); i++) {
-    pfi::data::string::uchar uc = number_string[i];
-    ss << convert_kansuji_09_to_value(uc);
-  }
-  ss >> value;
-}
-
-void NumberConverterTemplate::convert_arabic_kansuji_kurai_man_mixed(const pfi::data::string::ustring& number_string, double& value) {
-  value = 0;
-  std::vector<std::pair<pfi::data::string::ustring, pfi::data::string::uchar> > number_string_splited;
-  split_by_kansuji_kurai(number_string, number_string_splited);
-  int number_converted;
-  for (int i = 0; i < static_cast<int>(number_string_splited.size()); i++) {
-    cast(number_string_splited[i].first, number_converted);
-    value += number_converted * pow(10, digit_utility::convert_kansuji_kurai_to_power_value(number_string_splited[i].second));
-    number_converted = 0;
-  }
-}
 
 void JapaneseNumberConverter::convert_arabic_kansuji_mixed_of_4digit(const pfi::data::string::ustring& number_string, int& number_converted) {
   number_converted = 0;
-  int tmpnum = -1;
+  int tmpnum = 0; //直前の数字を格納
   for (int i = 0; i < static_cast<int>(number_string.size()); i++) {
     pfi::data::string::uchar uc = number_string[i];
     if (is_kansuji_kurai_sen(uc)) {
-      if (tmpnum == -1) tmpnum = 1;
+      if (tmpnum == 0) tmpnum = 1; //直前に数字がでてこなかったら、そのままその位を適応（「十」＝１０）
       number_converted += tmpnum * pow(10, convert_kansuji_kurai_to_power_value(uc));
-      tmpnum = -1;
+      tmpnum = 0;
     } else if (is_kansuji_09(uc)) {
-      tmpnum = convert_kansuji_09_to_value(uc);
+      tmpnum = tmpnum*10 + convert_kansuji_09_to_value(uc);
     } else if (is_hankakusuji(uc)) {
-      cast(pfi::data::string::uchar_to_string(uc), tmpnum);
+			int cast_tmp;
+      cast(pfi::data::string::uchar_to_string(uc), cast_tmp);
+			tmpnum = tmpnum*10 + cast_tmp;
     }
   }
-  if (tmpnum != -1) number_converted += tmpnum;
+  if (tmpnum != 0) number_converted += tmpnum;
 }
   
 void ChineseNumberConverter::convert_arabic_kansuji_mixed_of_4digit(const pfi::data::string::ustring& number_string, int& number_converted) {
@@ -198,26 +192,31 @@ void ChineseNumberConverter::convert_arabic_kansuji_mixed_of_4digit(const pfi::d
      よって、直前に零が出てきたかどうか、また出てきた場合のために前の桁を覚えておく必要がある。
    */
   number_converted = 0;
-  int tmpnum = -1;
-  int power_value;
+  int tmpnum = 0;
+  int power_value=1;
   bool prev_is_zero = false, current_is_zero = false; //chinese specific
   for (int i = 0; i < static_cast<int>(number_string.size()); i++) {
     pfi::data::string::uchar uc = number_string[i];
     if (is_kansuji_kurai_sen(uc)) {
-      if (tmpnum == -1) tmpnum = 1;
+      if (tmpnum == 0) tmpnum = 1;
       power_value = convert_kansuji_kurai_to_power_value(uc);
       number_converted += tmpnum * pow(10, power_value);
-      tmpnum = -1;
+      tmpnum = 0;
     } else if (is_kansuji_09(uc)) {
-      tmpnum = convert_kansuji_09_to_value(uc);
+      tmpnum = tmpnum*10 + convert_kansuji_09_to_value(uc);
       prev_is_zero = current_is_zero;
       if(tmpnum == 0) current_is_zero = true;
       else current_is_zero = false;
     } else if (is_hankakusuji(uc)) {
-      cast(pfi::data::string::uchar_to_string(uc), tmpnum);
+			int cast_tmp;
+      cast(pfi::data::string::uchar_to_string(uc), cast_tmp);
+			tmpnum = tmpnum*10 + cast_tmp;
+			prev_is_zero = current_is_zero;
+			if(tmpnum == 0) current_is_zero = true;
+      else current_is_zero = false;
     }
   }
-  if (tmpnum != -1) {
+  if (tmpnum != 0) {
     if(prev_is_zero){
       number_converted += tmpnum;
     }else{
@@ -226,66 +225,60 @@ void ChineseNumberConverter::convert_arabic_kansuji_mixed_of_4digit(const pfi::d
   }
 }
 
-void ArabicNumberConverter::convert_arabic_kansuji_mixed_of_4digit(const pfi::data::string::ustring& number_string, int& number_converted) {} //日本語、中国語以外では漢数字がでてこないので、実装の必要はない
-  
-void NumberConverterTemplate::convert_kansuji(const pfi::data::string::ustring& number_string, double& value) {
-  value = 0;
-  std::vector<std::pair<pfi::data::string::ustring, pfi::data::string::uchar> > number_string_splited;
-  split_by_kansuji_kurai(number_string, number_string_splited);
-  int number_converted;
-  for (int i = 0; i < static_cast<int>(number_string_splited.size()); i++) {
-    convert_arabic_kansuji_mixed_of_4digit(number_string_splited[i].first, number_converted);
-    value += number_converted * pow(10, digit_utility::convert_kansuji_kurai_to_power_value(number_string_splited[i].second));
-    number_converted = 0;
-  }
-}
 
-void NumberConverterTemplate::convert_arabic_kansuji_mixed(const pfi::data::string::ustring& number_string, double& value) {
-  value = 0;
-  std::vector<std::pair<pfi::data::string::ustring, pfi::data::string::uchar> > number_string_splited;
-  split_by_kansuji_kurai(number_string, number_string_splited);
-  int number_converted;
-  for (int i = 0; i < static_cast<int>(number_string_splited.size()); i++) {
-    convert_arabic_kansuji_mixed_of_4digit(number_string_splited[i].first, number_converted);
-    value += number_converted * pow(10, digit_utility::convert_kansuji_kurai_to_power_value(number_string_splited[i].second));
-    number_converted = 0;
-  }
-}
+void ArabicNumberConverter::convert_arabic_kansuji_mixed_of_4digit(const pfi::data::string::ustring& number_string, int& number_converted) {} //日本語、中国語以外では漢数字がでてこないので、実装の必要はない
+
 
 void NumberConverterTemplate::convert_number(const pfi::data::string::ustring& number_string_org, double& value, int& notation_type) {
-  notation_type = NOT_NUMBER;
   pfi::data::string::ustring number_string;
   delete_comma(number_string_org, number_string);
   number_string = pfi::data::string::zenkaku_latin_to_basic_latin(number_string);
 
-  identify_notation_type_of_number_string(number_string, notation_type);
-  if (notation_type == HANKAKU) convert_arabic_numerals(number_string, value);
-  else if (notation_type == KANSUJI_09) convert_kansuji_by_positional_notation(number_string, value);
-  else if (notation_type == (HANKAKU | KANSUJI_KURAI_MAN)) convert_arabic_kansuji_kurai_man_mixed(number_string, value);
-  else if (notation_type == (KANSUJI_09 | KANSUJI_KURAI_SEN) || notation_type == KANSUJI_KURAI_SEN
-      || notation_type == (KANSUJI_09 | KANSUJI_KURAI_MAN) || notation_type == (KANSUJI_09 | KANSUJI_KURAI_SEN | KANSUJI_KURAI_MAN)) convert_kansuji(
-      number_string, value);
-  else if (notation_type == (HANKAKU | KANSUJI_KURAI_SEN) || notation_type == (HANKAKU | KANSUJI_KURAI_SEN | KANSUJI_KURAI_MAN)) convert_arabic_kansuji_mixed(
-      number_string, value);
-  else {
-    //TODO : error処理はどうする？
-  }
+	value = 0;
+  std::vector<std::pair<pfi::data::string::ustring, pfi::data::string::uchar> > number_string_splited;
+  split_by_kansuji_kurai(number_string, number_string_splited); //「億」「万」などの単位で区切る
+  int number_converted;
+  for (int i = 0; i < static_cast<int>(number_string_splited.size()); i++) {
+    convert_arabic_kansuji_mixed_of_4digit(number_string_splited[i].first, number_converted);
+		if(number_converted == 0 && number_string_splited[i].second != pfi::data::string::string_to_uchar("　")){ 
+			if(value == 0){
+				//「万」「億」など単体で出てくるとき。「数万」などの処理のため、これも規格化しておく
+				number_converted = 1;
+			}else{
+				//number_converted = value; //「一億万」など、「億」「万」で区切ったときに前に数字がない場合、とりあえず前までの値を参照する //TODO : invalidとして扱わないことにした。必要なケースはあるか？
+			}
+		}
+		
+    value += number_converted * pow(10, digit_utility::convert_kansuji_kurai_to_power_value(number_string_splited[i].second));
+    number_converted = 0;
+  }	
+
+
 }
   
 void ArabicNumberConverter::convert_number(const pfi::data::string::ustring& number_string_org, double& value, int& notation_type) {
   //日本語、中国語以外では漢数字がでてこないので、アラビア数字を値として認識する処理のみを行う
   //もし漢数字以外にも、アラビア数字以外の表記を数字として認識させたい場合は、ExtractorとConverterの2つに処理を追記する
-  notation_type = NOT_NUMBER;
   pfi::data::string::ustring number_string;
   delete_comma(number_string_org, number_string);
   number_string = pfi::data::string::zenkaku_latin_to_basic_latin(number_string);
-  
-  identify_notation_type_of_number_string(number_string, notation_type);
-  if (notation_type == HANKAKU) convert_arabic_numerals(number_string, value);
-  else {
-    //TODO : error処理はどうする？
-  }
+
+	convert_arabic_numerals(number_string, value);
 }
+
+
+
+
+
+
+
+
+
+
+/*
+記号の処理
+*/
+
 
 bool SymbolFixer::is_plus(const pfi::data::string::ustring& utext, int i, pfi::data::string::ustring& plus_strings) {
   if (i < 0) return false;
@@ -332,7 +325,6 @@ void SymbolFixer::fix_prefix_symbol(const pfi::data::string::ustring& utext, std
     numbers[i].original_expression = minus_strings + numbers[i].original_expression;
     numbers[i].position_start--;
   }
-  //TODO : 「数」の処理はどうする？　「数十円」など
 }
 
 double SymbolFixer::create_decimal_value(const Number& number) {
@@ -380,11 +372,10 @@ void SymbolFixer::fix_intermediate_symbol(const pfi::data::string::ustring& utex
   if ((digit_utility::is_range_expression(intermediate)) || (digit_utility::is_comma(intermediate[0]) && intermediate.size() == 1 && (numbers[i].value_lowerbound == numbers[i+1].value_upperbound-1))) { //範囲表現か、コンマの並列表現のとき
     fix_range_expression(numbers, i, intermediate);
   }
-  //TODO : 「数」の処理はどうする？　「百数十円」など
 }
 
 void SymbolFixer::fix_suffix_symbol(const pfi::data::string::ustring& utext, std::vector<Number>& numbers, int i) {
-  //TODO : 「数」の処理はどうする？　「十数円」など
+	//suffixの処理は特にない
 }
 
 void SymbolFixer::fix_numbers_by_symbol(const std::string& text, std::vector<Number>& numbers) {
@@ -404,13 +395,82 @@ void convert_number(NumberConverter& NC, std::vector<Number>& numbers){
   }
 }
 
+bool is_only_kansuji_kurai_man(pfi::data::string::ustring original_expression){
+	for(int i = 0; i<static_cast<int>(original_expression.size()); i++){
+		if(not is_kansuji_kurai_man(original_expression[i])) return false;
+	}
+	return true;
+}
+
 void remove_only_kansuji_kurai_man(std::vector<Number>& numbers) {
 	for(int i = static_cast<int>(numbers.size()-1); i>=0; i--){
-		if(numbers[i].original_expression.size() == 1 && is_kansuji_kurai_man(numbers[i].original_expression[0])){
+		if(is_only_kansuji_kurai_man(numbers[i].original_expression)){
 			numbers.erase(numbers.begin() + i);
 		}
 	}
 }
+
+
+
+void fix_prefix_su(const pfi::data::string::ustring& utext, std::vector<Number>& numbers, int i) {
+	//「数十万円」「数万円」「数十円」といった表現の処理を行う。
+	if(numbers[i].position_start == 0) return;
+	if(utext[numbers[i].position_start-1] != pfi::data::string::string_to_ustring("数")[0]) return;
+
+	//数の範囲の操作
+	numbers[i].value_upperbound *= 9;
+	
+	//統合処理
+	numbers[i].position_start++;
+	numbers[i].original_expression = pfi::data::string::string_to_ustring("数") + numbers[i].original_expression;
+}
+
+
+void fix_intermediate_su(const pfi::data::string::ustring& utext, std::vector<Number>& numbers, int i) {
+	//「十数万円」といった表現の処理を行う
+	if (static_cast<int>(numbers.size()) - 1 <= i) return;
+	if(numbers[i].position_end != numbers[i+1].position_start-1) return;
+	if(utext[numbers[i].position_end] != pfi::data::string::string_to_ustring("数")[0]) return;
+	
+	//数の範囲の操作
+	//numbers[i].valueを、numbers[i+1].valueのスケールに合わせる
+	while(1){
+		if(numbers[i+1].value_lowerbound < numbers[i].value_lowerbound) break;
+		numbers[i].value_lowerbound *= pow(10,4);
+	}
+	numbers[i].value_upperbound = numbers[i].value_lowerbound;
+	//numbers[i+1]に「数」の処理を行う
+	numbers[i+1].value_upperbound *= 9;
+	//二つの数の範囲を統合
+	numbers[i].value_lowerbound += numbers[i+1].value_lowerbound;
+	numbers[i].value_upperbound += numbers[i+1].value_upperbound;
+	
+	//統合処理
+	numbers[i].position_end = numbers[i+1].position_end;
+	numbers[i].original_expression += pfi::data::string::string_to_ustring("数");
+	numbers[i].original_expression += numbers[i+1].original_expression;
+	numbers.erase(numbers.begin() + i+1);
+	i--;
+}
+
+void fix_suffix_su(const pfi::data::string::ustring& utext, std::vector<Number>& numbers, int i) {
+	//「十数円」の処理を行う（これ以外に、suffixに数がくるケースはない。
+	if(numbers[i].position_end == static_cast<int>(utext.size())) return;
+	if(utext[numbers[i].position_end] != pfi::data::string::string_to_ustring("数")[0]) return;
+	numbers[i].value_upperbound += 9;
+	numbers[i].value_lowerbound += 1;
+	numbers[i].original_expression += pfi::data::string::string_to_ustring("数");
+}
+
+void fix_numbers_by_su(const std::string& text, std::vector<Number>& numbers) {
+	pfi::data::string::ustring utext = pfi::data::string::string_to_ustring(text);
+	for(int i=0; i<static_cast<int>(numbers.size()); i++){
+		fix_prefix_su(utext, numbers, i);
+		fix_intermediate_su(utext, numbers, i);
+		fix_suffix_su(utext, numbers, i);
+	}	
+}
+
 
 void NumberNormalizer::process(const std::string& text, std::vector<Number>& numbers) {
   numbers.clear();
@@ -434,13 +494,21 @@ void NumberNormalizer::process(const std::string& text, std::vector<Number>& num
     ArabicNumberConverter NC;
     convert_number(NC, numbers);
   }
+	
+	
+	//「数万」などの処理を行う
+	//TODO : fix_symbolとマージしたいが、下のような処理が必要なので、うまくいかない。なんとかマージしたい。
+	fix_numbers_by_su(text, numbers);	
+
+	//「京」「万」など「万」以上の桁区切り文字しかないものを削除する。
+	//TODO : 高速化のため最初から候補から除外したいが、「数万」などの処理のために必要。NE側で「数」に関する判定を行えば解決するが、全体像が見えにくくなるので、ひとまず行わない。
+  remove_only_kansuji_kurai_man(numbers);
+
 
   //記号の処理を行う
   SymbolFixer SF;
   SF.fix_numbers_by_symbol(text, numbers);
   
-  //「京」「万」など単独のものを削除する（ここで処理を行わないと、「数万」などに対応できない）
-  remove_only_kansuji_kurai_man(numbers);
 }
   
 void NumberNormalizer::process_dont_fix_by_symbol(const std::string& text, std::vector<Number>& numbers) {

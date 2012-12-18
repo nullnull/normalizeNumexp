@@ -138,7 +138,7 @@ namespace numerical_expression_extractor{
 		pfi::data::string::ustring utext = pfi::data::string::string_to_ustring(text);
 		pfi::data::string::uchar a,b;
 		if(any_type_expression.position_start	>= 1) a = utext[any_type_expression.position_start-1];
-		if(any_type_expression.position_end	< utext.size()) b = utext[any_type_expression.position_end];
+		if(any_type_expression.position_end	< static_cast<int>(utext.size())) b = utext[any_type_expression.position_end];
 		if(url_strings_to_bool[pfi::data::string::uchar_to_string(a)[0]] && url_strings_to_bool[pfi::data::string::uchar_to_string(b)[0]]){
 			for(int i=0; i<static_cast<int>(any_type_expression.original_expression.size()); i++){
 				if(not url_strings_to_bool[pfi::data::string::uchar_to_string(any_type_expression.original_expression[i])[0]]) return false;

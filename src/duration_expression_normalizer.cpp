@@ -142,7 +142,7 @@ void do_time_about(DurationExpression& durationexp) {
 
 
 void do_time_kyou(DurationExpression& durationexp) {
-	normalizer_utility::Time &tvl = durationexp.value_lowerbound, &tvu = durationexp.value_upperbound;
+	normalizer_utility::Time &tvu = durationexp.value_upperbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(durationexp.value_lowerbound);
 	if (target_time_position == "year") {
 		tvu.year += 5;
@@ -161,7 +161,7 @@ void do_time_kyou(DurationExpression& durationexp) {
 
 
 void do_time_jaku(DurationExpression& durationexp) {
-	normalizer_utility::Time &tvl = durationexp.value_lowerbound, &tvu = durationexp.value_upperbound;
+	normalizer_utility::Time &tvl = durationexp.value_lowerbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(durationexp.value_lowerbound);
 	if (target_time_position == "year") {
 		tvl.year -= 5;

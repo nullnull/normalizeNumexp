@@ -18,6 +18,7 @@
 {"character":"零", "value":0, "NotationType":"09"}
 {"character":"壹", "value":1, "NotationType":"09"}
 {"character":"贰", "value":2, "NotationType":"09"}
+{"character":"两", "value":2, "NotationType":"09"}
 {"character":"叁", "value":3, "NotationType":"09"}
 {"character":"肆", "value":4, "NotationType":"09"}
 {"character":"伍", "value":5, "NotationType":"09"}
@@ -29,3 +30,4 @@
 {"character":"佰", "value":2, "NotationType":"sen"}
 {"character":"仟", "value":3, "NotationType":"sen"}
 {"character":"萬", "value":4, "NotationType":"man"}
+{"character":"亿", "value":8, "NotationType":"man"}

@@ -10,6 +10,7 @@
 namespace number_normalizer {
 using namespace digit_utility;
 
+
 class NumberExtractor {
 public:
   void extract_number(const std::string& input, std::vector<Number>& output);
@@ -18,17 +19,16 @@ private:
   void return_longest_number_strings(const pfi::data::string::ustring& utext, int &i, std::string& numstr);
 };
 
+
+
 class NumberConverterTemplate {
 public:
   void convert_number(const pfi::data::string::ustring& number_string_org, double& value, int& number_type);
 protected:
   virtual void convert_arabic_kansuji_mixed_of_4digit(const pfi::data::string::ustring& number_string, int& number_converted) = 0;
   void delete_comma(const pfi::data::string::ustring& ustr, pfi::data::string::ustring& ret);
-  void identify_notation_type_of_number_string(const pfi::data::string::ustring& number_string, int& notation_type);
   void convert_arabic_numerals(const pfi::data::string::ustring& number_string, double& value);
-  void convert_kansuji_by_positional_notation(const pfi::data::string::ustring& number_string, double& value);
   void convert_arabic_kansuji_kurai_man_mixed(const pfi::data::string::ustring& number_string, double& value);
-  void convert_kansuji(const pfi::data::string::ustring& number_string, double& value);
   void convert_arabic_kansuji_mixed(const pfi::data::string::ustring& number_string, double& value);
 };
   
@@ -50,6 +50,7 @@ private:
 };
   
 
+
 class SymbolFixer {
 public:
   void fix_numbers_by_symbol(const std::string& text, std::vector<Number>& numbers);
@@ -63,6 +64,8 @@ private:
   void fix_intermediate_symbol(const pfi::data::string::ustring& utext, std::vector<Number>& numbers, int i);
   void fix_suffix_symbol(const pfi::data::string::ustring& utext, std::vector<Number>& numbers, int i);
 };
+
+
 
 class NumberNormalizer {
 public:

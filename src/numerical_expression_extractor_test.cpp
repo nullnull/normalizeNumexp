@@ -17,13 +17,13 @@ TEST_F(NumexpExtractorTest, simple1) {
   string text("1911年から2011年の間、その100年間において、1人も死傷者はでなかった。");
   NumericalExpressionExtractor NEE(language);
   NEE.extract_numerical_expression(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+	  cout << result[i] << endl;
+  }
   ASSERT_EQ(3u, result.size());
   EXPECT_EQ("numerical*1人*27*29*人*1*1*", result[0]);
   EXPECT_EQ("abstime*1911年から2011年*0*12*none*1911/MM/DD/hh/mm/ss*2011/MM/DD/hh/mm/ss*", result[1]);
   EXPECT_EQ("duration*100年間*17*22*none*100/MM/DD/hh/mm/ss*100/MM/DD/hh/mm/ss*", result[2]);
-  for(int i=0; i<static_cast<int>(result.size()); i++){
-	  cout << result[i] << endl;
-  }
 }
 
 TEST_F(NumexpExtractorTest, simple2) {

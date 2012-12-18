@@ -5,6 +5,7 @@
 ほとんど	about
 全	none
 ちょうど	none
+第	ordinary
 ~	kara_prefix
 〜	kara_prefix
 ～	kara_prefix

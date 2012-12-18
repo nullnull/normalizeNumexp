@@ -150,18 +150,20 @@ public:
     return;
   }
   
-  void normalize_suffix_number_modifier(const pfi::data::string::ustring& utext_replaced, AnyTypeExpression& any_type_expression){
+  bool normalize_suffix_number_modifier(const pfi::data::string::ustring& utext_replaced, AnyTypeExpression& any_type_expression){
     int matching_pattern_id;
     normalizer_utility::search_suffix_number_modifier(utext_replaced, any_type_expression.position_end, suffix_number_modifier_patterns_, matching_pattern_id);
-    if(matching_pattern_id == -1) return;
+    if(matching_pattern_id == -1) return false;
     revise_any_type_expression_by_matching_suffix_number_modifier(any_type_expression, suffix_number_modifier_[matching_pattern_id]);
+		return true;
   }
   
-  void normalize_prefix_number_modifier(const pfi::data::string::ustring& utext_replaced, AnyTypeExpression& any_type_expression){
+  bool normalize_prefix_number_modifier(const pfi::data::string::ustring& utext_replaced, AnyTypeExpression& any_type_expression){
     int matching_pattern_id;
     normalizer_utility::search_prefix_number_modifier(utext_replaced, any_type_expression.position_start, prefix_number_modifier_patterns_, matching_pattern_id);
-    if(matching_pattern_id == -1) return;
+    if(matching_pattern_id == -1) return false;
     revise_any_type_expression_by_matching_prefix_number_modifier(any_type_expression, prefix_number_modifier_[matching_pattern_id]);
+		return true;
   }
   
   void convert_numbers_to_any_type_expressions(const std::vector<digit_utility::Number>& numbers, std::vector<AnyTypeExpression>& any_type_expressions){
@@ -214,9 +216,9 @@ public:
         //TODO : 単位が存在しなかった場合の処理をどうするか、相談して決める
       }
       normalize_prefix_counter(utext_replaced, any_type_expressions[i]);
-      normalize_suffix_number_modifier(utext_replaced, any_type_expressions[i]); //TODO : 2回以上の接尾辞・接頭辞の繰り返しを許すか？（例：「およそ約3人」）
-      normalize_prefix_number_modifier(utext_replaced, any_type_expressions[i]);
-      any_type_expressions[i].set_original_expression_from_position(utext);
+      if(normalize_suffix_number_modifier(utext_replaced, any_type_expressions[i])) normalize_suffix_number_modifier(utext_replaced, any_type_expressions[i]);  //TODO : 2回以上の繰り返しを本当に含めて良いのか？
+      if(normalize_prefix_number_modifier(utext_replaced, any_type_expressions[i])) normalize_prefix_counter(utext_replaced, any_type_expressions[i]);
+			any_type_expressions[i].set_original_expression_from_position(utext);
     }
     
     //TODO : 範囲表現の処理

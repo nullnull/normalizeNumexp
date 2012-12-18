@@ -206,6 +206,12 @@ void DurationExpressionNormalizer::revise_any_type_expression_by_number_modifier
 		do_time_kyou(durationexp);
 	} else if (process_type == "jaku") {
 		do_time_jaku(durationexp);				
+	} else if (process_type == "made") {
+		if(durationexp.value_lowerbound == durationexp.value_upperbound){
+			durationexp.value_lowerbound = normalizer_utility::Time(-INFINITY);
+		} else{
+			
+		}
 	} else {
 		durationexp.options.push_back(process_type);
 	}

@@ -248,9 +248,12 @@
 {"pattern":"明治", "corresponding_time_position":[], "process_type":["1867"], "ordinary":false, "option":"seireki"}
 {"pattern":"大正", "corresponding_time_position":[], "process_type":["1911"], "ordinary":false, "option":"seireki"}
 {"pattern":"昭和", "corresponding_time_position":[], "process_type":["1925"], "ordinary":false, "option":"seireki"}
+{"pattern":"S", "corresponding_time_position":[], "process_type":["1925"], "ordinary":false, "option":"seireki"}
+{"pattern":"Ｓ", "corresponding_time_position":[], "process_type":["1925"], "ordinary":false, "option":"seireki"}
 {"pattern":"戦後", "corresponding_time_position":[], "process_type":["1945"], "ordinary":false, "option":"seireki"}
 {"pattern":"平成", "corresponding_time_position":[], "process_type":["1988"], "ordinary":false, "option":"seireki"}
 {"pattern":"H", "corresponding_time_position":[], "process_type":["1988"], "ordinary":false, "option":"seireki"}
+{"pattern":"Ｈ", "corresponding_time_position":[], "process_type":["1988"], "ordinary":false, "option":"seireki"}
 {"pattern":"紀元前", "corresponding_time_position":[], "process_type":[], "ordinary":false, "option":"kigenzen"}
 {"pattern":"午前", "corresponding_time_position":[], "process_type":[], "ordinary":false, "option":"gozen"}
 {"pattern":"午後", "corresponding_time_position":[], "process_type":[], "ordinary":false, "option":"gogo"}

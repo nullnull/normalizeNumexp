@@ -270,6 +270,14 @@ void AbstimeExpressionNormalizer::revise_any_type_expression_by_number_modifier(
 		do_time_tyujun(abstimeexp);
 	} else if (process_type == "gejun") {
 		do_time_gejun(abstimeexp);
+	} else if (process_type == "made") {
+		if(abstimeexp.value_upperbound == abstimeexp.value_lowerbound){
+			//「3時までに来て下さい」の場合
+			abstimeexp.value_lowerbound = normalizer_utility::Time(-INFINITY);
+		} else {
+			//「2時~3時までに来て下さい」の場合
+			;
+		}
 	}	else {
     abstimeexp.options.push_back(process_type);
   }

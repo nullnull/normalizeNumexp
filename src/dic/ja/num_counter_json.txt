@@ -64,11 +64,9 @@
 {"pattern":"か所", "counter":"箇所", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"個所", "counter":"箇所", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"文節", "counter":"文節", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
-{"pattern":"年生", "counter":"年生", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"回生", "counter":"回生", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"単位", "counter":"単位", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"次元", "counter":"次元", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
-{"pattern":"番地", "counter":"番地", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"連勝", "counter":"連勝", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"連敗", "counter":"連敗", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"重奏", "counter":"重奏", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
@@ -264,7 +262,6 @@
 {"pattern":"号", "counter":"号", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"課", "counter":"課", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"作", "counter":"作", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
-{"pattern":"軍", "counter":"軍", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"集", "counter":"集", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"州", "counter":"州", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"周", "counter":"周", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
@@ -283,7 +280,6 @@
 {"pattern":"碗", "counter":"碗", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"台分", "counter":"台分", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"人分", "counter":"人分", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
-{"pattern":"号室", "counter":"号室", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"月号", "counter":"月号", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"倍速", "counter":"倍速", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"コ", "counter":"個", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
@@ -308,6 +304,9 @@
 {"pattern":"事例", "counter":"事例", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"周年", "counter":"周年", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"例", "counter":"例", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
+{"pattern":"ppm", "counter":"ppm", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
+{"pattern":"G", "counter":"G", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
+{"pattern":"Ｇ", "counter":"G", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"ニュートン", "counter":"N", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"ギガニュートン", "counter":"N", "SI_prefix":9, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"メガニュートン", "counter":"N", "SI_prefix":6, "optional_power_of_ten":0, "ordinary":false, "option":""}

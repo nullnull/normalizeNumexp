@@ -4,6 +4,8 @@ $	ドル	counter
 ＄	ドル	counter
 €	ユーロ	counter
 £	ポンド	counter
+小さじ	小さじ	counter
+大さじ	大さじ	counter
 時速	/h	add_suffix_counter
 毎時	/h	add_suffix_counter
 分速	/m	add_suffix_counter
@@ -13,6 +15,14 @@ $	ドル	counter
 週	/week	add_suffix_counter
 月	/month	add_suffix_counter
 年	/year	add_suffix_counter
-最大	(saidai)	add_suffix_counter
-最長	(saityou)	add_suffix_counter
-最高	(saikou)	add_suffix_counter
+最大	*	saidai
+最長	*	saityou
+最高	*	saikou
+華氏	℉	counter
+摂氏	℃	counter
+風速	*	fusoku
+水温	*	suion
+北緯	*	hokui
+南緯	*	nanni
+東経	*	toukei
+西経	*	seikei

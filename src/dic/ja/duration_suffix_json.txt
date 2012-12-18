@@ -2,7 +2,7 @@
 {"pattern":"以下", "process_type":"or_less"}
 {"pattern":"以前", "process_type":"or_less"}
 {"pattern":"以内", "process_type":"or_less"}
-{"pattern":"まで", "process_type":"or_less"}
+{"pattern":"まで", "process_type":"made"}
 {"pattern":"迄", "process_type":"or_less"}
 {"pattern":"未満", "process_type":"less"}
 {"pattern":"以上", "process_type":"or_over"}

@@ -8,3 +8,11 @@
 −	kara_prefix
 ー	kara_prefix
 から	kara_prefix
+PM	gogo
+AM	gozen
+ＰＭ	gogo
+ＡＭ	gozen
+ PM	gogo
+ AM	gozen
+　ＰＭ	gogo
+　ＡＭ	gozen

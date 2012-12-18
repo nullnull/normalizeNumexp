@@ -8,3 +8,11 @@
 {"pattern":"−", "process_type":"kara_prefix"}
 {"pattern":"ー", "process_type":"kara_prefix"}
 {"pattern":"から", "process_type":"kara_prefix"}
+{"pattern":"PM", "process_type":"gogo"}
+{"pattern":"AM", "process_type":"gozen"}
+{"pattern":"ＰＭ", "process_type":"gogo"}
+{"pattern":"ＡＭ", "process_type":"gozen"}
+{"pattern":"PM", "process_type":"gogo"}
+{"pattern":"AM", "process_type":"gozen"}
+{"pattern":"　ＰＭ", "process_type":"gogo"}
+{"pattern":"　ＡＭ", "process_type":"gozen"}

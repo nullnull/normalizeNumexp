@@ -10,7 +10,7 @@ def build(bld):
             use = ['PFICOMMON','normalize_numexp', 'UX', 'boost_regex'])
 
     bld.shlib(
-        source = ['dictionary_dirpath.cpp', 'digit_utility.cpp', 'number_normalizer.cpp', 'normalizer_utility.cpp',  'numerical_expression_normalizer.cpp', 'abstime_expression_normalizer.cpp', 'reltime_expression_normalizer.cpp', 'duration_expression_normalizer.cpp', 'numerical_expression_extractor.cpp'],
+        source = ['dictionary_dirpath.cpp', 'digit_utility.cpp', 'number_normalizer.cpp', 'normalizer_utility.cpp',  'numerical_expression_normalizer.cpp', 'abstime_expression_normalizer.cpp', 'reltime_expression_normalizer.cpp', 'duration_expression_normalizer.cpp', 'inappropriate_expression_remover.cpp', 'numerical_expression_extractor.cpp'],
         use = ['PFICOMMON', 'UX'],
         target = 'normalize_numexp'
         )

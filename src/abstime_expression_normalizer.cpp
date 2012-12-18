@@ -40,9 +40,21 @@ void set_time(AbstimeExpression& abstimeexp, const std::string& corresponding_ti
 
 void revise_abstimeexp_by_process_type(AbstimeExpression& abstimeexp, std::string process_type) {
 	//修飾語でない、パターンに含まれるprocess_typeによる規格化表現の補正処理。
-  if (process_type == "gogo") {
-    abstimeexp.value_lowerbound.hour += 12;
-    abstimeexp.value_upperbound.hour += 12;
+	if (process_type == "gozen") {
+		if(abstimeexp.value_lowerbound == INFINITY){
+			abstimeexp.value_lowerbound = 0;
+			abstimeexp.value_upperbound = 12;
+		}else{
+			;
+		}
+	}else if (process_type == "gogo") {
+		if(abstimeexp.value_lowerbound == INFINITY){
+			abstimeexp.value_lowerbound = 12;
+			abstimeexp.value_upperbound = 24;
+		}else{
+			abstimeexp.value_lowerbound.hour += 12;
+			abstimeexp.value_upperbound.hour += 12;
+		}
   }else if (process_type == "han") {
     abstimeexp.value_lowerbound.minute = 30;
     abstimeexp.value_upperbound.minute = 30;
@@ -73,7 +85,12 @@ void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_prefix_
     normalizer_utility::cast(matching_limited_expression.process_type[0], tmp);
     any_type_expression.value_lowerbound.year += tmp;
     any_type_expression.value_upperbound.year += tmp;
-  }
+  }else if(matching_limited_expression.option == "gogo"){
+		any_type_expression.value_lowerbound.hour += 12;
+    any_type_expression.value_upperbound.hour += 12;
+	}else if(matching_limited_expression.option == "gozen"){
+	
+	}
   any_type_expression.position_start -= pfi::data::string::string_to_ustring(matching_limited_expression.pattern).size();
 }
 

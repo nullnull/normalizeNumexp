@@ -179,7 +179,16 @@ public:
   }
   
   void merge_options(std::vector<std::string>& options1, std::vector<std::string>& options2){
+		//範囲表現の統合の際に使われる。kara_suffix, kara_prefixはここで削除する
+		//TODO : 削除するというのが非常に分かり辛い。どうにかする。
+		for(int i=0; i<static_cast<int>(options1.size()); i++){
+			if(options1[i] == "kara_suffix"){
+				options1.erase(options1.begin() + i);
+				break;
+			}
+		}
     for(int i=0; i<static_cast<int>(options2.size()); i++){
+			if(options2[i] == "kara_prefix") continue;
       options1.push_back(options2[i]);
     }
   }

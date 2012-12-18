@@ -1,0 +1,18 @@
+時
+h
+時半
+h
+時*分
+h mn
+時*分*秒
+h mn s
+分*秒
+mn s
+:*
+h mn
+：*
+h mn
+:*:*
+h mn s
+：*：*
+h mn s

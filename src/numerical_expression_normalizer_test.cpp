@@ -278,9 +278,6 @@ TEST_F(NumexpNormalizerTest, range9) {
   ex.counter = string_to_ustring("m/h");
   ASSERT_EQ(1u, numexps.size());
   EXPECT_TRUE(is_same_numexp(ex, numexps[0]));
-  ASSERT_EQ(2u, numexps[0].options.size());
-  EXPECT_EQ("kara_suffix", numexps[0].options[0]);
-  EXPECT_EQ("kara_prefix", numexps[0].options[1]); //optionsにおいて、unique処理を行うかどうか、またkara_suffix, kara_prefixを処理するべきかどうか、どちらとも言えないので、とりあえずこのように定義する
 }
 
 TEST_F(NumexpNormalizerTest, chinese1) {

@@ -1,0 +1,336 @@
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"月}
+{"pattern":"(月)}
+{"pattern":"（月）}
+{"pattern":" 月 }
+{"pattern":"　月　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"火}
+{"pattern":"(火)}
+{"pattern":"（火）}
+{"pattern":" 火 }
+{"pattern":"　火　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"水}
+{"pattern":"(水)}
+{"pattern":"（水）}
+{"pattern":" 水 }
+{"pattern":"　水　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"木}
+{"pattern":"(木)}
+{"pattern":"（木）}
+{"pattern":" 木 }
+{"pattern":"　木　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"金}
+{"pattern":"(金)}
+{"pattern":"（金）}
+{"pattern":" 金 }
+{"pattern":"　金　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"土}
+{"pattern":"(土)}
+{"pattern":"（土）}
+{"pattern":" 土 }
+{"pattern":"　土　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"日}
+{"pattern":"(日)}
+{"pattern":"（日）}
+{"pattern":" 日 }
+{"pattern":"　日　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"月曜日}
+{"pattern":"(月曜日)}
+{"pattern":"（月曜日）}
+{"pattern":" 月曜日 }
+{"pattern":"　月曜日　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"火曜日}
+{"pattern":"(火曜日)}
+{"pattern":"（火曜日）}
+{"pattern":" 火曜日 }
+{"pattern":"　火曜日　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"水曜日}
+{"pattern":"(水曜日)}
+{"pattern":"（水曜日）}
+{"pattern":" 水曜日 }
+{"pattern":"　水曜日　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"木曜日}
+{"pattern":"(木曜日)}
+{"pattern":"（木曜日）}
+{"pattern":" 木曜日 }
+{"pattern":"　木曜日　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"金曜日}
+{"pattern":"(金曜日)}
+{"pattern":"（金曜日）}
+{"pattern":" 金曜日 }
+{"pattern":"　金曜日　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"土曜日}
+{"pattern":"(土曜日)}
+{"pattern":"（土曜日）}
+{"pattern":" 土曜日 }
+{"pattern":"　土曜日　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"日曜日}
+{"pattern":"(日曜日)}
+{"pattern":"（日曜日）}
+{"pattern":" 日曜日 }
+{"pattern":"　日曜日　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Monday}
+{"pattern":"(Monday)}
+{"pattern":"（Monday）}
+{"pattern":" Monday }
+{"pattern":"　Monday　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Tuesday}
+{"pattern":"(Tuesday)}
+{"pattern":"（Tuesday）}
+{"pattern":" Tuesday }
+{"pattern":"　Tuesday　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Wednesday}
+{"pattern":"(Wednesday)}
+{"pattern":"（Wednesday）}
+{"pattern":" Wednesday }
+{"pattern":"　Wednesday　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Thursday}
+{"pattern":"(Thursday)}
+{"pattern":"（Thursday）}
+{"pattern":" Thursday }
+{"pattern":"　Thursday　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Friday}
+{"pattern":"(Friday)}
+{"pattern":"（Friday）}
+{"pattern":" Friday }
+{"pattern":"　Friday　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Saturday}
+{"pattern":"(Saturday)}
+{"pattern":"（Saturday）}
+{"pattern":" Saturday }
+{"pattern":"　Saturday　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Sunday}
+{"pattern":"(Sunday)}
+{"pattern":"（Sunday）}
+{"pattern":" Sunday }
+{"pattern":"　Sunday　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Mon}
+{"pattern":"(Mon)}
+{"pattern":"（Mon）}
+{"pattern":" Mon }
+{"pattern":"　Mon　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Tue}
+{"pattern":"(Tue)}
+{"pattern":"（Tue）}
+{"pattern":" Tue }
+{"pattern":"　Tue　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Wed}
+{"pattern":"(Wed)}
+{"pattern":"（Wed）}
+{"pattern":" Wed }
+{"pattern":"　Wed　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Thu}
+{"pattern":"(Thu)}
+{"pattern":"（Thu）}
+{"pattern":" Thu }
+{"pattern":"　Thu　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Fri}
+{"pattern":"(Fri)}
+{"pattern":"（Fri）}
+{"pattern":" Fri }
+{"pattern":"　Fri　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Sat}
+{"pattern":"(Sat)}
+{"pattern":"（Sat）}
+{"pattern":" Sat }
+{"pattern":"　Sat　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Sun}
+{"pattern":"(Sun)}
+{"pattern":"（Sun）}
+{"pattern":" Sun }
+{"pattern":"　Sun　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｍｏｎｄａｙ}
+{"pattern":"(Ｍｏｎｄａｙ)}
+{"pattern":"（Ｍｏｎｄａｙ）}
+{"pattern":" Ｍｏｎｄａｙ }
+{"pattern":"　Ｍｏｎｄａｙ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｔｕｅｓｄａｙ}
+{"pattern":"(Ｔｕｅｓｄａｙ)}
+{"pattern":"（Ｔｕｅｓｄａｙ）}
+{"pattern":" Ｔｕｅｓｄａｙ }
+{"pattern":"　Ｔｕｅｓｄａｙ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｗｅｄｎｅｓｄａｙ}
+{"pattern":"(Ｗｅｄｎｅｓｄａｙ)}
+{"pattern":"（Ｗｅｄｎｅｓｄａｙ）}
+{"pattern":" Ｗｅｄｎｅｓｄａｙ }
+{"pattern":"　Ｗｅｄｎｅｓｄａｙ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｔｈｕｒｓｄａｙ}
+{"pattern":"(Ｔｈｕｒｓｄａｙ)}
+{"pattern":"（Ｔｈｕｒｓｄａｙ）}
+{"pattern":" Ｔｈｕｒｓｄａｙ }
+{"pattern":"　Ｔｈｕｒｓｄａｙ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｆｒｉｄａｙ}
+{"pattern":"(Ｆｒｉｄａｙ)}
+{"pattern":"（Ｆｒｉｄａｙ）}
+{"pattern":" Ｆｒｉｄａｙ }
+{"pattern":"　Ｆｒｉｄａｙ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｓａｔｕｒｄａｙ}
+{"pattern":"(Ｓａｔｕｒｄａｙ)}
+{"pattern":"（Ｓａｔｕｒｄａｙ）}
+{"pattern":" Ｓａｔｕｒｄａｙ }
+{"pattern":"　Ｓａｔｕｒｄａｙ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｓｕｎｄａｙ}
+{"pattern":"(Ｓｕｎｄａｙ)}
+{"pattern":"（Ｓｕｎｄａｙ）}
+{"pattern":" Ｓｕｎｄａｙ }
+{"pattern":"　Ｓｕｎｄａｙ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｍｏｎ}
+{"pattern":"(Ｍｏｎ)}
+{"pattern":"（Ｍｏｎ）}
+{"pattern":" Ｍｏｎ }
+{"pattern":"　Ｍｏｎ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｔｕｅ}
+{"pattern":"(Ｔｕｅ)}
+{"pattern":"（Ｔｕｅ）}
+{"pattern":" Ｔｕｅ }
+{"pattern":"　Ｔｕｅ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｗｅｄ}
+{"pattern":"(Ｗｅｄ)}
+{"pattern":"（Ｗｅｄ）}
+{"pattern":" Ｗｅｄ }
+{"pattern":"　Ｗｅｄ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｔｈｕ}
+{"pattern":"(Ｔｈｕ)}
+{"pattern":"（Ｔｈｕ）}
+{"pattern":" Ｔｈｕ }
+{"pattern":"　Ｔｈｕ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｆｒｉ}
+{"pattern":"(Ｆｒｉ)}
+{"pattern":"（Ｆｒｉ）}
+{"pattern":" Ｆｒｉ }
+{"pattern":"　Ｆｒｉ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｓａｔ}
+{"pattern":"(Ｓａｔ)}
+{"pattern":"（Ｓａｔ）}
+{"pattern":" Ｓａｔ }
+{"pattern":"　Ｓａｔ　}
+{"pattern":"}
+{"pattern":"　}
+{"pattern":" }
+{"pattern":"Ｓｕｎ}
+{"pattern":"(Ｓｕｎ)}
+{"pattern":"（Ｓｕｎ）}
+{"pattern":" Ｓｕｎ }
+{"pattern":"　Ｓｕｎ　}

@@ -45,4 +45,3 @@
 {"pattern":"上旬", "process_type":"joujun"}
 {"pattern":"中旬", "process_type":"tyujun"}
 {"pattern":"下旬", "process_type":"gejun"}
-{"pattern":"午前", "process_type":"null"}

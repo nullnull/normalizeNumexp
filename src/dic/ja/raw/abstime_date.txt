@@ -1,0 +1,44 @@
+世紀
+seiki
+年
+y
+年*月
+y m
+年*月*日
+y m d
+月
+m
+月*日
+m d
+日
+d
+/*
+m d
+/*/*
+y m d
+／*
+m d
+／*／*
+y m d
+-*-*
+y m d
+−*−*
+y m d
+ー*ー*
+y m d
+.*.*
+y m d
+.*
+y m
+．*
+y m
+．*．*
+y m d
+・*
+y m
+・*・*
+y m d
+，*
+y m
+，*，*
+y m d

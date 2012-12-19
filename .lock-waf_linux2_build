@@ -1,8 +1,0 @@
-argv = ['./waf', 'configure', '--prefix=/home/katsuma/usr/local/']
-environ = {'PYTHONPATH': 'Users/katsuma', 'TMUX': '/tmp/tmux-20014/default,15314,2', 'SSH_CLIENT': '192.168.100.63 63320 22', 'LSCOLORS': 'gxfxcxdxbxegedabagacad', 'LOGNAME': 'katsuma', 'USER': 'katsuma', 'PATH': '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/katsuma/usr/local/bin:/home/katsuma/usr/local/bin', 'PKG_CONFIG_PATH': '/home/katsuma/usr/local/lib/pkgconfig/', 'HOME': '/home/katsuma', 'PS1': '\\[\\e[0;32m\\]\\u@\\h\\[\\e[0m\\][\\t]:\\W$ ', 'LD_LIBRARY_PATH': '/home/katsuma/src/digit_utils/build/src/:/home/katsuma/usr/local/lib/', '_': './waf', 'LANG': 'en_US.UTF-8', 'TERM': 'screen-256color', 'SHELL': '/bin/bash', 'XDG_SESSION_COOKIE': '083224cca24db6ba1f9451574ba31e23-1355240262.319630-719736133', 'SHLVL': '2', 'SSH_TTY': '/dev/pts/8', 'OLDPWD': '/home/katsuma/src/normalizeNumexp/src', 'HISTSIZE': '10000', 'HISTCONTROL': 'ignoreboth', 'PWD': '/home/katsuma/src/normalizeNumexp', 'MAIL': '/var/mail/katsuma', 'CLICOLOR': '1', 'SSH_CONNECTION': '192.168.100.63 50663 192.168.100.114 22', 'TMUX_PANE': '%9'}
-files = ['/home/katsuma/src/normalizeNumexp/wscript']
-hash = 8939153935397674075
-options = {'files': '', 'checkall': False, 'targets': '', 'jobs': 12, 'verbose': 0, 'nocache': False, 'progress_bar': 0, 'checkone': False, 'top': '', 'destdir': '', 'keep': 0, 'zones': '', 'prefix': '/home/katsuma/usr/local/', 'download': False, 'force': False, 'out': '', 'check_cxx_compiler': 'g++ icpc', 'check': False, 'checkfilter': False}
-out_dir = '/home/katsuma/src/normalizeNumexp/build'
-run_dir = '/home/katsuma/src/normalizeNumexp'
-top_dir = '/home/katsuma/src/normalizeNumexp'

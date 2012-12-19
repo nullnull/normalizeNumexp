@@ -139,7 +139,7 @@ TEST_F(NormalizerUtilityTest, is_null_time_false) {
 
 TEST_F(NormalizerUtilityTest, identify_time_detail) {
   Time t(1,1,1,1,1,INFINITY);
-  EXPECT_EQ(identify_time_detail(t), "minute");
+  EXPECT_EQ(identify_time_detail(t), "mn");
 }
 
 TEST_F(NormalizerUtilityTest, reverse_string) {

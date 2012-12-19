@@ -15,4 +15,3 @@ python create_dic_reltime.py > ../reltime_expression_json.txt
 python create_dic_reltime_prefix_counter.py > ../reltime_prefix_counter_json.txt
 python create_dic_duration.py > ../duration_expression_json.txt
 python create_dic_inappropriate.py > ../inappropriate_strings_json.txt
-python create_dic_dayweek.py > ../dayweek_json.txt

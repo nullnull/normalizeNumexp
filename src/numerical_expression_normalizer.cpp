@@ -112,7 +112,7 @@ bool suffix_match_counter(pfi::data::string::ustring counter1, pfi::data::string
 
 void NumericalExpressionNormalizer::fix_by_range_expression(const pfi::data::string::ustring& utext, std::vector<NumericalExpression>& numexps) {
   for(int i=0; i<static_cast<int>(numexps.size()-1); i++){
-    if(have_kara_suffix(numexps[i].options) && have_kara_prefix(numexps[i+1].options)){
+    if(have_kara_suffix(numexps[i].options) && have_kara_prefix(numexps[i+1].options) && numexps[i].position_end +2 >= numexps[i+1].position_start){
       if(!suffix_match_counter(numexps[i].counter, numexps[i+1].counter)) continue;
       numexps[i].value_upperbound = numexps[i+1].value_upperbound;
       numexps[i].position_end = numexps[i+1].position_end;

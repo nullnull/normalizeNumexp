@@ -280,7 +280,6 @@
 {"pattern":"碗", "counter":"碗", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"台分", "counter":"台分", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"人分", "counter":"人分", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
-{"pattern":"月号", "counter":"月号", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"倍速", "counter":"倍速", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"コ", "counter":"個", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"こま", "counter":"コマ", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
@@ -307,6 +306,7 @@
 {"pattern":"ppm", "counter":"ppm", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"G", "counter":"G", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"Ｇ", "counter":"G", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
+{"pattern":"色", "counter":"色", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"ニュートン", "counter":"N", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"ギガニュートン", "counter":"N", "SI_prefix":9, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"メガニュートン", "counter":"N", "SI_prefix":6, "optional_power_of_ten":0, "ordinary":false, "option":""}

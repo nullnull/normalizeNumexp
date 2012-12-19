@@ -1,3 +1,4 @@
+{"pattern":"去年", "corresponding_time_position":["y"], "process_type":["-1"], "ordinary":false, "option":"add_relation"}
 {"pattern":"昨年", "corresponding_time_position":["y"], "process_type":["-1"], "ordinary":false, "option":"add_relation"}
 {"pattern":"一昨年", "corresponding_time_position":["y"], "process_type":["-2"], "ordinary":false, "option":"add_relation"}
 {"pattern":"今年", "corresponding_time_position":["y"], "process_type":["0"], "ordinary":false, "option":"add_relation"}

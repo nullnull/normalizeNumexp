@@ -296,7 +296,7 @@ namespace inappropriate_expression_remover{
 	}
 	
 	void InappropriateExpressionRemover::init_url_strings(){
-			std::string url_strings("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-!#$%&()=~^|¥@`/");
+		std::string url_strings("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-!#$%&()=~^|¥@`/１２３４５６７８９０ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＭＮＬＰＱＲＳＴＵＶＷＸＹＺ！＃＄％＆（）＝〜｜");
 			
 		for(int i=0; i<static_cast<int>(url_strings.size()); i++){
 			url_strings_to_bool[url_strings[i]] = true;

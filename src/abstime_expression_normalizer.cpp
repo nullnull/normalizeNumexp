@@ -74,8 +74,9 @@ void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_limited
     revise_abstimeexp_by_process_type(abstimeexps[expression_id], matching_limited_abstime_expression.process_type[i]);
   }
   abstimeexps[expression_id].ordinary = matching_limited_abstime_expression.ordinary;
+	abstimeexps[expression_id].options.push_back(matching_limited_abstime_expression.option);
   abstimeexps.erase(abstimeexps.begin() + expression_id + 1,
-      abstimeexps.begin() + expression_id + 1 + matching_limited_abstime_expression.total_number_of_place_holder);
+      abstimeexps.begin() + expression_id + 1 + matching_limited_abstime_expression.total_number_of_place_holder); //一致した部分のnumberを削除
 }
 
 void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_prefix_counter(AbstimeExpression& any_type_expression, const LimitedAbstimeExpression& matching_limited_expression) {
@@ -90,6 +91,8 @@ void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_prefix_
     any_type_expression.value_upperbound.hour += 12;
 	}else if(matching_limited_expression.option == "gozen"){
 	
+	}else{
+		any_type_expression.options.push_back(matching_limited_expression.option);
 	}
   any_type_expression.position_start -= pfi::data::string::string_to_ustring(matching_limited_expression.pattern).size();
 }
@@ -105,23 +108,23 @@ void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_prefix_
 void do_time_about(AbstimeExpression& abstimeexp) {
   normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
   const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
-  if (target_time_position == "year") {
+  if (target_time_position == "y") {
     //TODO : 「1800年ごろ」という指定なら1790~1810くらいだと感じる　「1811年ごろ」という指定なら1810~1812くらいだと感じる　　以下は雑な実装
     tvl.year -= 5;
     tvu.year += 5;
-  } else if (target_time_position == "month") {
+  } else if (target_time_position == "m") {
     tvl.month -= 1;
     tvu.month += 1;
-  } else if (target_time_position == "day") {
+  } else if (target_time_position == "d") {
     tvl.day -= 1;
     tvu.day += 1;
-  } else if (target_time_position == "hour") {
+  } else if (target_time_position == "h") {
     tvl.hour -= 1;
     tvu.hour += 1;
-  } else if (target_time_position == "minute") {
+  } else if (target_time_position == "mn") {
     tvl.minute -= 5;
     tvu.minute += 5;
-  } else if (target_time_position == "second") {
+  } else if (target_time_position == "s") {
     tvl.second -= 5;
     tvu.second += 5;
   }
@@ -133,7 +136,7 @@ void do_time_zenhan(AbstimeExpression& abstimeexp) {
 	//TODO : 「18世紀はじめ」などもzenhanに括ってしまっている。より細かく分類が行いたい場合は、hajime関数などを書いて処理
 	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
   const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
-  if (target_time_position == "year") {
+  if (target_time_position == "y") {
     if(tvl.year != tvu.year){
 			//「18世紀前半」のとき
 			tvu.year = (tvl.year + tvu.year)/2 -0.5;
@@ -142,11 +145,11 @@ void do_time_zenhan(AbstimeExpression& abstimeexp) {
 			tvl.month = 1;
 			tvu.month = 6;
 		}
-  } else if (target_time_position == "month") {
+  } else if (target_time_position == "m") {
 		//「7月前半」のとき
     tvl.day = 1;
 		tvl.day = 15;
-  } else if (target_time_position == "day") {
+  } else if (target_time_position == "d") {
 		//「3日朝」のとき
     tvl.hour = 5;
 		tvu.hour = 12;
@@ -161,7 +164,7 @@ void do_time_kouhan(AbstimeExpression& abstimeexp) {
 	//TODO : 「18世紀末」「3日夜」などもkouhanに括ってしまっている。
 	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
-	if (target_time_position == "year") {
+	if (target_time_position == "y") {
 		if(tvl.year != tvu.year){
 			//「18世紀後半」のとき
 			tvl.year = (tvl.year + tvu.year)/2 +0.5;;
@@ -170,11 +173,11 @@ void do_time_kouhan(AbstimeExpression& abstimeexp) {
 			tvl.month = 7;
 			tvu.month = 12;
 		}
-	} else if (target_time_position == "month") {
+	} else if (target_time_position == "m") {
 		//「7月後半」のとき
 		tvl.day = 16;
 		tvl.day = 31;
-	} else if (target_time_position == "day") {
+	} else if (target_time_position == "d") {
 		//「3日夜」のとき
 		tvl.hour = 18;
 		tvu.hour = 24;
@@ -189,7 +192,7 @@ void do_time_nakaba(AbstimeExpression& abstimeexp) {
 	//TODO : 「18世紀なかば」「3日昼」などもnakabaに括ってしまっている。
 	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
-	if (target_time_position == "year") {
+	if (target_time_position == "y") {
 		if(tvl.year != tvu.year){
 			//「18世紀中盤」のとき
 			int tmp = (tvu.year - tvl.year)/4;
@@ -200,11 +203,11 @@ void do_time_nakaba(AbstimeExpression& abstimeexp) {
 			tvl.month = 4;
 			tvu.month = 9;
 		}
-	} else if (target_time_position == "month") {
+	} else if (target_time_position == "m") {
 		//「7月半ば」のとき
 		tvl.day = 10;
 		tvl.day = 20;
-	} else if (target_time_position == "day") {
+	} else if (target_time_position == "d") {
 		//「3日昼」のとき
 		tvl.hour = 10;
 		tvu.hour = 15;
@@ -217,7 +220,7 @@ void do_time_nakaba(AbstimeExpression& abstimeexp) {
 void do_time_joujun(AbstimeExpression& abstimeexp) {
 	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
-	if (target_time_position == "month") {
+	if (target_time_position == "m") {
 			tvl.day = 1;
 			tvu.day = 10;
 	} 
@@ -226,7 +229,7 @@ void do_time_joujun(AbstimeExpression& abstimeexp) {
 void do_time_tyujun(AbstimeExpression& abstimeexp) {
 	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
-	if (target_time_position == "month") {
+	if (target_time_position == "m") {
 			tvl.day = 11;
 			tvu.day = 20;
 	} 
@@ -235,7 +238,7 @@ void do_time_tyujun(AbstimeExpression& abstimeexp) {
 void do_time_gejun(AbstimeExpression& abstimeexp) {
 	normalizer_utility::Time &tvl = abstimeexp.value_lowerbound, &tvu = abstimeexp.value_upperbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexp.value_lowerbound);
-	if (target_time_position == "month") {
+	if (target_time_position == "m") {
 			tvl.day = 21;
 			tvu.day = 31;
 	} 
@@ -304,7 +307,12 @@ void AbstimeExpressionNormalizer::delete_not_any_type_expression(std::vector<Abs
 
 void AbstimeExpressionNormalizer::fix_by_range_expression(const pfi::data::string::ustring& utext, std::vector<AbstimeExpression>& abstimeexps) {
   for(int i=0; i<static_cast<int>(abstimeexps.size()-1); i++){
-    if(have_kara_suffix(abstimeexps[i].options) && have_kara_prefix(abstimeexps[i+1].options)){
+    if(have_kara_suffix(abstimeexps[i].options) && have_kara_prefix(abstimeexps[i+1].options) && abstimeexps[i].position_end +2 >= abstimeexps[i+1].position_start){
+			if(abstimeexps[i].value_lowerbound == normalizer_utility::Time(INFINITY)){ //lower_boundが空 = 時間として認識されていない場合（例：「4~12月」の「4~」）、lower_boundを設定
+				const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexps[i+1].value_upperbound);
+				AbstimeExpression tmp_abstimeexp = abstimeexps[i];
+				set_time(abstimeexps[i], target_time_position, tmp_abstimeexp);
+			}
       abstimeexps[i].value_upperbound = abstimeexps[i+1].value_upperbound;
       abstimeexps[i].position_end = abstimeexps[i+1].position_end;
       abstimeexps[i].set_original_expression_from_position(utext);

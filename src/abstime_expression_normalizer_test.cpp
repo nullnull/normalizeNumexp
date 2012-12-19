@@ -188,9 +188,9 @@ TEST_F(AbstimeexpNormalizerTest, zenhan2) {
   std::vector<AbstimeExpression> abstimeexps;
   AEN.process(text, abstimeexps);
   
-  Time ex1_lower(INFINITY, 7, 3, 5, INFINITY, INFINITY);
-  Time ex1_upper(-INFINITY, 7, 3, 12, -INFINITY, -INFINITY);
-  EXPECT_EQ("7月3日朝", ustring_to_string(abstimeexps[0].original_expression));
+  Time ex1_lower(INFINITY, 7, 3, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY, 7, 3, -INFINITY, -INFINITY, -INFINITY);
+  EXPECT_EQ("7月3日", ustring_to_string(abstimeexps[0].original_expression)); //「朝」はtimeなのでとらない
   EXPECT_TRUE(is_same_time(ex1_lower, abstimeexps[0].value_lowerbound));
   EXPECT_TRUE(is_same_time(ex1_upper, abstimeexps[0].value_upperbound));
 }
@@ -263,6 +263,19 @@ TEST_F(AbstimeexpNormalizerTest, range2) {
   EXPECT_TRUE(is_same_time(ex1_upper, abstimeexps[0].value_upperbound));
 }
 
+TEST_F(AbstimeexpNormalizerTest, range3) {
+  AbstimeExpressionNormalizer AEN("ja");
+  std::string text("15~18時の間に、");
+  std::vector<AbstimeExpression> abstimeexps;
+  AEN.process(text, abstimeexps);
+  ASSERT_EQ(1u, abstimeexps.size());
+  Time ex1_lower(INFINITY, INFINITY, INFINITY, 15, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 18, -INFINITY, -INFINITY);
+  EXPECT_EQ("15~18時", ustring_to_string(abstimeexps[0].original_expression));
+  EXPECT_TRUE(is_same_time(ex1_lower, abstimeexps[0].value_lowerbound));
+  EXPECT_TRUE(is_same_time(ex1_upper, abstimeexps[0].value_upperbound));
+}
+
 TEST_F(AbstimeexpNormalizerTest, ambiguous1) {
   AbstimeExpressionNormalizer AEN("ja");
   std::string text("2011.3 その日、");
@@ -276,6 +289,7 @@ TEST_F(AbstimeexpNormalizerTest, ambiguous1) {
   EXPECT_TRUE(is_same_time(ex1_lower, abstimeexps[0].value_lowerbound));
   EXPECT_TRUE(is_same_time(ex1_upper, abstimeexps[0].value_upperbound));
 }
+
 
 TEST_F(AbstimeexpNormalizerTest, chinese1) {
   AbstimeExpressionNormalizer AEN("zh");

@@ -320,6 +320,12 @@ TEST_F(NumberNormalizerTest, process_test5_suu) {
 	std::string language("ja");
 	NumberNormalizer nn(language);
 	nn.process(text, result);
+	EXPECT_EQ("数十", ustring_to_string(result[0].original_expression));
+	EXPECT_EQ("数万", ustring_to_string(result[1].original_expression));
+	EXPECT_EQ("十数", ustring_to_string(result[2].original_expression));
+	EXPECT_EQ("百数十", ustring_to_string(result[3].original_expression));
+	EXPECT_EQ("一万数千", ustring_to_string(result[4].original_expression));
+	EXPECT_EQ("十数万", ustring_to_string(result[5].original_expression));
 	EXPECT_EQ(10.0, result[0].value_lowerbound);
 	EXPECT_EQ(90.0, result[0].value_upperbound);
 	EXPECT_EQ(10000.0, result[1].value_lowerbound);

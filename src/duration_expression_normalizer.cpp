@@ -119,22 +119,22 @@ void DurationExpressionNormalizer::revise_any_type_expression_by_matching_prefix
 void do_time_about(DurationExpression& durationexp) {
 	normalizer_utility::Time &tvl = durationexp.value_lowerbound, &tvu = durationexp.value_upperbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(durationexp.value_lowerbound);
-	if (target_time_position == "year") {
+	if (target_time_position == "y") {
 		tvl.year -= 5;
 		tvu.year += 5;
-	} else if (target_time_position == "month") {
+	} else if (target_time_position == "m") {
 		tvl.month -= 1;
 		tvu.month += 1;
-	} else if (target_time_position == "day") {
+	} else if (target_time_position == "d") {
 		tvl.day -= 1;
 		tvu.day += 1;
-	} else if (target_time_position == "hour") {
+	} else if (target_time_position == "h") {
 		tvl.hour -= 1;
 		tvu.hour += 1;
-	} else if (target_time_position == "minute") {
+	} else if (target_time_position == "mn") {
 		tvl.minute -= 5;
 		tvu.minute += 5;
-	} else if (target_time_position == "second") {
+	} else if (target_time_position == "s") {
 		tvl.second -= 5;
 		tvu.second += 5;
 	}
@@ -144,17 +144,17 @@ void do_time_about(DurationExpression& durationexp) {
 void do_time_kyou(DurationExpression& durationexp) {
 	normalizer_utility::Time &tvu = durationexp.value_upperbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(durationexp.value_lowerbound);
-	if (target_time_position == "year") {
+	if (target_time_position == "y") {
 		tvu.year += 5;
-	} else if (target_time_position == "month") {
+	} else if (target_time_position == "m") {
 		tvu.month += 1;
-	} else if (target_time_position == "day") {
+	} else if (target_time_position == "d") {
 		tvu.day += 1;
-	} else if (target_time_position == "hour") {
+	} else if (target_time_position == "h") {
 		tvu.hour += 1;
-	} else if (target_time_position == "minute") {
+	} else if (target_time_position == "mn") {
 		tvu.minute += 5;
-	} else if (target_time_position == "second") {
+	} else if (target_time_position == "s") {
 		tvu.second += 5;
 	}
 }
@@ -163,17 +163,17 @@ void do_time_kyou(DurationExpression& durationexp) {
 void do_time_jaku(DurationExpression& durationexp) {
 	normalizer_utility::Time &tvl = durationexp.value_lowerbound;
 	const std::string target_time_position = normalizer_utility::identify_time_detail(durationexp.value_lowerbound);
-	if (target_time_position == "year") {
+	if (target_time_position == "y") {
 		tvl.year -= 5;
-	} else if (target_time_position == "month") {
+	} else if (target_time_position == "m") {
 		tvl.month -= 1;
-	} else if (target_time_position == "day") {
+	} else if (target_time_position == "d") {
 		tvl.day -= 1;
-	} else if (target_time_position == "hour") {
+	} else if (target_time_position == "h") {
 		tvl.hour -= 1;
-	} else if (target_time_position == "minute") {
+	} else if (target_time_position == "mn") {
 		tvl.minute -= 5;
-	} else if (target_time_position == "second") {
+	} else if (target_time_position == "s") {
 		tvl.second -= 5;
 	}
 }	
@@ -229,7 +229,7 @@ void DurationExpressionNormalizer::delete_not_any_type_expression(std::vector<Du
 
 void DurationExpressionNormalizer::fix_by_range_expression(const pfi::data::string::ustring& utext, std::vector<DurationExpression>& durationexps) {
 	for(int i=0; i<static_cast<int>(durationexps.size()-1); i++){
-		if(have_kara_suffix(durationexps[i].options) && have_kara_prefix(durationexps[i+1].options)){
+		if(have_kara_suffix(durationexps[i].options) && have_kara_prefix(durationexps[i+1].options) && durationexps[i].position_end +2 >= durationexps[i+1].position_start){
 			durationexps[i].value_upperbound = durationexps[i+1].value_upperbound;
 			durationexps[i].position_end = durationexps[i+1].position_end;
 			durationexps[i].set_original_expression_from_position(utext);

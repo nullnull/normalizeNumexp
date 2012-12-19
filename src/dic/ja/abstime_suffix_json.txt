@@ -25,15 +25,10 @@
 {"pattern":"初め", "process_type":"zenhan"}
 {"pattern":"始め", "process_type":"zenhan"}
 {"pattern":"はじめ", "process_type":"zenhan"}
-{"pattern":"朝", "process_type":"zenhan"}
-{"pattern":"朝方", "process_type":"zenhan"}
-{"pattern":"朝頃", "process_type":"zenhan"}
 {"pattern":"後半", "process_type":"kouhan"}
 {"pattern":"後期", "process_type":"kouhan"}
 {"pattern":"終盤", "process_type":"kouhan"}
 {"pattern":"終わり", "process_type":"kouhan"}
-{"pattern":"夜", "process_type":"kouhan"}
-{"pattern":"夕方", "process_type":"kouhan"}
 {"pattern":"末", "process_type":"kouhan"}
 {"pattern":"半ば", "process_type":"nakaba"}
 {"pattern":"中期", "process_type":"nakaba"}
@@ -41,7 +36,6 @@
 {"pattern":"中頃", "process_type":"nakaba"}
 {"pattern":"中ごろ", "process_type":"nakaba"}
 {"pattern":"中旬", "process_type":"nakaba"}
-{"pattern":"昼", "process_type":"nakaba"}
 {"pattern":"上旬", "process_type":"joujun"}
 {"pattern":"中旬", "process_type":"tyujun"}
 {"pattern":"下旬", "process_type":"gejun"}

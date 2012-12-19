@@ -182,6 +182,8 @@ namespace reltime_expression_normalizer {
   
   void ReltimeExpressionNormalizer::revise_any_type_expression_by_matching_prefix_counter(ReltimeExpression& reltimeexp, const LimitedReltimeExpression& matching_limited_expression) {
     if(matching_limited_expression.option == "add_relation"){
+			//「去年3月」などの、「相対時間表現」＋「絶対時間表現」からなる処理
+			if(normalizer_utility::is_null_time(reltimeexp.value_lowerbound_abs) && normalizer_utility::is_null_time(reltimeexp.value_upperbound_abs)) return; //絶対時間表現が抽出されていなければ、処理を行わない
       int relation_value;
       normalizer_utility::cast(matching_limited_expression.process_type[0], relation_value);
       if (matching_limited_expression.corresponding_time_position[0] == "y") {
@@ -222,22 +224,22 @@ namespace reltime_expression_normalizer {
 		//「およそ1000年前」「2か月前頃」など
 		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_rel, &tvu = reltimeexp.value_upperbound_rel;
 		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_rel);
-		if (target_time_position == "year") {
+		if (target_time_position == "y") {
 			tvl.year -= 5;
 			tvu.year += 5;
-		} else if (target_time_position == "month") {
+		} else if (target_time_position == "m") {
 			tvl.month -= 1;
 			tvu.month += 1;
-		} else if (target_time_position == "day") {
+		} else if (target_time_position == "d") {
 			tvl.day -= 1;
 			tvu.day += 1;
-		} else if (target_time_position == "hour") {
+		} else if (target_time_position == "h") {
 			tvl.hour -= 1;
 			tvu.hour += 1;
-		} else if (target_time_position == "minute") {
+		} else if (target_time_position == "mn") {
 			tvl.minute -= 5;
 			tvu.minute += 5;
-		} else if (target_time_position == "second") {
+		} else if (target_time_position == "s") {
 			tvl.second -= 5;
 			tvu.second += 5;
 		}
@@ -249,7 +251,7 @@ namespace reltime_expression_normalizer {
 		//TODO : 「18世紀はじめ」などもzenhanに括ってしまっている。より細かく分類が行いたい場合は、hajime関数などを書いて処理
 		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
 		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
-		if (target_time_position == "year") {
+		if (target_time_position == "y") {
 			if(tvl.year != tvu.year){
 				//「18世紀前半」のとき
 				tvu.year = (tvl.year + tvu.year)/2 -0.5;
@@ -258,11 +260,11 @@ namespace reltime_expression_normalizer {
 				tvl.month = 1;
 				tvu.month = 6;
 			}
-		} else if (target_time_position == "month") {
+		} else if (target_time_position == "m") {
 			//「7月前半」のとき
 			tvl.day = 1;
 			tvl.day = 15;
-		} else if (target_time_position == "day") {
+		} else if (target_time_position == "d") {
 			//「3日朝」のとき
 			tvl.hour = 5;
 			tvu.hour = 12;
@@ -277,7 +279,7 @@ namespace reltime_expression_normalizer {
 		//TODO : 「18世紀末」「3日夜」などもkouhanに括ってしまっている。
 		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
 		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
-		if (target_time_position == "year") {
+		if (target_time_position == "y") {
 			if(tvl.year != tvu.year){
 				//「18世紀後半」のとき
 				tvl.year = (tvl.year + tvu.year)/2 +0.5;;
@@ -286,11 +288,11 @@ namespace reltime_expression_normalizer {
 				tvl.month = 7;
 				tvu.month = 12;
 			}
-		} else if (target_time_position == "month") {
+		} else if (target_time_position == "m") {
 			//「7月後半」のとき
 			tvl.day = 16;
 			tvl.day = 31;
-		} else if (target_time_position == "day") {
+		} else if (target_time_position == "d") {
 			//「3日夜」のとき
 			tvl.hour = 18;
 			tvu.hour = 24;
@@ -305,7 +307,7 @@ namespace reltime_expression_normalizer {
 		//TODO : 「18世紀なかば」「3日昼」などもnakabaに括ってしまっている。
 		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
 		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
-		if (target_time_position == "year") {
+		if (target_time_position == "y") {
 			if(tvl.year != tvu.year){
 				//「18世紀中盤」のとき
 				int tmp = (tvu.year - tvl.year)/4;
@@ -316,11 +318,11 @@ namespace reltime_expression_normalizer {
 				tvl.month = 4;
 				tvu.month = 9;
 			}
-		} else if (target_time_position == "month") {
+		} else if (target_time_position == "m") {
 			//「7月半ば」のとき
 			tvl.day = 10;
 			tvl.day = 20;
-		} else if (target_time_position == "day") {
+		} else if (target_time_position == "d") {
 			//「3日昼」のとき
 			tvl.hour = 10;
 			tvu.hour = 15;
@@ -333,7 +335,7 @@ namespace reltime_expression_normalizer {
 	void do_time_joujun(ReltimeExpression& reltimeexp) {
 		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
 		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
-		if (target_time_position == "month") {
+		if (target_time_position == "m") {
 			tvl.day = 1;
 			tvu.day = 10;
 		} 
@@ -342,7 +344,7 @@ namespace reltime_expression_normalizer {
 	void do_time_tyujun(ReltimeExpression& reltimeexp) {
 		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
 		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
-		if (target_time_position == "month") {
+		if (target_time_position == "m") {
 			tvl.day = 11;
 			tvu.day = 20;
 		} 
@@ -351,7 +353,7 @@ namespace reltime_expression_normalizer {
 	void do_time_gejun(ReltimeExpression& reltimeexp) {
 		normalizer_utility::Time &tvl = reltimeexp.value_lowerbound_abs, &tvu = reltimeexp.value_upperbound_abs;
 		const std::string target_time_position = normalizer_utility::identify_time_detail(reltimeexp.value_lowerbound_abs);
-		if (target_time_position == "month") {
+		if (target_time_position == "m") {
 			tvl.day = 21;
 			tvu.day = 31;
 		} 
@@ -393,7 +395,7 @@ namespace reltime_expression_normalizer {
   
   void ReltimeExpressionNormalizer::fix_by_range_expression(const pfi::data::string::ustring& utext, std::vector<ReltimeExpression>& reltimeexps) {
     for(int i=0; i<static_cast<int>(reltimeexps.size()-1); i++){
-      if(have_kara_suffix(reltimeexps[i].options) && have_kara_prefix(reltimeexps[i+1].options)){
+      if(have_kara_suffix(reltimeexps[i].options) && have_kara_prefix(reltimeexps[i+1].options) && reltimeexps[i].position_end +2 >= reltimeexps[i+1].position_start){
         reltimeexps[i].value_upperbound_rel = reltimeexps[i+1].value_upperbound_rel;
         reltimeexps[i].value_upperbound_abs = reltimeexps[i+1].value_upperbound_abs;
         reltimeexps[i].position_end = reltimeexps[i+1].position_end;

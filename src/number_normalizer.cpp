@@ -421,7 +421,7 @@ void fix_prefix_su(const pfi::data::string::ustring& utext, std::vector<Number>&
 	numbers[i].value_upperbound *= 9;
 	
 	//統合処理
-	numbers[i].position_start++;
+	numbers[i].position_start--;
 	numbers[i].original_expression = pfi::data::string::string_to_ustring("数") + numbers[i].original_expression;
 }
 
@@ -460,6 +460,7 @@ void fix_suffix_su(const pfi::data::string::ustring& utext, std::vector<Number>&
 	numbers[i].value_upperbound += 9;
 	numbers[i].value_lowerbound += 1;
 	numbers[i].original_expression += pfi::data::string::string_to_ustring("数");
+	numbers[i].position_end++;
 }
 
 void fix_numbers_by_su(const std::string& text, std::vector<Number>& numbers) {

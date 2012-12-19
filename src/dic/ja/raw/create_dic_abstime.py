@@ -15,7 +15,18 @@ def create_process_type(str) :
 	if(str.endswith("半")) : process_type.append("han")
 	return process_type
 	
-
+#load dayweeks　　「午後」などの処理もここで。
+lst_dayweek = []
+fin = open("abstime_dayweek.txt", "r")
+for line in fin.readlines() :
+	dayweek, type = line.rstrip().split()
+	fin2 = open("abstime_dayweek_pattern.txt", "r")
+	for pattern in fin2.readlines() :
+		pattern = pattern.rstrip("\n")
+		tmp_type = ""
+		if pattern.count("*") != 0 : tmp_type = type
+		lst_dayweek.append([pattern.replace("*",dayweek), tmp_type])
+			
 #create date expression
 fin = open("abstime_date.txt")
 lst = []
@@ -26,6 +37,12 @@ for line in fin.readlines() :
   if len(lst) == 2 :
 		corresponding_time_position = create_list_expression( lst[1].split() )
 		print "{\"pattern\":\""+lst[0]+"\", \"corresponding_time_position\":"+corresponding_time_position+", \"process_type\":[], \"ordinary\":false, \"option\":\"\"}"
+		if lst[1].find("d") != -1 : #曜日表現を加える
+			for dayweek in lst_dayweek :
+				dayweek[0] = dayweek[0].rstrip().rstrip("　")
+				if dayweek[0] == "" : continue
+				process_type = create_process_type(lst[0] + dayweek[0])
+				print "{\"pattern\":\""+lst[0]+dayweek[0]+"\", \"corresponding_time_position\":"+corresponding_time_position+", \"process_type\":"+create_list_expression(process_type)+", \"ordinary\":false, \"option\":\""+dayweek[1]+"\"}"
 		lst = []
 fin.close()
 

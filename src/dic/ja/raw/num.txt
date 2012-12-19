@@ -306,3 +306,4 @@ PB	PB
 ppm	ppm
 G	G
 Ｇ	G
+色	色

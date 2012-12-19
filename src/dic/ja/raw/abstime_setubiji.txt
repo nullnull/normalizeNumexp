@@ -25,15 +25,10 @@
 初め	zenhan
 始め	zenhan
 はじめ	zenhan
-朝	zenhan
-朝方	zenhan
-朝頃	zenhan
 後半	kouhan
 後期	kouhan
 終盤	kouhan
 終わり	kouhan
-夜	kouhan
-夕方	kouhan
 末	kouhan
 半ば	nakaba
 中期	nakaba
@@ -41,7 +36,6 @@
 中頃	nakaba
 中ごろ	nakaba
 中旬	nakaba
-昼	nakaba
 上旬	joujun
 中旬	tyujun
 下旬	gejun

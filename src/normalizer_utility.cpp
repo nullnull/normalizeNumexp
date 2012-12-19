@@ -116,17 +116,17 @@ bool is_null_time(const Time& t){
 
 const std::string identify_time_detail(const normalizer_utility::Time& time) {
   if (normalizer_utility::is_finite(time.second)) {
-    return "second";
+    return "s";
   } else if (normalizer_utility::is_finite(time.minute)) {
-    return "minute";
+    return "mn";
   } else if (normalizer_utility::is_finite(time.hour)) {
-    return "hour";
+    return "h";
   } else if (normalizer_utility::is_finite(time.day)) {
-    return "day";
+    return "d";
   } else if (normalizer_utility::is_finite(time.month)) {
-    return "month";
+    return "m";
   } else if (normalizer_utility::is_finite(time.year)) {
-    return "year";
+    return "y";
   }
   return "";
 }

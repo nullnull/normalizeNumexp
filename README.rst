@@ -19,3 +19,9 @@ Do following instructions.
   $ ./waf build
 
   $ ./waf install
+
+To check that the installation has completed successfully, 
+
+..
+
+  $ ./waf --checkall

@@ -1,0 +1,8 @@
+argv = ['./waf', 'configure']
+environ = {'TERM_SESSION_ID': '250260A3-BB11-4376-8733-7025EDAF6C86', 'PYTHONPATH': '/Users/katsuma/', 'SSH_AUTH_SOCK': '/tmp/launch-sjj9Rn/Listeners', 'TERM_PROGRAM_VERSION': '303.2', 'Apple_PubSub_Socket_Render': '/tmp/launch-04rAS6/Render', 'LOGNAME': 'katsuma', 'USER': 'katsuma', 'HOME': '/Users/katsuma', 'PKG_CONFIG_PATH': '/usr/local/lib/pkgconfig/', 'PATH': '/opt/local/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin', 'PS1': '\\[\\e[0;32m\\]\\u@\\h\\[\\e[0m\\][\\t]:\\W$ ', 'DISPLAY': '/tmp/launch-xkZOlf/org.x:0', '_': './waf', 'TERM_PROGRAM': 'Apple_Terminal', 'LANG': 'ja_JP.UTF-8', '__CF_USER_TEXT_ENCODING': '0x1F6:1:14', 'TERM': 'xterm-256color', 'SHELL': '/bin/bash', 'SHLVL': '1', 'OLDPWD': '/Users/katsuma/src', 'HISTSIZE': '10000', 'HISTCONTROL': 'ignoreboth', 'Apple_Ubiquity_Message': '/tmp/launch-YesU27/Apple_Ubiquity_Message', 'PWD': '/Users/katsuma/src/normalizeNumexp', 'TMPDIR': '/var/folders/68/zvn0f60d2cqgsjrn3pnd9rr00000gp/T/', 'CLICOLOR': '1', 'COMMAND_MODE': 'unix2003', 'LSCOLORS': 'gxfxcxdxbxegedabagacad'}
+files = ['/Users/katsuma/src/normalizeNumexp/wscript']
+hash = 1481620693718057605
+options = {'files': '', 'checkall': False, 'targets': '', 'jobs': 2, 'verbose': 0, 'nocache': False, 'progress_bar': 0, 'checkone': False, 'top': '', 'destdir': '', 'keep': 0, 'zones': '', 'prefix': '/usr/local/', 'download': False, 'force': False, 'out': '', 'check_cxx_compiler': 'g++', 'check': False, 'checkfilter': False}
+out_dir = '/Users/katsuma/src/normalizeNumexp/build'
+run_dir = '/Users/katsuma/src/normalizeNumexp'
+top_dir = '/Users/katsuma/src/normalizeNumexp'

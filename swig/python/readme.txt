@@ -1,0 +1,3 @@
+■swigによるpython連携について
+distutilが上手く使えなかったため、通常のインストール方法ではなく、手動でのインストールになります。
+compile.shを実行した後、生成された.soファイルと.pyファイルをpythonのsite-packagesにコピーして下さい。

@@ -1,0 +1,32 @@
+
+
+def build(bld):
+    def define_test(source):
+        target = source.split('.')[0].replace('/', '_')
+        bld.program(
+            features = 'gtest',
+            source = source,
+            target = target,
+            use = ['PFICOMMON','normalize_numexp', 'UX', 'boost_regex'])
+
+    bld.shlib(
+        source = ['dictionary_dirpath.cpp', 'digit_utility.cpp', 'number_normalizer.cpp', 'normalizer_utility.cpp',  'numerical_expression_normalizer.cpp', 'abstime_expression_normalizer.cpp', 'reltime_expression_normalizer.cpp', 'duration_expression_normalizer.cpp', 'inappropriate_expression_remover.cpp', 'normalize_numexp.cpp'],
+        use = ['PFICOMMON', 'UX'],
+        target = 'normalize_numexp'
+        )
+
+    bld(features = 'cxx cprogram',
+        source = 'main.cpp',
+        use = ['PFICOMMON'],
+        target = 'normalizeNumexp',
+        uselib_local = 'normalize_numexp')
+
+    define_test('digit_utility_test.cpp')
+    define_test('number_normalizer_test.cpp')
+    define_test('normalizer_utility_test.cpp')
+    define_test('numerical_expression_normalizer_test.cpp')
+    define_test('abstime_expression_normalizer_test.cpp')
+    define_test('reltime_expression_normalizer_test.cpp')
+    define_test('duration_expression_normalizer_test.cpp')
+    define_test('normalize_numexp_test.cpp')
+    #define_test('normalizer_tester.cpp')

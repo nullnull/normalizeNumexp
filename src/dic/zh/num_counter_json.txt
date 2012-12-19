@@ -1,0 +1,3 @@
+{"pattern":"元", "counter":"元", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
+{"pattern":"美元", "counter":"美元", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
+{"pattern":"円", "counter":"円", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}

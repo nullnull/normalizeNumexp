@@ -1,0 +1,42 @@
+{"pattern":"世紀", "corresponding_time_position":["seiki"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"世紀半", "corresponding_time_position":["seiki"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年間", "corresponding_time_position":["y"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年間半", "corresponding_time_position":["y"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"ヶ月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ヶ月半", "corresponding_time_position":["m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"か月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"か月半", "corresponding_time_position":["m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"カ月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"カ月半", "corresponding_time_position":["m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"ヵ月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ヵ月半", "corresponding_time_position":["m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"ケ月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"ケ月半", "corresponding_time_position":["m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"箇月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"箇月半", "corresponding_time_position":["m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"週間", "corresponding_time_position":["w"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"週間半", "corresponding_time_position":["w"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"日間", "corresponding_time_position":["d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日間半", "corresponding_time_position":["d"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"時間", "corresponding_time_position":["h"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"時間半", "corresponding_time_position":["h"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"分間", "corresponding_time_position":["mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"分間半", "corresponding_time_position":["mn"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"秒間", "corresponding_time_position":["s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"秒間半", "corresponding_time_position":["s"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年", "corresponding_time_position":["y"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年半", "corresponding_time_position":["y"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"月半", "corresponding_time_position":["m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"週", "corresponding_time_position":["w"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"週半", "corresponding_time_position":["w"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"日", "corresponding_time_position":["d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"日半", "corresponding_time_position":["d"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"分", "corresponding_time_position":["mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"分半", "corresponding_time_position":["mn"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"秒", "corresponding_time_position":["s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"秒半", "corresponding_time_position":["s"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年ǂヶ月半", "corresponding_time_position":["y", "m"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"時間ǂ分", "corresponding_time_position":["h", "mn"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"時間ǂ分半", "corresponding_time_position":["h", "mn"], "process_type":["han"], "ordinary":false, "option":""}

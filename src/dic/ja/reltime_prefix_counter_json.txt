@@ -1,0 +1,16 @@
+{"pattern":"去年", "corresponding_time_position":["y"], "process_type":["-1"], "ordinary":false, "option":"add_relation"}
+{"pattern":"昨年", "corresponding_time_position":["y"], "process_type":["-1"], "ordinary":false, "option":"add_relation"}
+{"pattern":"一昨年", "corresponding_time_position":["y"], "process_type":["-2"], "ordinary":false, "option":"add_relation"}
+{"pattern":"今年", "corresponding_time_position":["y"], "process_type":["0"], "ordinary":false, "option":"add_relation"}
+{"pattern":"来年", "corresponding_time_position":["y"], "process_type":["+1"], "ordinary":false, "option":"add_relation"}
+{"pattern":"先月", "corresponding_time_position":["m"], "process_type":["-1"], "ordinary":false, "option":"add_relation"}
+{"pattern":"先々月", "corresponding_time_position":["m"], "process_type":["-2"], "ordinary":false, "option":"add_relation"}
+{"pattern":"今月", "corresponding_time_position":["m"], "process_type":["0"], "ordinary":false, "option":"add_relation"}
+{"pattern":"来月", "corresponding_time_position":["m"], "process_type":["+1"], "ordinary":false, "option":"add_relation"}
+{"pattern":"来来月", "corresponding_time_position":["m"], "process_type":["+2"], "ordinary":false, "option":"add_relation"}
+{"pattern":"昨日", "corresponding_time_position":["d"], "process_type":["-1"], "ordinary":false, "option":"add_relation"}
+{"pattern":"一昨日", "corresponding_time_position":["d"], "process_type":["-2"], "ordinary":false, "option":"add_relation"}
+{"pattern":"今日", "corresponding_time_position":["d"], "process_type":["0"], "ordinary":false, "option":"add_relation"}
+{"pattern":"本日", "corresponding_time_position":["d"], "process_type":["0"], "ordinary":false, "option":"add_relation"}
+{"pattern":"明日", "corresponding_time_position":["d"], "process_type":["+1"], "ordinary":false, "option":"add_relation"}
+{"pattern":"明後日", "corresponding_time_position":["d"], "process_type":["+2"], "ordinary":false, "option":"add_relation"}

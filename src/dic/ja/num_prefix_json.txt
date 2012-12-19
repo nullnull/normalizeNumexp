@@ -1,0 +1,15 @@
+{"pattern":"第", "process_type":"ordinary"}
+{"pattern":"約", "process_type":"about"}
+{"pattern":"だいたい", "process_type":"about"}
+{"pattern":"ほぼ", "process_type":"about"}
+{"pattern":"およそ", "process_type":"about"}
+{"pattern":"ほとんど", "process_type":"about"}
+{"pattern":"全", "process_type":"none"}
+{"pattern":"ちょうど", "process_type":"none"}
+{"pattern":"~", "process_type":"kara_prefix"}
+{"pattern":"〜", "process_type":"kara_prefix"}
+{"pattern":"～", "process_type":"kara_prefix"}
+{"pattern":"-", "process_type":"kara_prefix"}
+{"pattern":"−", "process_type":"kara_prefix"}
+{"pattern":"ー", "process_type":"kara_prefix"}
+{"pattern":"から", "process_type":"kara_prefix"}

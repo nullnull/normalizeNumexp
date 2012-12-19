@@ -1,0 +1,20 @@
+前	-	 
+以上前	-	or_over
+くらい前	-	about
+ぐらい前	-	about
+ほど前	-	about
+程度前	-	about
+ばかり前	-	about
+近く前	-	about
+より前	-	over
+よりも前	-	over
+後	+	 
+以上後	+	or_over
+より後	+	over
+よりも後	+	over
+ほど後	+	about
+くらい後	+	about
+ぐらい後	+	about
+程度後	+	about
+ばかり後	+	about
+近く後	+	about 

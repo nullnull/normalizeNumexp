@@ -43,5 +43,8 @@ for line in fin.readlines() :
   l = line.rstrip().split()
   print "{\"pattern\":\""+l[0]+"\", \"counter\":\""+l[1]+"\", \"SI_prefix\":0, \"optional_power_of_ten\":"+l[2]+", \"ordinary\":false, \"option\":\"\"}"
 
-
+fin = open("num_wari.txt")
+for line in fin.readlines() :
+	l = line.rstrip().replace("*","ǂ")
+	print l
 

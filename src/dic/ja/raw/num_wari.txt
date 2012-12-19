@@ -1,0 +1,6 @@
+{"pattern":"割", "counter":"%", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"wari"}
+{"pattern":"分", "counter":"%", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"wari"}
+{"pattern":"厘", "counter":"%", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"wari"}
+{"pattern":"割*分", "counter":"%", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"wari"}
+{"pattern":"分*厘", "counter":"%", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"wari"}
+{"pattern":"割*分*厘", "counter":"%", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"wari"}

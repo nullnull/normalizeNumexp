@@ -66,6 +66,19 @@ TEST_F(NumexpExtractorTest, simple4) {
 	}
 }
 
+TEST_F(NumexpExtractorTest, simple5) {
+	vector<string> result;
+	string language("ja");
+	string text("午後3時45分に待ち合わせ");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	ASSERT_EQ(1u, result.size());
+	EXPECT_EQ("abstime*午後3時45分*0*7*none*15:45:XX*15:45:XX*", result[0]);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+}
+
 TEST_F(NumexpExtractorTest, day_of_week1) {
 	vector<string> result;
 	string language("ja");
@@ -236,4 +249,17 @@ TEST_F(NumexpExtractorTest, range2) {
 	}
 	ASSERT_EQ(1u, result.size());
 	EXPECT_EQ("abstime*2012/4/3~2012/4/6*0*17*none*2012-04-03*2012-04-06*", result[0]);
+}
+
+TEST_F(NumexpExtractorTest, wari1) {
+	vector<string> result;
+	string language("ja");
+	string text("彼の打率は3割4分5厘だ");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(1u, result.size());
+	EXPECT_EQ("numerical*3割4分5厘*5*11*%*34.5*34.5*", result[0]);
 }

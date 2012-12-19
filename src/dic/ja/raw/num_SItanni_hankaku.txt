@@ -29,4 +29,8 @@ S	S
 T	T
 H	H
 Sv	Sv
-B	B
+B	バイト
+Bq	Bq
+dB	dB
+pixel	pixel
+cal	cal

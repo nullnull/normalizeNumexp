@@ -18,8 +18,39 @@ void multiply_numexp_value(NumericalExpression& numexp, double x){
   numexp.value_upperbound *= x;
 }
 
+
+void do_option_wari(std::vector<NumericalExpression>& numexps, int expression_id, const Counter matching_limited_expression){
+	pfi::data::string::ustring upattern = pfi::data::string::string_to_ustring(matching_limited_expression.pattern);
+  numexps[expression_id].position_end += upattern.size();
+	numexps[expression_id].counter = pfi::data::string::string_to_ustring("%");
+	numexps[expression_id].ordinary = false;
+			
+	//set_value
+	double value = 0;
+	for(int i=0; i<static_cast<int>(upattern.size()); i+=2){
+		if(upattern[i] == pfi::data::string::string_to_ustring("割")[0]){
+			value += numexps[expression_id + i/2].value_lowerbound * 10; 
+		}else if(upattern[i] == pfi::data::string::string_to_ustring("分")[0]){
+			value += numexps[expression_id + i/2].value_lowerbound * 1;
+		}else if(upattern[i] == pfi::data::string::string_to_ustring("厘")[0]){
+			value += numexps[expression_id + i/2].value_lowerbound * 0.1;
+		}
+	}
+	numexps[expression_id].value_lowerbound = value;
+	numexps[expression_id].value_upperbound = value;
+	
+	//erase merged numexps
+	for(int i=2; i<static_cast<int>(upattern.size()); i+=2){
+		numexps.erase(numexps.begin() + expression_id + 1);
+	}
+}
+
 void NumericalExpressionNormalizer::revise_any_type_expression_by_matching_limited_expression(std::vector<NumericalExpression>& numexps, int& expression_id, const Counter matching_limited_expression){
   //特殊なタイプをここで例外処理
+	if(matching_limited_expression.option == "wari"){
+		do_option_wari(numexps, expression_id, matching_limited_expression);
+		return;
+	}
   //TODO : 今のところ特殊なタイプは分数しかないので、とりあえず保留
 
   numexps[expression_id].position_end += pfi::data::string::string_to_ustring(matching_limited_expression.pattern).size();

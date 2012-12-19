@@ -95,8 +95,8 @@ public:
 			if(is_upperbound) return "INF";
 			else return "-INF";
 		}
-		ss << to_string_from_time_element(hour, "XX", ":", is_upperbound, 3);
-		ss << to_string_from_time_element(minute, "XX", ":", is_upperbound, 3);
+		ss << to_string_from_time_element(hour, "XX", ":", is_upperbound, 2);
+		ss << to_string_from_time_element(minute, "XX", ":", is_upperbound, 2);
 		ss << to_string_from_time_element(second, "XX", "", is_upperbound, 2);
 		ss >> ret;
 		return ret;

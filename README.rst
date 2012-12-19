@@ -54,7 +54,7 @@ This utility normalize (Japanese) numerical and temporal expressions in the inpu
 If you want to know more detail about this tool, please read following documents.
 http://www.cl.ecei.tohoku.ac.jp/~katsuma/software/normalizeNumexp/
 
-..
 
-  $ ./waf --checkall
+
+
 

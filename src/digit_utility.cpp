@@ -49,8 +49,8 @@ void init_kansuji(const std::string& language){
     return;
   }
   load_from_dictionary(dictionary_path, chinese_characters);
-  for(int i=0; i<chinese_characters.size(); i++){
-    ENotationType notation_type;
+  for(int i=0; i<static_cast<int>(chinese_characters.size()); i++){
+    ENotationType notation_type = NOT_NUMBER;
     if(chinese_characters[i].NotationType == "09") notation_type = KANSUJI_09;
     else if(chinese_characters[i].NotationType == "sen") notation_type = KANSUJI_KURAI_SEN;
     else if(chinese_characters[i].NotationType == "man") notation_type = KANSUJI_KURAI_MAN;

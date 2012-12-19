@@ -7,13 +7,19 @@ About
 
 This is a tool for normalizing numerical/temporal expression.
 
+
+Necessary Libraries
+======
+ux(More Succinct Trie Data structure):http://code.google.com/p/ux-trie/wiki/Tutorial_Japanese
+pficommon(General purpose C++ library for PFI):https://github.com/pfi/pficommon
+
+
 Install
 =======
 
 Do following instructions.
 
 ..
-
   $ ./waf configure
 
   $ ./waf build
@@ -23,7 +29,6 @@ Do following instructions.
 To check that the installation has completed successfully, 
 
 ..
-
   $ ./waf --checkall
 
 
@@ -33,7 +38,6 @@ How to Use
 This utility normalize (Japanese) numerical and temporal expressions in the input sentence.
 
 ..
-
   $ normalizeNumexp
 
   魔女狩りは15世紀〜18世紀にかけてみられ、全ヨーロッパで4万人が処刑された
@@ -42,6 +46,7 @@ This utility normalize (Japanese) numerical and temporal expressions in the inpu
 
 If you want to know more detail about this tool, please read following documents.
 http://www.cl.ecei.tohoku.ac.jp/~katsuma/software/normalizeNumexp/
-=======
+
+..
   $ ./waf --checkall
 

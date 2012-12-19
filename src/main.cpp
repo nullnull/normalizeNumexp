@@ -49,7 +49,7 @@ int version(std::ostream& os)
 int main(int argc, char * argv[]){
 	option opt;
 	try { 
-		int arg_used = opt.parse(argv, argc);
+		//int arg_used = opt.parse(argv, argc);
 	} catch (const optparse::unrecognized_option& e) {
 		std::cerr << "ERROR: unrecognized option: " << e.what() << std::endl;
 		return 1;
@@ -71,7 +71,7 @@ int main(int argc, char * argv[]){
 	
   while(1) {
     sentence = "";
-    std::cin >> sentence;
+    std::getline(std::cin, sentence);
     if(sentence.empty()) break;
     NN.normalize(sentence, result);
 

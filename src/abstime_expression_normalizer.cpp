@@ -309,9 +309,15 @@ void AbstimeExpressionNormalizer::fix_by_range_expression(const pfi::data::strin
   for(int i=0; i<static_cast<int>(abstimeexps.size()-1); i++){
     if(have_kara_suffix(abstimeexps[i].options) && have_kara_prefix(abstimeexps[i+1].options) && abstimeexps[i].position_end +2 >= abstimeexps[i+1].position_start){
 			if(abstimeexps[i].value_lowerbound == normalizer_utility::Time(INFINITY)){ //lower_boundが空 = 時間として認識されていない場合（例：「4~12月」の「4~」）、lower_boundを設定
+				//TODO : 本当は、[i+1]の最上位時間単位を指定したいので、最下位時間単位を返すidentify_time_detailを用いるのは間違っている。しかし、このパターンのとき、2つ以上の時間単位がでてくることは考えられないので、とりあえずこの実装でOK
 				const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexps[i+1].value_upperbound);
 				AbstimeExpression tmp_abstimeexp = abstimeexps[i];
 				set_time(abstimeexps[i], target_time_position, tmp_abstimeexp);
+			}else if(abstimeexps[i+1].value_upperbound == normalizer_utility::Time(-INFINITY)){ //upper_boundが空 = 時間として認識されていない場合（例：「2012/4/3~6」の「~6」）、upper_boundを設定
+				abstimeexps[i+1].value_upperbound = abstimeexps[i].value_upperbound;
+				const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexps[i].value_upperbound);
+				AbstimeExpression tmp_abstimeexp = abstimeexps[i+1];
+				set_time(abstimeexps[i+1], target_time_position, tmp_abstimeexp);
 			}
       abstimeexps[i].value_upperbound = abstimeexps[i+1].value_upperbound;
       abstimeexps[i].position_end = abstimeexps[i+1].position_end;

@@ -26,19 +26,19 @@ y m d
 y m d
 ー*ー*
 y m d
+.*
+m d
 .*.*
 y m d
-.*
-y m
 ．*
-y m
+m d
 ．*．*
 y m d
 ・*
-y m
+m d
 ・*・*
 y m d
 ，*
-y m
+m d
 ，*，*
 y m d

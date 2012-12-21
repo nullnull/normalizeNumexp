@@ -58,7 +58,18 @@ void revise_abstimeexp_by_process_type(AbstimeExpression& abstimeexp, std::strin
   }else if (process_type == "han") {
     abstimeexp.value_lowerbound.minute = 30;
     abstimeexp.value_upperbound.minute = 30;
-  }
+  }else if (process_type == "unclear") {
+		//「2012/3」「3/10」の曖昧性を解消するためのプロセス
+		//最初はmonth/dayとして認識している。monthの値として変で、yearとして考えられる場合、これを変更する
+		if(1800 <= abstimeexp.value_lowerbound.month && abstimeexp.value_lowerbound.month <= 2100){
+			abstimeexp.value_lowerbound.year = abstimeexp.value_lowerbound.month;
+			abstimeexp.value_upperbound.year = abstimeexp.value_upperbound.month;
+			abstimeexp.value_lowerbound.month = abstimeexp.value_lowerbound.day;
+			abstimeexp.value_upperbound.month = abstimeexp.value_upperbound.day;
+			abstimeexp.value_lowerbound.day = INFINITY;
+			abstimeexp.value_upperbound.day = -INFINITY;
+		}
+	}
 }
 
 void AbstimeExpressionNormalizer::revise_any_type_expression_by_matching_limited_expression(std::vector<AbstimeExpression>& abstimeexps, int &expression_id,
@@ -305,20 +316,52 @@ void AbstimeExpressionNormalizer::delete_not_any_type_expression(std::vector<Abs
   }
 }
 
+void supplement_abstime_information_specific_type(double& time_element1_lowerbound, double& time_element1_upperbound, double& time_element2_lowerbound, double& time_element2_upperbound){
+		if(time_element1_lowerbound == INFINITY && time_element1_upperbound == -INFINITY){ //1がセットされていなければ、2に合わせる
+			time_element1_lowerbound = time_element2_lowerbound;
+			time_element1_upperbound = time_element2_upperbound;
+		}
+} 
+
+void supplement_abstime_information(AbstimeExpression& abstime1, AbstimeExpression& abstime2){
+	supplement_abstime_information_specific_type(abstime1.value_lowerbound.year, abstime1.value_upperbound.year, abstime2.value_lowerbound.year, abstime2.value_upperbound.year);
+	supplement_abstime_information_specific_type(abstime2.value_lowerbound.year, abstime2.value_upperbound.year, abstime1.value_lowerbound.year, abstime1.value_upperbound.year);
+	supplement_abstime_information_specific_type(abstime1.value_lowerbound.month, abstime1.value_upperbound.month, abstime2.value_lowerbound.month, abstime2.value_upperbound.month);
+	supplement_abstime_information_specific_type(abstime2.value_lowerbound.month, abstime2.value_upperbound.month, abstime1.value_lowerbound.month, abstime1.value_upperbound.month);
+	supplement_abstime_information_specific_type(abstime1.value_lowerbound.day, abstime1.value_upperbound.day, abstime2.value_lowerbound.day, abstime2.value_upperbound.day);
+	supplement_abstime_information_specific_type(abstime2.value_lowerbound.day, abstime2.value_upperbound.day, abstime1.value_lowerbound.day, abstime1.value_upperbound.day);
+	supplement_abstime_information_specific_type(abstime1.value_lowerbound.hour, abstime1.value_upperbound.hour, abstime2.value_lowerbound.hour, abstime2.value_upperbound.hour);
+	supplement_abstime_information_specific_type(abstime2.value_lowerbound.hour, abstime2.value_upperbound.hour, abstime1.value_lowerbound.hour, abstime1.value_upperbound.hour);
+	supplement_abstime_information_specific_type(abstime1.value_lowerbound.minute, abstime1.value_upperbound.minute, abstime2.value_lowerbound.minute, abstime2.value_upperbound.minute);
+	supplement_abstime_information_specific_type(abstime2.value_lowerbound.minute, abstime2.value_upperbound.minute, abstime1.value_lowerbound.minute, abstime1.value_upperbound.minute);
+	supplement_abstime_information_specific_type(abstime1.value_lowerbound.second, abstime1.value_upperbound.second, abstime2.value_lowerbound.second, abstime2.value_upperbound.second);
+	supplement_abstime_information_specific_type(abstime2.value_lowerbound.second, abstime2.value_upperbound.second, abstime1.value_lowerbound.second, abstime1.value_upperbound.second);
+}
+
+void set_abstime_information_to_null_abstime(AbstimeExpression& abstime1, AbstimeExpression& abstime2){
+	if(abstime1.value_lowerbound == normalizer_utility::Time(INFINITY)){ //lower_boundが空 = 時間として認識されていない場合（例：「4~12月」の「4~」）、lower_boundを設定
+		//TODO : 本当は、[i+1]の最上位時間単位を指定したいので、最下位時間単位を返すidentify_time_detailを用いるのは間違っている。しかし、このパターンのとき、2つ以上の時間単位がでてくることは考えられないので、とりあえずこの実装でOK
+		const std::string target_time_position = normalizer_utility::identify_time_detail(abstime2.value_upperbound);
+		AbstimeExpression tmp_abstimeexp = abstime1;
+		set_time(abstime1, target_time_position, tmp_abstimeexp);
+	}else if(abstime2.value_upperbound == normalizer_utility::Time(-INFINITY)){ //upper_boundが空 = 時間として認識されていない場合（例：「2012/4/3~6」の「~6」）、upper_boundを設定
+		abstime2.value_upperbound = abstime1.value_upperbound;
+		const std::string target_time_position = normalizer_utility::identify_time_detail(abstime1.value_upperbound);
+		AbstimeExpression tmp_abstimeexp = abstime2;
+		set_time(abstime2, target_time_position, tmp_abstimeexp);
+	}
+}
+
 void AbstimeExpressionNormalizer::fix_by_range_expression(const pfi::data::string::ustring& utext, std::vector<AbstimeExpression>& abstimeexps) {
   for(int i=0; i<static_cast<int>(abstimeexps.size()-1); i++){
     if(have_kara_suffix(abstimeexps[i].options) && have_kara_prefix(abstimeexps[i+1].options) && abstimeexps[i].position_end +2 >= abstimeexps[i+1].position_start){
-			if(abstimeexps[i].value_lowerbound == normalizer_utility::Time(INFINITY)){ //lower_boundが空 = 時間として認識されていない場合（例：「4~12月」の「4~」）、lower_boundを設定
-				//TODO : 本当は、[i+1]の最上位時間単位を指定したいので、最下位時間単位を返すidentify_time_detailを用いるのは間違っている。しかし、このパターンのとき、2つ以上の時間単位がでてくることは考えられないので、とりあえずこの実装でOK
-				const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexps[i+1].value_upperbound);
-				AbstimeExpression tmp_abstimeexp = abstimeexps[i];
-				set_time(abstimeexps[i], target_time_position, tmp_abstimeexp);
-			}else if(abstimeexps[i+1].value_upperbound == normalizer_utility::Time(-INFINITY)){ //upper_boundが空 = 時間として認識されていない場合（例：「2012/4/3~6」の「~6」）、upper_boundを設定
-				abstimeexps[i+1].value_upperbound = abstimeexps[i].value_upperbound;
-				const std::string target_time_position = normalizer_utility::identify_time_detail(abstimeexps[i].value_upperbound);
-				AbstimeExpression tmp_abstimeexp = abstimeexps[i+1];
-				set_time(abstimeexps[i+1], target_time_position, tmp_abstimeexp);
-			}
+			//「4~12月」「4月3~4日」の場合、前者（後者）がそもそも時間表現として認識されてないので、時間表現として設定する。
+			set_abstime_information_to_null_abstime(abstimeexps[i], abstimeexps[i+1]);
+			
+			//「2012/4/3~4/5」のような場合、どちらも時間表現として認識されているが、後者で情報が欠落しているので、これを埋める
+			supplement_abstime_information(abstimeexps[i], abstimeexps[i+1]);
+			
+			//範囲表現として設定する
       abstimeexps[i].value_upperbound = abstimeexps[i+1].value_upperbound;
       abstimeexps[i].position_end = abstimeexps[i+1].position_end;
       abstimeexps[i].set_original_expression_from_position(utext);

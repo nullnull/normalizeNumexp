@@ -25,6 +25,16 @@ namespace inappropriate_expression_remover{
 																	 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
 		//表現タイプ毎に重複があるので、これを削除する（例：「300年間」はabstimeexpsでも「300年」として規格化されている）
 		//TODO : O(N^2)のアルゴリズム。対象となる表現と、その他すべての表現に対して重複をチェックしている。必要に応じて高速化する
+
+		//erase numexp
+		//時間表現と被っていた場合、時間表現を優先するため、一番先にnumexpを削除（例：「1分」）
+		for(int i=0; i<static_cast<int>(numexps.size()); i++){
+			if(is_covered_by_other_type_expressions(numexps[i], abstimeexps) || is_covered_by_other_type_expressions(numexps[i], reltimeexps) || is_covered_by_other_type_expressions(numexps[i], durationexps)){
+				numexps.erase(numexps.begin() + i);
+				i--;
+			}
+		}
+		
 		//erase duration
 		for(int i=0; i<static_cast<int>(durationexps.size()); i++){
 			if(is_covered_by_other_type_expressions(durationexps[i], abstimeexps) || is_covered_by_other_type_expressions(durationexps[i], reltimeexps) || is_covered_by_other_type_expressions(durationexps[i], numexps)){
@@ -37,14 +47,6 @@ namespace inappropriate_expression_remover{
 		for(int i=0; i<static_cast<int>(reltimeexps.size()); i++){
 			if(is_covered_by_other_type_expressions(reltimeexps[i], abstimeexps) || is_covered_by_other_type_expressions(reltimeexps[i], numexps) || is_covered_by_other_type_expressions(reltimeexps[i], durationexps)){
 				reltimeexps.erase(reltimeexps.begin() + i);
-				i--;
-			}
-		}
-		
-		//erase numexp
-		for(int i=0; i<static_cast<int>(numexps.size()); i++){
-			if(is_covered_by_other_type_expressions(numexps[i], abstimeexps) || is_covered_by_other_type_expressions(numexps[i], reltimeexps) || is_covered_by_other_type_expressions(numexps[i], durationexps)){
-				numexps.erase(numexps.begin() + i);
 				i--;
 			}
 		}
@@ -128,9 +130,9 @@ namespace inappropriate_expression_remover{
 		pfi::data::string::uchar a(pfi::data::string::string_to_uchar("")),b(pfi::data::string::string_to_uchar(""));
 		if(any_type_expression.position_start	>= 1) a = utext[any_type_expression.position_start-1];
 		if(any_type_expression.position_end	< static_cast<int>(utext.size())) b = utext[any_type_expression.position_end];
-		if(url_strings_to_bool[pfi::data::string::uchar_to_string(a)[0]] && url_strings_to_bool[pfi::data::string::uchar_to_string(b)[0]]){
+		if(url_strings_to_bool[pfi::data::string::uchar_to_string(a)] && url_strings_to_bool[pfi::data::string::uchar_to_string(b)]){
 			for(int i=0; i<static_cast<int>(any_type_expression.original_expression.size()); i++){
-				if(not url_strings_to_bool[pfi::data::string::uchar_to_string(any_type_expression.original_expression[i])[0]]) return false;
+				if(not url_strings_to_bool[pfi::data::string::uchar_to_string(any_type_expression.original_expression[i])]) return false;
 			}
 			return true;
 		}
@@ -296,10 +298,9 @@ namespace inappropriate_expression_remover{
 	}
 	
 	void InappropriateExpressionRemover::init_url_strings(){
-		std::string url_strings("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-!#$%&()=~^|¥@`/１２３４５６７８９０ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＭＮＬＰＱＲＳＴＵＶＷＸＹＺ！＃＄％＆（）＝〜｜");
-			
+		pfi::data::string::ustring url_strings(pfi::data::string::string_to_ustring("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ１２３４５６７８９０ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚＡＢＣＤＥＦＧＨＩＪＫＭＮＬＰＱＲＳＴＵＶＷＸＹＺ"));
 		for(int i=0; i<static_cast<int>(url_strings.size()); i++){
-			url_strings_to_bool[url_strings[i]] = true;
+			url_strings_to_bool[pfi::data::string::uchar_to_string(url_strings[i])] = true;
 		}
 	}
 

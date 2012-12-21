@@ -13,6 +13,8 @@ def create_list_expression(lst) :
 def create_process_type(str) :
 	process_type = []
 	if(str.endswith("半")) : process_type.append("han")
+	if str in ["/ǂ", "／ǂ", ".ǂ", "・ǂ", "．ǂ", "，ǂ"] : #ハイフンで3-3（3月3日)はなさそうなので除外してある
+		process_type.append("unclear")
 	return process_type
 	
 #load dayweeks　　「午後」などの処理もここで。
@@ -36,7 +38,8 @@ for line in fin.readlines() :
   lst.append(l)
   if len(lst) == 2 :
 		corresponding_time_position = create_list_expression( lst[1].split() )
-		print "{\"pattern\":\""+lst[0]+"\", \"corresponding_time_position\":"+corresponding_time_position+", \"process_type\":[], \"ordinary\":false, \"option\":\"\"}"
+		process_type = create_process_type(lst[0])
+		print "{\"pattern\":\""+lst[0]+"\", \"corresponding_time_position\":"+corresponding_time_position+", \"process_type\":"+create_list_expression(process_type)+", \"ordinary\":false, \"option\":\"\"}"
 		if lst[1].find("d") != -1 : #曜日表現を加える
 			for dayweek in lst_dayweek :
 				dayweek[0] = dayweek[0].rstrip().rstrip("　")

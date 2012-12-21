@@ -38,7 +38,7 @@ namespace inappropriate_expression_remover{
 		void init_url_strings();
 		
 		std::map<std::string, bool> inappropriate_strings_to_bool;
-		std::map<char, bool> url_strings_to_bool;
+		std::map<std::string, bool> url_strings_to_bool;
 	};
 } //namespace inappropriate_expression_remover.hpp
 

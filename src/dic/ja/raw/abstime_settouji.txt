@@ -12,10 +12,10 @@ PM	gogo
 AM	gozen
 ＰＭ	gogo
 ＡＭ	gozen
- PM	gogo
- AM	gozen
-　ＰＭ	gogo
-　ＡＭ	gozen
+PM 	gogo
+AM 	gozen
+ＰＭ　	gogo
+ＡＭ　	gozen
 朝	asa
 夜	yoru
 深夜	sinnya

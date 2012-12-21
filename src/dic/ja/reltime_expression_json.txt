@@ -1315,7 +1315,7 @@
 {"pattern":"日（Ｓｕｎ）", "corresponding_time_position":["d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"日 Ｓｕｎ", "corresponding_time_position":["d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"日　Ｓｕｎ", "corresponding_time_position":["d"], "process_type":[], "ordinary":false, "option":"Sun"}
-{"pattern":"/ǂ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"/ǂ", "corresponding_time_position":["m", "d"], "process_type":["unclear"], "ordinary":false, "option":""}
 {"pattern":"/ǂ月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
 {"pattern":"/ǂ(月)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
 {"pattern":"/ǂ（月）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
@@ -1737,7 +1737,7 @@
 {"pattern":"/ǂ/ǂ（Ｓｕｎ）", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"/ǂ/ǂ Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"/ǂ/ǂ　Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
-{"pattern":"／ǂ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"／ǂ", "corresponding_time_position":["m", "d"], "process_type":["unclear"], "ordinary":false, "option":""}
 {"pattern":"／ǂ月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
 {"pattern":"／ǂ(月)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
 {"pattern":"／ǂ（月）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
@@ -2792,6 +2792,217 @@
 {"pattern":"ーǂーǂ（Ｓｕｎ）", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"ーǂーǂ Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"ーǂーǂ　Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ", "corresponding_time_position":["m", "d"], "process_type":["unclear"], "ordinary":false, "option":""}
+{"pattern":".ǂ月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ(月)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ（月）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ 月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ　月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ(火)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ（火）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ 火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ　火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ(水)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ（水）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ 水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ　水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ(木)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ（木）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ 木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ　木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ(金)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ（金）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ 金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ　金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ(土)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ（土）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ 土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ　土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ(日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ（日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ 日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ　日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ(月曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ（月曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ 月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ　月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ(火曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ（火曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ 火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ　火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ(水曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ（水曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ 水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ　水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ(木曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ（木曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ 木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ　木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ(金曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ（金曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ 金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ　金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ(土曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ（土曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ 土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ　土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ(日曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ（日曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ 日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ　日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂMonday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ(Monday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ（Monday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ Monday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ　Monday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂTuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ(Tuesday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ（Tuesday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ Tuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ　Tuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂWednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ(Wednesday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ（Wednesday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ Wednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ　Wednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂThursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ(Thursday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ（Thursday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ Thursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ　Thursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂFriday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ(Friday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ（Friday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ Friday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ　Friday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂSaturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ(Saturday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ（Saturday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ Saturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ　Saturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂSunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ(Sunday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ（Sunday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ Sunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ　Sunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂMon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ(Mon)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ（Mon）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ Mon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ　Mon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂTue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ(Tue)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ（Tue）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ Tue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ　Tue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂWed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ(Wed)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ（Wed）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ Wed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ　Wed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂThu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ(Thu)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ（Thu）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ Thu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ　Thu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂFri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ(Fri)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ（Fri）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ Fri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ　Fri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂSat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ(Sat)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ（Sat）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ Sat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ　Sat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂSun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ(Sun)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ（Sun）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ Sun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ　Sun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂＭｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ(Ｍｏｎｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ（Ｍｏｎｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ Ｍｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ　Ｍｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂＴｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ(Ｔｕｅｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ（Ｔｕｅｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ Ｔｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ　Ｔｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂＷｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ(Ｗｅｄｎｅｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ（Ｗｅｄｎｅｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ Ｗｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ　Ｗｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂＴｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ(Ｔｈｕｒｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ（Ｔｈｕｒｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ Ｔｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ　Ｔｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂＦｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ(Ｆｒｉｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ（Ｆｒｉｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ Ｆｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ　Ｆｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂＳａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ(Ｓａｔｕｒｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ（Ｓａｔｕｒｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ Ｓａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ　Ｓａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂＳｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ(Ｓｕｎｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ（Ｓｕｎｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ Ｓｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ　Ｓｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂＭｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ(Ｍｏｎ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ（Ｍｏｎ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ Ｍｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂ　Ｍｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":".ǂＴｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ(Ｔｕｅ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ（Ｔｕｅ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ Ｔｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂ　Ｔｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":".ǂＷｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ(Ｗｅｄ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ（Ｗｅｄ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ Ｗｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂ　Ｗｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":".ǂＴｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ(Ｔｈｕ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ（Ｔｈｕ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ Ｔｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂ　Ｔｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":".ǂＦｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ(Ｆｒｉ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ（Ｆｒｉ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ Ｆｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂ　Ｆｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":".ǂＳａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ(Ｓａｔ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ（Ｓａｔ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ Ｓａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂ　Ｓａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":".ǂＳｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ(Ｓｕｎ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ（Ｓｕｎ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ Ｓｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":".ǂ　Ｓｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":".ǂ.ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":".ǂ.ǂ月", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
 {"pattern":".ǂ.ǂ(月)", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
@@ -3003,8 +3214,217 @@
 {"pattern":".ǂ.ǂ（Ｓｕｎ）", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":".ǂ.ǂ Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":".ǂ.ǂ　Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
-{"pattern":".ǂ", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
-{"pattern":"．ǂ", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"．ǂ", "corresponding_time_position":["m", "d"], "process_type":["unclear"], "ordinary":false, "option":""}
+{"pattern":"．ǂ月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ(月)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ（月）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ 月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ　月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ(火)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ（火）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ 火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ　火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ(水)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ（水）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ 水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ　水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ(木)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ（木）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ 木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ　木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ(金)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ（金）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ 金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ　金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ(土)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ（土）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ 土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ　土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ(日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ（日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ 日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ　日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ(月曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ（月曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ 月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ　月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ(火曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ（火曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ 火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ　火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ(水曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ（水曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ 水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ　水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ(木曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ（木曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ 木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ　木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ(金曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ（金曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ 金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ　金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ(土曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ（土曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ 土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ　土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ(日曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ（日曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ 日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ　日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂMonday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ(Monday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ（Monday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ Monday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ　Monday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂTuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ(Tuesday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ（Tuesday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ Tuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ　Tuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂWednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ(Wednesday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ（Wednesday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ Wednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ　Wednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂThursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ(Thursday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ（Thursday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ Thursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ　Thursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂFriday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ(Friday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ（Friday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ Friday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ　Friday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂSaturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ(Saturday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ（Saturday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ Saturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ　Saturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂSunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ(Sunday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ（Sunday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ Sunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ　Sunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂMon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ(Mon)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ（Mon）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ Mon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ　Mon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂTue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ(Tue)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ（Tue）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ Tue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ　Tue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂWed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ(Wed)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ（Wed）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ Wed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ　Wed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂThu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ(Thu)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ（Thu）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ Thu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ　Thu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂFri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ(Fri)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ（Fri）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ Fri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ　Fri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂSat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ(Sat)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ（Sat）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ Sat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ　Sat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂSun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ(Sun)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ（Sun）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ Sun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ　Sun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂＭｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ(Ｍｏｎｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ（Ｍｏｎｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ Ｍｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ　Ｍｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂＴｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ(Ｔｕｅｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ（Ｔｕｅｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ Ｔｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ　Ｔｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂＷｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ(Ｗｅｄｎｅｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ（Ｗｅｄｎｅｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ Ｗｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ　Ｗｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂＴｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ(Ｔｈｕｒｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ（Ｔｈｕｒｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ Ｔｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ　Ｔｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂＦｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ(Ｆｒｉｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ（Ｆｒｉｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ Ｆｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ　Ｆｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂＳａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ(Ｓａｔｕｒｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ（Ｓａｔｕｒｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ Ｓａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ　Ｓａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂＳｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ(Ｓｕｎｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ（Ｓｕｎｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ Ｓｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ　Ｓｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂＭｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ(Ｍｏｎ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ（Ｍｏｎ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ Ｍｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂ　Ｍｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"．ǂＴｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ(Ｔｕｅ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ（Ｔｕｅ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ Ｔｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂ　Ｔｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"．ǂＷｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ(Ｗｅｄ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ（Ｗｅｄ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ Ｗｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂ　Ｗｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"．ǂＴｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ(Ｔｈｕ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ（Ｔｈｕ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ Ｔｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂ　Ｔｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"．ǂＦｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ(Ｆｒｉ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ（Ｆｒｉ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ Ｆｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂ　Ｆｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"．ǂＳａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ(Ｓａｔ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ（Ｓａｔ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ Ｓａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂ　Ｓａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"．ǂＳｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ(Ｓｕｎ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ（Ｓｕｎ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ Ｓｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"．ǂ　Ｓｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"．ǂ．ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":"．ǂ．ǂ月", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
 {"pattern":"．ǂ．ǂ(月)", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
@@ -3216,7 +3636,217 @@
 {"pattern":"．ǂ．ǂ（Ｓｕｎ）", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"．ǂ．ǂ Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"．ǂ．ǂ　Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
-{"pattern":"・ǂ", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"・ǂ", "corresponding_time_position":["m", "d"], "process_type":["unclear"], "ordinary":false, "option":""}
+{"pattern":"・ǂ月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ(月)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ（月）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ 月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ　月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ(火)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ（火）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ 火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ　火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ(水)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ（水）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ 水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ　水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ(木)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ（木）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ 木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ　木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ(金)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ（金）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ 金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ　金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ(土)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ（土）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ 土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ　土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ(日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ（日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ 日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ　日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ(月曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ（月曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ 月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ　月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ(火曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ（火曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ 火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ　火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ(水曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ（水曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ 水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ　水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ(木曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ（木曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ 木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ　木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ(金曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ（金曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ 金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ　金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ(土曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ（土曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ 土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ　土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ(日曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ（日曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ 日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ　日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂMonday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ(Monday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ（Monday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ Monday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ　Monday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂTuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ(Tuesday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ（Tuesday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ Tuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ　Tuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂWednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ(Wednesday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ（Wednesday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ Wednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ　Wednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂThursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ(Thursday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ（Thursday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ Thursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ　Thursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂFriday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ(Friday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ（Friday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ Friday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ　Friday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂSaturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ(Saturday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ（Saturday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ Saturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ　Saturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂSunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ(Sunday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ（Sunday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ Sunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ　Sunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂMon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ(Mon)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ（Mon）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ Mon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ　Mon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂTue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ(Tue)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ（Tue）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ Tue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ　Tue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂWed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ(Wed)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ（Wed）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ Wed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ　Wed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂThu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ(Thu)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ（Thu）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ Thu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ　Thu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂFri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ(Fri)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ（Fri）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ Fri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ　Fri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂSat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ(Sat)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ（Sat）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ Sat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ　Sat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂSun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ(Sun)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ（Sun）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ Sun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ　Sun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂＭｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ(Ｍｏｎｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ（Ｍｏｎｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ Ｍｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ　Ｍｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂＴｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ(Ｔｕｅｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ（Ｔｕｅｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ Ｔｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ　Ｔｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂＷｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ(Ｗｅｄｎｅｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ（Ｗｅｄｎｅｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ Ｗｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ　Ｗｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂＴｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ(Ｔｈｕｒｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ（Ｔｈｕｒｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ Ｔｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ　Ｔｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂＦｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ(Ｆｒｉｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ（Ｆｒｉｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ Ｆｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ　Ｆｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂＳａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ(Ｓａｔｕｒｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ（Ｓａｔｕｒｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ Ｓａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ　Ｓａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂＳｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ(Ｓｕｎｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ（Ｓｕｎｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ Ｓｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ　Ｓｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂＭｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ(Ｍｏｎ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ（Ｍｏｎ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ Ｍｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂ　Ｍｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"・ǂＴｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ(Ｔｕｅ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ（Ｔｕｅ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ Ｔｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂ　Ｔｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"・ǂＷｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ(Ｗｅｄ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ（Ｗｅｄ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ Ｗｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂ　Ｗｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"・ǂＴｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ(Ｔｈｕ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ（Ｔｈｕ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ Ｔｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂ　Ｔｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"・ǂＦｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ(Ｆｒｉ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ（Ｆｒｉ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ Ｆｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂ　Ｆｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"・ǂＳａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ(Ｓａｔ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ（Ｓａｔ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ Ｓａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂ　Ｓａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"・ǂＳｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ(Ｓｕｎ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ（Ｓｕｎ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ Ｓｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"・ǂ　Ｓｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"・ǂ・ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":"・ǂ・ǂ月", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
 {"pattern":"・ǂ・ǂ(月)", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
@@ -3428,7 +4058,217 @@
 {"pattern":"・ǂ・ǂ（Ｓｕｎ）", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"・ǂ・ǂ Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"・ǂ・ǂ　Ｓｕｎ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
-{"pattern":"，ǂ", "corresponding_time_position":["y", "m"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"，ǂ", "corresponding_time_position":["m", "d"], "process_type":["unclear"], "ordinary":false, "option":""}
+{"pattern":"，ǂ月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ(月)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ（月）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ 月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ　月", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ(火)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ（火）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ 火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ　火", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ(水)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ（水）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ 水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ　水", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ(木)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ（木）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ 木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ　木", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ(金)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ（金）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ 金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ　金", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ(土)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ（土）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ 土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ　土", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ(日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ（日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ 日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ　日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ(月曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ（月曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ 月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ　月曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ(火曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ（火曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ 火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ　火曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ(水曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ（水曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ 水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ　水曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ(木曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ（木曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ 木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ　木曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ(金曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ（金曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ 金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ　金曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ(土曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ（土曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ 土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ　土曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ(日曜日)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ（日曜日）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ 日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ　日曜日", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂMonday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ(Monday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ（Monday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ Monday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ　Monday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂTuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ(Tuesday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ（Tuesday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ Tuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ　Tuesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂWednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ(Wednesday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ（Wednesday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ Wednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ　Wednesday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂThursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ(Thursday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ（Thursday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ Thursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ　Thursday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂFriday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ(Friday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ（Friday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ Friday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ　Friday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂSaturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ(Saturday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ（Saturday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ Saturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ　Saturday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂSunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ(Sunday)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ（Sunday）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ Sunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ　Sunday", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂMon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ(Mon)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ（Mon）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ Mon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ　Mon", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂTue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ(Tue)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ（Tue）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ Tue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ　Tue", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂWed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ(Wed)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ（Wed）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ Wed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ　Wed", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂThu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ(Thu)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ（Thu）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ Thu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ　Thu", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂFri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ(Fri)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ（Fri）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ Fri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ　Fri", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂSat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ(Sat)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ（Sat）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ Sat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ　Sat", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂSun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ(Sun)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ（Sun）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ Sun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ　Sun", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂＭｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ(Ｍｏｎｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ（Ｍｏｎｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ Ｍｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ　Ｍｏｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂＴｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ(Ｔｕｅｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ（Ｔｕｅｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ Ｔｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ　Ｔｕｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂＷｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ(Ｗｅｄｎｅｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ（Ｗｅｄｎｅｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ Ｗｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ　Ｗｅｄｎｅｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂＴｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ(Ｔｈｕｒｓｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ（Ｔｈｕｒｓｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ Ｔｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ　Ｔｈｕｒｓｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂＦｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ(Ｆｒｉｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ（Ｆｒｉｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ Ｆｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ　Ｆｒｉｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂＳａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ(Ｓａｔｕｒｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ（Ｓａｔｕｒｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ Ｓａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ　Ｓａｔｕｒｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂＳｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ(Ｓｕｎｄａｙ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ（Ｓｕｎｄａｙ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ Ｓｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ　Ｓｕｎｄａｙ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂＭｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ(Ｍｏｎ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ（Ｍｏｎ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ Ｍｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂ　Ｍｏｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
+{"pattern":"，ǂＴｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ(Ｔｕｅ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ（Ｔｕｅ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ Ｔｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂ　Ｔｕｅ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Tue"}
+{"pattern":"，ǂＷｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ(Ｗｅｄ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ（Ｗｅｄ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ Ｗｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂ　Ｗｅｄ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Wed"}
+{"pattern":"，ǂＴｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ(Ｔｈｕ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ（Ｔｈｕ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ Ｔｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂ　Ｔｈｕ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Thu"}
+{"pattern":"，ǂＦｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ(Ｆｒｉ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ（Ｆｒｉ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ Ｆｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂ　Ｆｒｉ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Fri"}
+{"pattern":"，ǂＳａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ(Ｓａｔ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ（Ｓａｔ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ Ｓａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂ　Ｓａｔ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sat"}
+{"pattern":"，ǂＳｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ(Ｓｕｎ)", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ（Ｓｕｎ）", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ Ｓｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
+{"pattern":"，ǂ　Ｓｕｎ", "corresponding_time_position":["m", "d"], "process_type":[], "ordinary":false, "option":"Sun"}
 {"pattern":"，ǂ，ǂ", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":"，ǂ，ǂ月", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}
 {"pattern":"，ǂ，ǂ(月)", "corresponding_time_position":["y", "m", "d"], "process_type":[], "ordinary":false, "option":"Mon"}

@@ -308,6 +308,7 @@
 {"pattern":"気圧", "counter":"気圧", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"光年", "counter":"光年", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"里", "counter":"里", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
+{"pattern":"セット", "counter":"セット", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"モル", "counter":"mol", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"ギガモル", "counter":"mol", "SI_prefix":9, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"メガモル", "counter":"mol", "SI_prefix":6, "optional_power_of_ten":0, "ordinary":false, "option":""}

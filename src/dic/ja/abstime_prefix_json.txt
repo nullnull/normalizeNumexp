@@ -14,8 +14,8 @@
 {"pattern":"ＡＭ", "process_type":"gozen"}
 {"pattern":"PM", "process_type":"gogo"}
 {"pattern":"AM", "process_type":"gozen"}
-{"pattern":"　ＰＭ", "process_type":"gogo"}
-{"pattern":"　ＡＭ", "process_type":"gozen"}
+{"pattern":"ＰＭ　", "process_type":"gogo"}
+{"pattern":"ＡＭ　", "process_type":"gozen"}
 {"pattern":"朝", "process_type":"asa"}
 {"pattern":"夜", "process_type":"yoru"}
 {"pattern":"深夜", "process_type":"sinnya"}

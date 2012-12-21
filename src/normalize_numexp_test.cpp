@@ -162,7 +162,7 @@ TEST_F(NumexpExtractorTest, inappropriate_abstime1) {
 TEST_F(NumexpExtractorTest, url1) {
 	vector<string> result;
 	string language("ja");
-	string text("tttp3gl-3kgggg");
+	string text("tttp3gl3molggg");
 	NormalizeNumexp NN(language);
 	NN.normalize(text, result);
 	for(int i=0; i<static_cast<int>(result.size()); i++){

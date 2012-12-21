@@ -39,3 +39,11 @@
 上旬	joujun
 中旬	tyujun
 下旬	gejun
+PM	gogo
+AM	gozen
+ＰＭ	gogo
+ＡＭ	gozen
+ PM	gogo
+ AM	gozen
+　ＰＭ	gogo
+　ＡＭ	gozen

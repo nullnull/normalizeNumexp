@@ -39,3 +39,11 @@
 {"pattern":"上旬", "process_type":"joujun"}
 {"pattern":"中旬", "process_type":"tyujun"}
 {"pattern":"下旬", "process_type":"gejun"}
+{"pattern":"PM", "process_type":"gogo"}
+{"pattern":"AM", "process_type":"gozen"}
+{"pattern":"ＰＭ", "process_type":"gogo"}
+{"pattern":"ＡＭ", "process_type":"gozen"}
+{"pattern":"PM", "process_type":"gogo"}
+{"pattern":"AM", "process_type":"gozen"}
+{"pattern":"　ＰＭ", "process_type":"gogo"}
+{"pattern":"　ＡＭ", "process_type":"gozen"}

@@ -276,9 +276,22 @@ TEST_F(AbstimeexpNormalizerTest, range3) {
   EXPECT_TRUE(is_same_time(ex1_upper, abstimeexps[0].value_upperbound));
 }
 
+TEST_F(AbstimeexpNormalizerTest, range4) {
+  AbstimeExpressionNormalizer AEN("ja");
+  std::string text("2012/3/8~3/10の間に、");
+  std::vector<AbstimeExpression> abstimeexps;
+  AEN.process(text, abstimeexps);
+  ASSERT_EQ(1u, abstimeexps.size());
+  Time ex1_lower(2012, 3, 8, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper(2012, 3, 10, -INFINITY, -INFINITY, -INFINITY);
+  EXPECT_EQ("2012/3/8~3/10", ustring_to_string(abstimeexps[0].original_expression));
+  EXPECT_TRUE(is_same_time(ex1_lower, abstimeexps[0].value_lowerbound));
+  EXPECT_TRUE(is_same_time(ex1_upper, abstimeexps[0].value_upperbound));
+}
+
 TEST_F(AbstimeexpNormalizerTest, ambiguous1) {
   AbstimeExpressionNormalizer AEN("ja");
-  std::string text("2011.3 その日、");
+  std::string text("2011.3");
   std::vector<AbstimeExpression> abstimeexps;
   AEN.process(text, abstimeexps);
   ASSERT_EQ(1u, abstimeexps.size());
@@ -286,6 +299,20 @@ TEST_F(AbstimeexpNormalizerTest, ambiguous1) {
   Time ex1_lower(2011,3, INFINITY, INFINITY, INFINITY, INFINITY);
   Time ex1_upper(2011,3, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
   EXPECT_EQ("2011.3", ustring_to_string(abstimeexps[0].original_expression));
+  EXPECT_TRUE(is_same_time(ex1_lower, abstimeexps[0].value_lowerbound));
+  EXPECT_TRUE(is_same_time(ex1_upper, abstimeexps[0].value_upperbound));
+}
+
+TEST_F(AbstimeexpNormalizerTest, ambiguous2) {
+  AbstimeExpressionNormalizer AEN("ja");
+  std::string text("3.11");
+  std::vector<AbstimeExpression> abstimeexps;
+  AEN.process(text, abstimeexps);
+  ASSERT_EQ(1u, abstimeexps.size());
+  
+  Time ex1_lower(INFINITY, 3, 11, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY,3, 11, -INFINITY, -INFINITY, -INFINITY);
+  EXPECT_EQ("3.11", ustring_to_string(abstimeexps[0].original_expression));
   EXPECT_TRUE(is_same_time(ex1_lower, abstimeexps[0].value_lowerbound));
   EXPECT_TRUE(is_same_time(ex1_upper, abstimeexps[0].value_upperbound));
 }

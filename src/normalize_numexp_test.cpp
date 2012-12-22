@@ -121,6 +121,61 @@ TEST_F(NumexpExtractorTest, real_example1) {
 	EXPECT_EQ("abstime*4/26(Tue)まで*59*70*none*XXXX-04-26*XXXX-04-26*Tue", result[0]);
 }
 
+TEST_F(NumexpExtractorTest, inappropriate_range1) {
+	vector<string> result;
+	string language("ja");
+	string text("中国から30匹の鳥がきた");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(1u, result.size());
+	EXPECT_EQ("numerical*30匹*4*7*匹*30*30*kara_prefix", result[0]);
+}
+
+
+TEST_F(NumexpExtractorTest, inappropriate_range2) {
+	vector<string> result;
+	string language("ja");
+	string text("30匹からのプレゼント");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(1u, result.size());
+	EXPECT_EQ("numerical*30匹*0*3*匹*30*30*kara_suffix", result[0]);
+}
+
+TEST_F(NumexpExtractorTest, inappropriate_range3) {
+	vector<string> result;
+	string language("ja");
+	string text("一万年と二千年前から愛してる");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(2u, result.size());
+	EXPECT_EQ("reltime*二千年前*4*8*none*XX:XX:XX,P-2000Y*XX:XX:XX,P-2000Y*kara_suffix", result[0]);
+	EXPECT_EQ("duration*一万年*0*3*none*P10000Y*P10000Y*", result[1]);
+}
+
+TEST_F(NumexpExtractorTest, inappropriate_range4) {
+	vector<string> result;
+	string language("ja");
+	string text("話をしよう。あれは今から36万年前………いや、1万4000年前だったか。");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(2u, result.size());
+	EXPECT_EQ("reltime*36万年前*12*17*none*XX:XX:XX,P-360000Y*XX:XX:XX,P-360000Y*kara_prefix", result[0]);
+	EXPECT_EQ("reltime*1万4000年前*23*31*none*XX:XX:XX,P-14000Y*XX:XX:XX,P-14000Y*", result[1]);
+}
+
 TEST_F(NumexpExtractorTest, inappropriate_strings1) {
 	vector<string> result;
 	string language("ja");
@@ -150,13 +205,25 @@ TEST_F(NumexpExtractorTest, inappropriate_prefix1) {
 TEST_F(NumexpExtractorTest, inappropriate_abstime1) {
 	vector<string> result;
 	string language("ja");
-	string text("198999年30月41日。080-6006-4451。ver2.0。");
+	string text("080-6006-4451。ver2.0。");
 	NormalizeNumexp NN(language);
 	NN.normalize(text, result);
 	for(int i=0; i<static_cast<int>(result.size()); i++){
 		cout << result[i] << endl;
 	}
 	ASSERT_EQ(0u, result.size());
+}
+
+TEST_F(NumexpExtractorTest, inappropriate_abstime2) {
+	vector<string> result;
+	string language("ja");
+	string text("198999年30月41日。");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(3u, result.size()); //durationとして認識される
 }
 
 TEST_F(NumexpExtractorTest, url1) {

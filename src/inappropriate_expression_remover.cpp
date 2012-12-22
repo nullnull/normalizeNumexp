@@ -1,3 +1,8 @@
+/*
+ 不適切な表現を削除する。
+ TODO : とりあえず実装しただけ。不適切な表現を真面目に削除していくのは今後の課題。
+*/
+
 #include "inappropriate_expression_remover.hpp"
 #include <sstream>
 namespace inappropriate_expression_remover{
@@ -25,6 +30,9 @@ namespace inappropriate_expression_remover{
 																	 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
 		//表現タイプ毎に重複があるので、これを削除する（例：「300年間」はabstimeexpsでも「300年」として規格化されている）
 		//TODO : O(N^2)のアルゴリズム。対象となる表現と、その他すべての表現に対して重複をチェックしている。必要に応じて高速化する
+		
+		//TODO : inappropriate_abstime, 以下の削除順番　の最適な順番は？
+		//不適切な絶対時間を削除(1万年、など) -> durationを削除(3月3日)など -> abstime　の流れで。
 
 		//erase numexp
 		//時間表現と被っていた場合、時間表現を優先するため、一番先にnumexpを削除（例：「1分」）
@@ -35,18 +43,18 @@ namespace inappropriate_expression_remover{
 			}
 		}
 		
-		//erase duration
-		for(int i=0; i<static_cast<int>(durationexps.size()); i++){
-			if(is_covered_by_other_type_expressions(durationexps[i], abstimeexps) || is_covered_by_other_type_expressions(durationexps[i], reltimeexps) || is_covered_by_other_type_expressions(durationexps[i], numexps)){
-				durationexps.erase(durationexps.begin() + i);
-				i--;
-			}
-		}
-		
 		//erase reltime
 		for(int i=0; i<static_cast<int>(reltimeexps.size()); i++){
 			if(is_covered_by_other_type_expressions(reltimeexps[i], abstimeexps) || is_covered_by_other_type_expressions(reltimeexps[i], numexps) || is_covered_by_other_type_expressions(reltimeexps[i], durationexps)){
 				reltimeexps.erase(reltimeexps.begin() + i);
+				i--;
+			}
+		}		
+		
+		//erase duration
+		for(int i=0; i<static_cast<int>(durationexps.size()); i++){
+			if(is_covered_by_other_type_expressions(durationexps[i], abstimeexps) || is_covered_by_other_type_expressions(durationexps[i], reltimeexps) || is_covered_by_other_type_expressions(durationexps[i], numexps)){
+				durationexps.erase(durationexps.begin() + i);
 				i--;
 			}
 		}
@@ -57,7 +65,7 @@ namespace inappropriate_expression_remover{
 				abstimeexps.erase(abstimeexps.begin() + i);
 				i--;
 			}
-		}															 
+		}
 	}
 
 
@@ -68,10 +76,6 @@ namespace inappropriate_expression_remover{
 
 	
 	
-	/*
-	不適切な表現を削除する。
-	TODO : とりあえず実装しただけ。局所的な手がかりしか用いない抽出による、不適切な表現を（しっかり）削除していくのは、今後の課題。
-	*/
 	
 	//辞書に記述した表現の削除
 	template <class AnyTypeExpression>
@@ -240,8 +244,38 @@ namespace inappropriate_expression_remover{
 	}
 	
 	
+	/*
+	不適切な範囲表現の削除（TODO : 範囲表現の扱いが定まっておらず、normalizerの方の処理が雑だった。今後も変わることが考えられるので、（非効率だが）ここで一括で設定
+	*/
+	template <class AnyTypeExpression>
+	void revise_inappropriate_range_expression(AnyTypeExpression& any_type_expression){
+		if(any_type_expression.original_expression[0] == pfi::data::string::string_to_uchar("か") && any_type_expression.original_expression[1] == pfi::data::string::string_to_uchar("ら")){
+			//先頭一致
+			any_type_expression.original_expression = any_type_expression.original_expression.substr(2, any_type_expression.original_expression.size()-2);
+			any_type_expression.position_start += 2;
+		}
+		if(any_type_expression.original_expression.size()>2 && any_type_expression.original_expression[any_type_expression.original_expression.size()-2] == pfi::data::string::string_to_uchar("か") && any_type_expression.original_expression[any_type_expression.original_expression.size()-1] == pfi::data::string::string_to_uchar("ら")){
+			any_type_expression.original_expression = any_type_expression.original_expression.substr(0, any_type_expression.original_expression.size()-2);
+			any_type_expression.position_end -= 2;
+		}
+	}
 	
+	template <class AnyTypeExpression>
+	void delete_inappropriate_range_expression_one_type(std::vector<AnyTypeExpression>&  any_type_expressions){
+		for(int i=0; i<static_cast<int>(any_type_expressions.size()); i++){
+			revise_inappropriate_range_expression(any_type_expressions[i]);
+		}
+	}
 	
+	void delete_inappropriate_range_expression(std::vector<numerical_expression_normalizer::NumericalExpression>& numexps,
+																					std::vector<abstime_expression_normalizer::AbstimeExpression>& abstimeexps,
+																					std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
+																					std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
+		delete_inappropriate_range_expression_one_type(numexps);
+		delete_inappropriate_range_expression_one_type(abstimeexps);
+		delete_inappropriate_range_expression_one_type(reltimeexps);
+		delete_inappropriate_range_expression_one_type(durationexps);
+	}
 	
 	
 	//不適切な表現の削除
@@ -251,9 +285,10 @@ namespace inappropriate_expression_remover{
 																																		 std::vector<reltime_expression_normalizer::ReltimeExpression>& reltimeexps,
 																																		 std::vector<duration_expression_normalizer::DurationExpression>& durationexps){
 		//TODO : この部分を、コンポーネントとして書き出す。辞書で指定できるようにする。　規格化処理は辞書で指定できるが、不適切な表現の処理は辞書でできるようにほとんどなっていない。
+		delete_inappropriate_abstimeexps(abstimeexps);
 		delete_duplicate_extraction(numexps, abstimeexps, reltimeexps, durationexps);
 		delete_inappropriate_extraction_using_dictionary(text, numexps, abstimeexps, reltimeexps, durationexps);
-		delete_inappropriate_abstimeexps(abstimeexps);
+		delete_inappropriate_range_expression(numexps, abstimeexps, reltimeexps, durationexps);
 	}
 	
 	

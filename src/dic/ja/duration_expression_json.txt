@@ -2,6 +2,8 @@
 {"pattern":"世紀半", "corresponding_time_position":["seiki"], "process_type":["han"], "ordinary":false, "option":""}
 {"pattern":"年間", "corresponding_time_position":["y"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":"年間半", "corresponding_time_position":["y"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"年", "corresponding_time_position":["y"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"年半", "corresponding_time_position":["y"], "process_type":["han"], "ordinary":false, "option":""}
 {"pattern":"ヶ月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":"ヶ月半", "corresponding_time_position":["m"], "process_type":["han"], "ordinary":false, "option":""}
 {"pattern":"か月", "corresponding_time_position":["m"], "process_type":[], "ordinary":false, "option":""}
@@ -40,3 +42,5 @@
 {"pattern":"年ǂヶ月半", "corresponding_time_position":["y", "m"], "process_type":["han"], "ordinary":false, "option":""}
 {"pattern":"時間ǂ分", "corresponding_time_position":["h", "mn"], "process_type":[], "ordinary":false, "option":""}
 {"pattern":"時間ǂ分半", "corresponding_time_position":["h", "mn"], "process_type":["han"], "ordinary":false, "option":""}
+{"pattern":"分ǂ秒", "corresponding_time_position":["mn", "s"], "process_type":[], "ordinary":false, "option":""}
+{"pattern":"分ǂ秒半", "corresponding_time_position":["mn", "s"], "process_type":["han"], "ordinary":false, "option":""}

@@ -131,7 +131,7 @@ namespace inappropriate_expression_remover{
 	bool InappropriateExpressionRemover::is_url_strings(const std::string& text, const AnyTypeExpression& any_type_expression){
 		//数量表現・時間表現の前後がurlに含まれる文字、かつ自分自身もurlに含まれる文字であればtrue
 		pfi::data::string::ustring utext = pfi::data::string::string_to_ustring(text);
-		pfi::data::string::uchar a(pfi::data::string::string_to_uchar("")),b(pfi::data::string::string_to_uchar(""));
+		pfi::data::string::uchar a(pfi::data::string::string_to_uchar(" ")),b(pfi::data::string::string_to_uchar(" "));
 		if(any_type_expression.position_start	>= 1) a = utext[any_type_expression.position_start-1];
 		if(any_type_expression.position_end	< static_cast<int>(utext.size())) b = utext[any_type_expression.position_end];
 		if(url_strings_to_bool[pfi::data::string::uchar_to_string(a)] && url_strings_to_bool[pfi::data::string::uchar_to_string(b)]){

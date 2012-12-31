@@ -138,6 +138,17 @@ TEST_F(NumberNormalizerTest, process_test2_decimal_point2) {
 	EXPECT_DOUBLE_EQ(131.1, result[0].value_upperbound);
 }
 
+TEST_F(NumberNormalizerTest, process_test2_decimal_point3) {
+	const string text("9.3万円も損した");
+	vector<Number> result;
+	std::string language("ja");
+	NumberNormalizer nn(language);
+	nn.process(text, result);
+	ASSERT_EQ(1u, result.size());
+	EXPECT_DOUBLE_EQ(93000, result[0].value_lowerbound);
+	EXPECT_DOUBLE_EQ(93000, result[0].value_upperbound);
+}
+
 TEST_F(NumberNormalizerTest, process_test3_plus) {
   const string text("その+3,244人が＋３，４５６，７８９円でプラス百二十三万四千五百六十七円");
   vector<Number> result;

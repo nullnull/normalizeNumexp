@@ -330,21 +330,34 @@ void SymbolFixer::fix_prefix_symbol(const pfi::data::string::ustring& utext, std
 double SymbolFixer::create_decimal_value(const Number& number) {
   double decimal;
   decimal = number.value_lowerbound;
-  while (decimal >= 1)
-    decimal *= 0.1;
-  int place = 0;
+  
+  //1より小さくなるまで0.1を乗算する
+  while (decimal >= 1) decimal *= 0.1;
+  
+  //「1.001」のような0が含まれる表記のため、先頭のゼロの分、0.1を乗算する
+  int pos = 0;
   while (1) {
-    std::string str = pfi::data::string::uchar_to_string(number.original_expression[place]);
+    std::string str = pfi::data::string::uchar_to_string(number.original_expression[pos]);
     if (str != "0" and str != "０" and str != "零" and str != "〇") break;
     decimal *= 0.1;
-    place++;
+    pos++;
   }
+  
   return decimal;
 }
 
 void SymbolFixer::fix_decimal_point(std::vector<Number>& numbers, int i, pfi::data::string::ustring decimal_strings) {
+  //小数点の処理を行う。「3.14」「9.3万」など。
+  //「3.14」の場合、小数点以下を10^(-n)乗してから、小数点以上の値に付け加える
+  //「9.3万」の場合、先に「万」を無視して上と同じ処理を行ってから、最後に「万」分の処理を行う
   double decimal = create_decimal_value(numbers[i+1]);
   numbers[i].value_lowerbound += decimal;
+  pfi::data::string::uchar uc(numbers[i+1].original_expression[numbers[i+1].original_expression.size()-1]);
+  if(is_kansuji_kurai_man(uc)){
+    int power_value = convert_kansuji_kurai_to_power_value(uc);
+    numbers[i].value_lowerbound *= pow(10, power_value);
+  }
+  
   numbers[i].value_upperbound = numbers[i].value_lowerbound;
   numbers[i].original_expression += decimal_strings;
   numbers[i].original_expression += numbers[i+1].original_expression;

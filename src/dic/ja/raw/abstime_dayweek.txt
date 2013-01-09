@@ -5,6 +5,13 @@
 金	Fri
 土	Sat
 日	Sun
+月曜	Mon
+火曜	Tue
+水曜	Wed
+木曜	Thu
+金曜	Fri
+土曜	Sat
+日曜	Sun
 月曜日	Mon
 火曜日	Tue
 水曜日	Wed

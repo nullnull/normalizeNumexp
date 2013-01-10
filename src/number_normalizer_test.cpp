@@ -352,6 +352,34 @@ TEST_F(NumberNormalizerTest, process_test5_suu) {
 }
 
 
+TEST_F(NumberNormalizerTest, process_test5_suu2) {
+	const string text("0数万人"); //２〇万人
+	std::vector<Number> result;
+	std::string language("ja");
+	NumberNormalizer nn(language);
+	nn.process(text, result);
+	EXPECT_EQ("0数", ustring_to_string(result[0].original_expression));
+	EXPECT_EQ(1.0, result[0].value_lowerbound);
+	EXPECT_EQ(9.0, result[0].value_upperbound);
+}
+
+
+
+
+/*
+TEST_F(NumberNormalizerTest, process_test5_suu3) {
+	const string text("２〇数万人"); //２〇万人
+	std::vector<Number> result;
+	std::string language("ja");
+	NumberNormalizer nn(language);
+	nn.process(text, result);
+	EXPECT_EQ("２〇数万", ustring_to_string(result[0].original_expression));
+	EXPECT_EQ(210000.0, result[0].value_lowerbound);
+	EXPECT_EQ(290000.0, result[0].value_upperbound);
+}
+*/
+
+
 
 /*
 中国語のテスト

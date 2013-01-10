@@ -450,6 +450,7 @@ void fix_intermediate_su(const pfi::data::string::ustring& utext, std::vector<Nu
 	while(1){
 		if(numbers[i+1].value_lowerbound < numbers[i].value_lowerbound) break;
 		numbers[i].value_lowerbound *= pow(10,4);
+		if(numbers[i].value_lowerbound <= 0) return; //0数万とかのとき
 	}
 	numbers[i].value_upperbound = numbers[i].value_lowerbound;
 	//numbers[i+1]に「数」の処理を行う

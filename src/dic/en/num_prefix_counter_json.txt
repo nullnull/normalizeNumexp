@@ -1,0 +1,8 @@
+{"pattern":"¥", "counter":"¥", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"¥ ", "counter":"¥", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"$", "counter":"$", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"$ ", "counter":"$", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"€", "counter":"€", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"€ ", "counter":"€", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"£", "counter":"£", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"£ ", "counter":"£", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}

@@ -104,17 +104,17 @@ void NumericalExpressionNormalizer::revise_any_type_expression_by_number_modifie
   }else if(process_type == "about"){
     numexp.value_lowerbound *= 0.7;
     numexp.value_upperbound *= 1.3;
-	}else if(process_type == "kyou"){
+  }else if(process_type == "kyou"){
     numexp.value_upperbound *= 1.6;
   }else if(process_type == "jaku"){
     numexp.value_lowerbound *= 0.5;
-	}else if(process_type == "made"){
+  /*}else if(process_type == "made"){
 		if(numexp.value_lowerbound == numexp.value_upperbound) {
 			numexp.value_lowerbound = -INFINITY;
 		}else{
 			;
 		}
-	}else {
+   }else {
     numexp.options.push_back(process_type);
 	}
 }

@@ -1,0 +1,9 @@
+giga	9
+mega	6
+kilo	3
+deci	-1
+centi	-2
+milli	-3
+micro	-6
+nano	-9
+pico	-12

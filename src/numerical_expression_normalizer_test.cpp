@@ -292,3 +292,33 @@ TEST_F(NumexpNormalizerTest, chinese1) {
 
 }
 //"東京支部の三人"
+
+
+
+/*
+tests for English
+*/
+TEST_F(NumexpNormalizerTest, english1) {
+	NumericalExpressionNormalizer NEN("en");
+	std::string text("He gave $30,000 to his friend at the bank");
+	std::vector<NumericalExpression> numexps;
+	NEN.process(text, numexps);
+	ASSERT_EQ(1u, numexps.size());
+	NumericalExpression ex(string_to_ustring("$30,000"), 8, 15, 30000, 30000);
+	ex.counter = string_to_ustring("$");
+	EXPECT_TRUE(is_same_numexp(ex, numexps[0]));
+}
+
+TEST_F(NumexpNormalizerTest, english2) {
+	NumericalExpressionNormalizer NEN("en");
+	std::string text("This is 30,000,000 kg and about 1,000,000 mm²");
+	std::vector<NumericalExpression> numexps;
+	NEN.process(text, numexps);
+	ASSERT_EQ(2u, numexps.size());
+	NumericalExpression ex(string_to_ustring("30,000,000 kg"), 8, 21, 30000000000, 30000000000);
+	ex.counter = string_to_ustring("g");
+	EXPECT_TRUE(is_same_numexp(ex, numexps[0]));
+	NumericalExpression ex2(string_to_ustring("about 1,000,000 mm²"), 26, 45, 0.7, 1.3);
+	ex2.counter = string_to_ustring("m2");
+	EXPECT_TRUE(is_same_numexp(ex2, numexps[1]));
+}

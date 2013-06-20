@@ -341,6 +341,7 @@ double SymbolFixer::create_decimal_value(const Number& number) {
     if (str != "0" and str != "０" and str != "零" and str != "〇") break;
     decimal *= 0.1;
     pos++;
+	if(pos >= number.original_expression.size()) break;
   }
   
   return decimal;

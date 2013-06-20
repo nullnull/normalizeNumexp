@@ -1,0 +1,15 @@
+{"pattern":"about ", "process_type":"about"}
+{"pattern":"close to ", "process_type":"about"}
+{"pattern":"almost ", "process_type":"about"}
+{"pattern":"around ", "process_type":"about"}
+{"pattern":"roughly ", "process_type":"about"}
+{"pattern":"over ", "process_type":"or_over"}
+{"pattern":"more than ", "process_type":"or_over"}
+{"pattern":"less than ", "process_type":"or_less"}
+{"pattern":"only ", "process_type":"small"}
+{"pattern":"as many as ", "process_type":"large"}
+{"pattern":"as few as ", "process_type":"small"}
+{"pattern":"as much as ", "process_type":"large"}
+{"pattern":"as little as ", "process_type":"small"}
+{"pattern":"as large as ", "process_type":"large"}
+{"pattern":"as small as ", "process_type":"small"}

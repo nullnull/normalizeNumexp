@@ -358,6 +358,7 @@ TEST_F(NumberNormalizerTest, process_test5_suu2) {
 	std::string language("ja");
 	NumberNormalizer nn(language);
 	nn.process(text, result);
+	ASSERT_EQ(2u, result.size());
 	EXPECT_EQ("0数", ustring_to_string(result[0].original_expression));
 	EXPECT_EQ(1.0, result[0].value_lowerbound);
 	EXPECT_EQ(9.0, result[0].value_upperbound);
@@ -475,3 +476,21 @@ TEST_F(NumberNormalizerTest, chinese7) {
  EXPECT_EQ(1000000000000, result[0].value_lowerbound);
  }
  */
+ 
+ 
+ 
+ 
+ /*
+tests for English
+ */
+TEST_F(NumberNormalizerTest, english1) {
+	const string text("as many as 100,000,000 people have died");
+	vector<Number> result;
+	std::string language("en");
+	NumberNormalizer nn(language);
+	nn.process(text, result);
+	ASSERT_EQ(1u, result.size());
+	EXPECT_EQ("100,000,000", ustring_to_string(result[0].original_expression));
+	EXPECT_EQ(100000000, result[0].value_lowerbound);
+}
+ 

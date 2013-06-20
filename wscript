@@ -34,7 +34,7 @@ def build(bld):
 def create_dic_file(bld) :
 #辞書ファイルの場所を指定
 	dictionary_dirpath = str(bld.env.PREFIX) + "/lib/normalizeNumexp/dic/"
-#	dictionary_dirpath = "/home/katsuma/usr/local/lib/normalizeNumexp/dic/"	
+	dictionary_dirpath = "/home/katsuma/usr/local/lib/normalizeNumexp/dic/"	
 	source = """
 #include "dictionary_dirpath.hpp"
 namespace dictionary_dirpath {

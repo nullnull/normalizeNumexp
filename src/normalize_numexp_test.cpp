@@ -11,6 +11,11 @@ public:
     void TearDown() {}
 };
 
+
+/*
+tests for Japanese
+*/
+
 TEST_F(NumexpExtractorTest, simple1) {
   vector<string> result;
   string language("ja");
@@ -329,4 +334,37 @@ TEST_F(NumexpExtractorTest, wari1) {
 	}
 	ASSERT_EQ(1u, result.size());
 	EXPECT_EQ("numerical*3割4分5厘*5*11*%*34.5*34.5*", result[0]);
+}
+
+
+
+/*
+tests for English
+*/
+
+TEST_F(NumexpExtractorTest, english1) {
+	vector<string> result;
+	string language("en");
+	string text("He gave $30,000 to his friend at the bank");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(1u, result.size());
+	EXPECT_EQ("numerical*$30,000*8*15*$*30000*30000*", result[0]);
+}
+
+TEST_F(NumexpExtractorTest, english2) {
+	vector<string> result;
+	string language("en");
+	string text("This is 30,000,000 kg and about 1,000 mm²");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(2u, result.size());
+	EXPECT_EQ("numerical*30,000,000 kg*8*21*g*3e+10*3e+10*", result[0]);
+	EXPECT_EQ("numerical*about 1,000 mm\xC2\xB2*26*41*m2*0.0007*0.0013*", result[1]);	
 }

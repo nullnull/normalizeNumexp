@@ -1,0 +1,26 @@
+people	people
+cars	cars
+times	time
+time	time
+%	%
+percent	%
+dollar	$
+yen	¥
+days	day
+day	day
+hours	hour
+hour	hour
+minutes	minute
+minute	minute
+years old	years-old
+rad	rad
+℃	℃
+℉	℉
+°	°
+KB	KB
+MB	MB
+GB	GB
+TB	TB
+PB	PB
+ppm	ppm
+G	G

@@ -1,0 +1,15 @@
+about	about
+close to	about
+almost	about
+around	about
+roughly	about
+over	<=
+more than	<=
+less than	>=
+only	small
+as many as	large
+as few as	small
+as much as	large
+as little as	small
+as large as	large
+as small as	small

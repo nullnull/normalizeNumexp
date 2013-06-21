@@ -1,6 +1,6 @@
-だいたい	about
-およそ	about
-ちょうど	none
+だいたい	MOD_APPROX
+およそ	MOD_APPROX
+ちょうど	MOD_JUST
 ~	kara_prefix
 〜	kara_prefix
 ～	kara_prefix
@@ -16,6 +16,7 @@ PM 	gogo
 AM 	gozen
 ＰＭ　	gogo
 ＡＭ　	gozen
-朝	asa
-夜	yoru
-深夜	sinnya
+朝	MO
+昼	MI
+夜	NI
+深夜	MN

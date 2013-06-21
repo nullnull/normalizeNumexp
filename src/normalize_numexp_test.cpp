@@ -337,6 +337,109 @@ TEST_F(NumexpExtractorTest, wari1) {
 }
 
 
+/*
+tests for MOD_ and special ISO format
+*/
+TEST_F(NumexpExtractorTest, mod_approx1) {
+	vector<string> result;
+	string language("ja");
+	string text("約3人以上");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(1u, result.size());
+	EXPECT_EQ("numerical*約3人以上*0*5*人*3*3*MOD_EQUAL_OR_MORE,MOD_APPROX", result[0]);
+}
+
+TEST_F(NumexpExtractorTest, bc1) {
+	vector<string> result;
+	string language("ja");
+	string text("紀元前3000年");
+	NormalizeNumexp NN(language);
+	NN.normalize(text, result);
+	for(int i=0; i<static_cast<int>(result.size()); i++){
+		cout << result[i] << endl;
+	}
+	ASSERT_EQ(1u, result.size());
+	EXPECT_EQ("abstime*紀元前3000年*0*8*none*3000-XX-XX*3000-XX-XX*BC", result[0]);
+}
+
+/*
+tests for TIMEX format output
+*/
+
+TEST_F(NumexpExtractorTest, timex0) {
+	string text_annotated;
+	string language("ja");
+	string text("紀元前3000年、それは300人の人が30年間に3時間30分にわたって");
+	NormalizeNumexp NN(language);
+	NN.normalize_by_timex_format(text, text_annotated);
+	cout << "debug:" << text_annotated << endl;
+	EXPECT_EQ("abstime*紀元前3000年*0*8*none*3000-XX-XX*3000-XX-XX*BC", text_annotated);
+}
+
+TEST_F(NumexpExtractorTest, timex1) { //以下、小西ら(2013)の例文より
+	string text_annotated;
+	string language("ja");
+	string text("二〇〇三年十月二十日　月曜日。午後五時傘寿ぷん。ステイシーはだらけた姿勢でモニターの前に陣取り、白黒の画像に見入っていた。彼女は伸びをし、腕時計に目をやった。二時間半で収穫ゼロ");
+	NormalizeNumexp NN(language);
+	NN.normalize_by_timex_format(text, text_annotated);
+	cout << "debug:" << text_annotated << endl;
+	EXPECT_EQ("abstime*紀元前3000年*0*8*none*3000-XX-XX*3000-XX-XX*BC", text_annotated);
+}
+
+
+TEST_F(NumexpExtractorTest, timex2) {
+	string text_annotated;
+	string language("ja");
+	string text("1980年7月7日、水曜日、1999年冬、第一四半期、1998年度、11世紀、紀元前202年、4000年前、2億年前、2005年8月8日午前8時45分30秒、午前8時45分30秒、3日未明、四日朝、四日昼、四日日中、四日午後、四日夕方、四日夜、四日深夜");
+	NormalizeNumexp NN(language);
+	NN.normalize_by_timex_format(text, text_annotated);
+	cout << "debug:" << text_annotated << endl;
+	EXPECT_EQ("abstime*紀元前3000年*0*8*none*3000-XX-XX*3000-XX-XX*BC", text_annotated);
+}
+
+TEST_F(NumexpExtractorTest, timex3) {
+	string text_annotated;
+	string language("ja");
+	string text("3年間、2ヶ月、5日, 3時間、30分、9秒80、1週間");
+	NormalizeNumexp NN(language);
+	NN.normalize_by_timex_format(text, text_annotated);
+	cout << "debug:" << text_annotated << endl;
+	EXPECT_EQ("abstime*紀元前3000年*0*8*none*3000-XX-XX*3000-XX-XX*BC", text_annotated);
+}
+
+TEST_F(NumexpExtractorTest, timex4) {
+	string text_annotated;
+	string language("ja");
+	string text("週に2回、毎日、毎10月、10日おき");
+	NormalizeNumexp NN(language);
+	NN.normalize_by_timex_format(text, text_annotated);
+	cout << "debug:" << text_annotated << endl;
+	EXPECT_EQ("abstime*紀元前3000年*0*8*none*3000-XX-XX*3000-XX-XX*BC", text_annotated);
+}
+
+TEST_F(NumexpExtractorTest, timex5) {
+	string text_annotated;
+	string language("ja");
+	string text("二十世紀初頭、二十世紀半ば、二十世紀末、二十世紀ごろ、2003年4月以前、2003年4月以降、3日以内、3日以上、10個未満、10個余り、ちょうど10個");
+	NormalizeNumexp NN(language);
+	NN.normalize_by_timex_format(text, text_annotated);
+	cout << "debug:" << text_annotated << endl;
+	EXPECT_EQ("abstime*紀元前3000年*0*8*none*3000-XX-XX*3000-XX-XX*BC", text_annotated);
+}
+
+TEST_F(NumexpExtractorTest, timex6) {
+	string text_annotated;
+	string language("ja");
+	string text("三年前、三日前、三時間前、昨年四月、先月四日夜、明日五時");
+	NormalizeNumexp NN(language);
+	NN.normalize_by_timex_format(text, text_annotated);
+	cout << "debug:" << text_annotated << endl;
+	EXPECT_EQ("abstime*紀元前3000年*0*8*none*3000-XX-XX*3000-XX-XX*BC", text_annotated);
+}
 
 /*
 tests for English
@@ -348,9 +451,6 @@ TEST_F(NumexpExtractorTest, english1) {
 	string text("He gave $30,000 to his friend at the bank");
 	NormalizeNumexp NN(language);
 	NN.normalize(text, result);
-	for(int i=0; i<static_cast<int>(result.size()); i++){
-		cout << result[i] << endl;
-	}
 	ASSERT_EQ(1u, result.size());
 	EXPECT_EQ("numerical*$30,000*8*15*$*30000*30000*", result[0]);
 }
@@ -358,13 +458,10 @@ TEST_F(NumexpExtractorTest, english1) {
 TEST_F(NumexpExtractorTest, english2) {
 	vector<string> result;
 	string language("en");
-	string text("This is 30,000,000 kg and about 1,000 mm²");
+	string text("This is 30,000,000 kg and about 1,000 mm².");
 	NormalizeNumexp NN(language);
 	NN.normalize(text, result);
-	for(int i=0; i<static_cast<int>(result.size()); i++){
-		cout << result[i] << endl;
-	}
 	ASSERT_EQ(2u, result.size());
-	EXPECT_EQ("numerical*30,000,000 kg*8*21*g*3e+10*3e+10*", result[0]);
-	EXPECT_EQ("numerical*about 1,000 mm\xC2\xB2*26*41*m2*0.0007*0.0013*", result[1]);	
+	EXPECT_EQ("numerical*30,000,000 kg *8*22*g*3e+10*3e+10*", result[0]);
+	EXPECT_EQ("numerical*about 1,000 mm\xC2\xB2.*26*42*m2*0.001*0.001*MOD_APPROX", result[1]);	
 }

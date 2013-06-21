@@ -1,4 +1,4 @@
-紀元前	kigenzen
+紀元前	BC
 午前	gozen
 午後	gogo
 AM	gozen

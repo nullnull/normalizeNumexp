@@ -10,6 +10,7 @@ namespace normalize_numexp{
 	public:
 		NormalizeNumexp(const std::string& language);
 		void normalize(const std::string& text, std::vector<std::string>& result);
+		void normalize_by_timex_format(const std::string& text, std::string& text_annotated);
 		
 	private:
 		void normalize_each_type_expressions(const std::string& text,

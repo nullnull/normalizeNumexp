@@ -1,4 +1,4 @@
-{"pattern":"about ", "process_type":"about"}
+{"pattern":"about ", "process_type":"MOD_APPROX"}
 {"pattern":"close to ", "process_type":"about"}
 {"pattern":"almost ", "process_type":"about"}
 {"pattern":"around ", "process_type":"about"}

@@ -131,7 +131,7 @@ TEST_F(DurationexpNormalizerTest, or_over1) {
   ASSERT_EQ(1u, durationexps.size());
   
   Time ex1_lower(INFINITY, INFINITY, INFINITY, 3, INFINITY, INFINITY);
-  Time ex1_upper(INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 3, -INFINITY, -INFINITY);
   
   EXPECT_EQ("三時間以上", ustring_to_string(durationexps[0].original_expression));
   EXPECT_TRUE(is_same_time(ex1_lower, durationexps[0].value_lowerbound));
@@ -145,8 +145,8 @@ TEST_F(DurationexpNormalizerTest, about_suffix) {
   DEN.process(text, durationexps);
   ASSERT_EQ(1u, durationexps.size());
   
-  Time ex1_lower(INFINITY, INFINITY, INFINITY, 2, INFINITY, INFINITY);
-  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 4, -INFINITY, -INFINITY);
+  Time ex1_lower(INFINITY, INFINITY, INFINITY, 3, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 3, -INFINITY, -INFINITY);
   
   EXPECT_EQ("三時間くらい", ustring_to_string(durationexps[0].original_expression));
   EXPECT_TRUE(is_same_time(ex1_lower, durationexps[0].value_lowerbound));
@@ -161,8 +161,8 @@ TEST_F(DurationexpNormalizerTest, about_prefix) {
   DEN.process(text, durationexps);
   ASSERT_EQ(1u, durationexps.size());
   
-  Time ex1_lower(INFINITY, INFINITY, INFINITY, 2, INFINITY, INFINITY);
-  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 4, -INFINITY, -INFINITY);
+  Time ex1_lower(INFINITY, INFINITY, INFINITY, 3, INFINITY, INFINITY);
+  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 3, -INFINITY, -INFINITY);
   
   EXPECT_EQ("ほぼ三時間", ustring_to_string(durationexps[0].original_expression));
   EXPECT_TRUE(is_same_time(ex1_lower, durationexps[0].value_lowerbound));
@@ -178,7 +178,7 @@ TEST_F(DurationexpNormalizerTest, kyou) {
   ASSERT_EQ(1u, durationexps.size());
   
   Time ex1_lower(INFINITY, INFINITY, INFINITY, 3, INFINITY, INFINITY);
-  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 4, -INFINITY, -INFINITY);
+  Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 3, -INFINITY, -INFINITY);
   
   EXPECT_EQ("三時間強", ustring_to_string(durationexps[0].original_expression));
   EXPECT_TRUE(is_same_time(ex1_lower, durationexps[0].value_lowerbound));
@@ -193,7 +193,7 @@ TEST_F(DurationexpNormalizerTest, jaku) {
   DEN.process(text, durationexps);
   ASSERT_EQ(1u, durationexps.size());
   
-  Time ex1_lower(INFINITY, INFINITY, INFINITY, 2, INFINITY, INFINITY);
+  Time ex1_lower(INFINITY, INFINITY, INFINITY, 3, INFINITY, INFINITY);
   Time ex1_upper(-INFINITY, -INFINITY, -INFINITY, 3, -INFINITY, -INFINITY);
   
   EXPECT_EQ("三時間弱", ustring_to_string(durationexps[0].original_expression));

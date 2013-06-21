@@ -6,6 +6,9 @@
 {"pattern":"£", "counter":"ポンド", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
 {"pattern":"小さじ", "counter":"小さじ", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
 {"pattern":"大さじ", "counter":"大さじ", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"華氏", "counter":"℉", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"摂氏", "counter":"℃", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
+{"pattern":"風速", "counter":"*", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"fusoku"}
 {"pattern":"時速", "counter":"/h", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
 {"pattern":"毎時", "counter":"/h", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
 {"pattern":"分速", "counter":"/m", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"add_suffix_counter"}
@@ -18,9 +21,6 @@
 {"pattern":"最大", "counter":"*", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"saidai"}
 {"pattern":"最長", "counter":"*", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"saityou"}
 {"pattern":"最高", "counter":"*", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"saikou"}
-{"pattern":"華氏", "counter":"℉", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
-{"pattern":"摂氏", "counter":"℃", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"counter"}
-{"pattern":"風速", "counter":"*", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"fusoku"}
 {"pattern":"水温", "counter":"*", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"suion"}
 {"pattern":"北緯", "counter":"*", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"hokui"}
 {"pattern":"南緯", "counter":"*", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":"nanni"}

@@ -108,12 +108,12 @@ void NumericalExpressionNormalizer::revise_any_type_expression_by_number_modifie
     numexp.value_upperbound *= 1.6;
   }else if(process_type == "jaku"){
     numexp.value_lowerbound *= 0.5;
-  /*}else if(process_type == "made"){
-		if(numexp.value_lowerbound == numexp.value_upperbound) {
+  }else if(process_type == "made"){
+		/*if(numexp.value_lowerbound == numexp.value_upperbound) {
 			numexp.value_lowerbound = -INFINITY;
 		}else{
 			;
-		}
+		}*/
    }else {
     numexp.options.push_back(process_type);
 	}

@@ -30,6 +30,7 @@
 {"pattern":"タイプ", "counter":"タイプ", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"ゲーム", "counter":"ゲーム", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"チーム", "counter":"チーム", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
+{"pattern":"新ペソ", "counter":"新ペソ", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"ペソ", "counter":"ペソ", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"選手", "counter":"選手", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}
 {"pattern":"拍子", "counter":"拍子", "SI_prefix":0, "optional_power_of_ten":0, "ordinary":false, "option":""}

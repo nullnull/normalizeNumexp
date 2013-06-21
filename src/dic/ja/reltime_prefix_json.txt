@@ -1,10 +1,10 @@
-{"pattern":"約", "process_type":"about"}
-{"pattern":"だいたい", "process_type":"about"}
-{"pattern":"ほぼ", "process_type":"about"}
-{"pattern":"およそ", "process_type":"about"}
-{"pattern":"ほとんど", "process_type":"about"}
+{"pattern":"約", "process_type":"MOD_APPROX"}
+{"pattern":"だいたい", "process_type":"MOD_APPROX"}
+{"pattern":"ほぼ", "process_type":"MOD_APPROX"}
+{"pattern":"およそ", "process_type":"MOD_APPROX"}
+{"pattern":"ほとんど", "process_type":"MOD_APPROX"}
 {"pattern":"全", "process_type":"none"}
-{"pattern":"ちょうど", "process_type":"none"}
+{"pattern":"ちょうど", "process_type":"MOD_JUST"}
 {"pattern":"~", "process_type":"kara_prefix"}
 {"pattern":"〜", "process_type":"kara_prefix"}
 {"pattern":"～", "process_type":"kara_prefix"}

@@ -257,7 +257,7 @@ void do_time_gejun(AbstimeExpression& abstimeexp) {
 
 void AbstimeExpressionNormalizer::revise_any_type_expression_by_number_modifier(AbstimeExpression& abstimeexp,
     const normalizer_utility::NumberModifier& number_modifier) {
-  std::string process_type = number_modifier.process_type; 
+  std::string process_type = number_modifier.process_type;
   if (process_type == "or_over") {
     abstimeexp.value_upperbound = normalizer_utility::Time(INFINITY);
   } else if (process_type == "or_less") {

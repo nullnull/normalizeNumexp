@@ -1,10 +1,10 @@
-約	about
-だいたい	about
-ほぼ	about
-およそ	about
-ほとんど	about
-全	none
-ちょうど	none
+約	MOD_APPROX
+だいたい	MOD_APPROX
+ほぼ	MOD_APPROX
+およそ	MOD_APPROX
+ほとんど	MOD_APPROX
+全	MOD_JUST
+ちょうど	MOD_JUST
 第	ordinary
 ~	kara_prefix
 〜	kara_prefix

@@ -269,8 +269,10 @@ TEST_F(ReltimeexpNormalizerTest, about1) {
   ASSERT_EQ(1u, reltimeexps.size());
   Time ex1_lower_abs(INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
   Time ex1_upper_abs(-INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
-  Time ex1_lower_rel(-1005, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
-  Time ex1_upper_rel(-995, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
+  //Time ex1_lower_rel(-1005, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
+  //Time ex1_upper_rel(-995, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
+  Time ex1_lower_rel(-1000, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper_rel(-1000, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
   EXPECT_EQ("およそ1000年前", ustring_to_string(reltimeexps[0].original_expression));
   EXPECT_TRUE(is_same_time(ex1_lower_abs, reltimeexps[0].value_lowerbound_abs));
   EXPECT_TRUE(is_same_time(ex1_upper_abs, reltimeexps[0].value_upperbound_abs));
@@ -286,8 +288,10 @@ TEST_F(ReltimeexpNormalizerTest, about2) {
   ASSERT_EQ(1u, reltimeexps.size());
   Time ex1_lower_abs(INFINITY, INFINITY, INFINITY, INFINITY, INFINITY, INFINITY);
   Time ex1_upper_abs(-INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
-  Time ex1_lower_rel(INFINITY, 2, INFINITY, INFINITY, INFINITY, INFINITY);
-  Time ex1_upper_rel(-INFINITY, 4, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
+  //Time ex1_lower_rel(INFINITY, 2, INFINITY, INFINITY, INFINITY, INFINITY);
+  //Time ex1_upper_rel(-INFINITY, 4, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
+  Time ex1_lower_rel(INFINITY, 3, INFINITY, INFINITY, INFINITY, INFINITY);
+  Time ex1_upper_rel(-INFINITY, 3, -INFINITY, -INFINITY, -INFINITY, -INFINITY);
   EXPECT_EQ("約3ヶ月後", ustring_to_string(reltimeexps[0].original_expression));
   EXPECT_TRUE(is_same_time(ex1_lower_abs, reltimeexps[0].value_lowerbound_abs));
   EXPECT_TRUE(is_same_time(ex1_upper_abs, reltimeexps[0].value_upperbound_abs));

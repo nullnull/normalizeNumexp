@@ -1,6 +1,6 @@
-{"pattern":"だいたい", "process_type":"about"}
-{"pattern":"およそ", "process_type":"about"}
-{"pattern":"ちょうど", "process_type":"none"}
+{"pattern":"だいたい", "process_type":"MOD_APPROX"}
+{"pattern":"およそ", "process_type":"MOD_APPROX"}
+{"pattern":"ちょうど", "process_type":"MOD_JUST"}
 {"pattern":"~", "process_type":"kara_prefix"}
 {"pattern":"〜", "process_type":"kara_prefix"}
 {"pattern":"～", "process_type":"kara_prefix"}
@@ -16,6 +16,7 @@
 {"pattern":"AM", "process_type":"gozen"}
 {"pattern":"ＰＭ　", "process_type":"gogo"}
 {"pattern":"ＡＭ　", "process_type":"gozen"}
-{"pattern":"朝", "process_type":"asa"}
-{"pattern":"夜", "process_type":"yoru"}
-{"pattern":"深夜", "process_type":"sinnya"}
+{"pattern":"朝", "process_type":"MO"}
+{"pattern":"昼", "process_type":"MI"}
+{"pattern":"夜", "process_type":"NI"}
+{"pattern":"深夜", "process_type":"MN"}

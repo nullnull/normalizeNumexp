@@ -6,6 +6,9 @@ $	ドル	counter
 £	ポンド	counter
 小さじ	小さじ	counter
 大さじ	大さじ	counter
+華氏	℉	counter
+摂氏	℃	counter
+風速	*	fusoku
 時速	/h	add_suffix_counter
 毎時	/h	add_suffix_counter
 分速	/m	add_suffix_counter
@@ -18,9 +21,6 @@ $	ドル	counter
 最大	*	saidai
 最長	*	saityou
 最高	*	saikou
-華氏	℉	counter
-摂氏	℃	counter
-風速	*	fusoku
 水温	*	suion
 北緯	*	hokui
 南緯	*	nanni

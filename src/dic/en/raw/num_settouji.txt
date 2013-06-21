@@ -1,8 +1,8 @@
-about	about
-close to	about
-almost	about
-around	about
-roughly	about
+about	MOD_APPROX
+close to	MOD_APPROX
+almost	MOD_APPROX
+around	MOD_APPROX
+roughly	MOD_APPROX
 over	<=
 more than	<=
 less than	>=

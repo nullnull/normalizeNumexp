@@ -1,0 +1,6 @@
+.lock-waf_linux2_build
+.unittest-gtest/
+.waf-1.6.9-7330c395352899063370590811613d1d/
+build/
+unittest_gtest.pyc
+

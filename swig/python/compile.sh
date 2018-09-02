@@ -1,6 +1,8 @@
 #!/bin/sh
 #http://www.swig.org/Doc2.0/SWIGDocumentation.html
 
+set -e
+
 #1. create _wrap.cxx and wrapper .py by swig.
 swig -c++ -python -I../../src/  -o normalize_numexp_wrap.cxx ../normalize_numexp.i
 
